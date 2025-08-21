@@ -4,3 +4,21 @@ h1 {
 p {
     background-color: yellowgreen;
 }
+
+#adityaPTag
+{
+    text-align: center;
+    color: red;
+}
+
+.adityaPClass
+{
+    text-align: end;
+    color: purple;
+}
+
+table.adityaPClass
+{
+    text-align: center;
+    color: crimson;
+}
