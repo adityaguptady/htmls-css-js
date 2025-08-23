@@ -22,3 +22,42 @@ table.adityaPClass
     text-align: center;
     color: crimson;
 }
+
+* { /* Universal selector*/
+    margin: 5px;
+    padding: 2px;
+}
+
+h2, h3, p {
+    text-align: center;
+    color: darkgoldenrod;
+}
+
+#testStylingMultipleProps
+{
+    background-color: #3ef9e9;
+	color: #ca26f8;
+	margin: 0;
+	padding: 0;
+	text-align: /*left*/ right;
+	font-size: 100%;
+	font-family: sans-serif;
+}
+
+#myDivStyle
+{
+    margin: 20px;
+    padding: 10px;
+    background-color: brown;
+}
+
+/* h3 {
+    text-align: center;
+    color: darkgoldenrod;
+}
+
+p {
+    text-align: center;
+    color: darkgoldenrod;
+} */
+  
