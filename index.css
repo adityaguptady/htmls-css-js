@@ -51,6 +51,16 @@ h2, h3, p {
     background-color: brown;
 }
 
+#testDiv
+{
+    background-image: url('./Unknown.jpeg');
+    background-position: center;
+    background-repeat: repeat;
+    border: 5px solid orange;
+    border-radius: 25px;
+    margin: 20px 20px 20px 20px;
+}
+
 /* h3 {
     text-align: center;
     color: darkgoldenrod;
