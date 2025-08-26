@@ -55,7 +55,8 @@ h2, h3, p {
 {
     background-image: url('./Unknown.jpeg');
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     border: 5px solid orange;
     border-radius: 25px;
     margin: 20px 20px 20px 20px;
