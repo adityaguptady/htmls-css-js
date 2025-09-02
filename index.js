@@ -113,13 +113,29 @@ console.log(6)
 
 // console.log("Count: ", counter)     //100
 
+// var counter = 100
+// function printCounter()
+// {
+//     let counter = 200                   //shadow variable
+//     console.log("Counter: ", counter)   // 200
+// }
+
+// console.log("Counter: ", counter)       // 100
+// printCounter()
+// console.log("Counter: ", counter)       // 100
+
+
+//Hoisting -> Javascript
+
+console.log("Counter: ", counter)
+
 var counter = 100
+
+console.log("Counter: ", counter)
+printCounter()
+
 function printCounter()
 {
-    let counter = 200   //shadow variable
+    let counter = 200                   //shadow variable
     console.log("Counter: ", counter)   // 200
 }
-
-console.log("Counter: ", counter)       // 100
-printCounter()  
-console.log("Counter: ", counter)       // 100
