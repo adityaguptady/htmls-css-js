@@ -91,26 +91,35 @@ console.log(6)
 // console.log(height) // -> 180
 // console.log(weight) // -> Uncaught ReferenceError: weight
 
-function helloWorldFunction()
+// function helloWorldFunction()
+// {
+//     console.log("Hello") // -> Hello
+//     console.log("World") // -> World
+// }
+
+// console.log("let's begin:") // -> let's begin:
+// helloWorldFunction()        //Calling / Invoking a function
+// console.log("and again:") // -> and again:
+// helloWorldFunction()
+// console.log("and once more:") // -> and once more:
+// helloWorldFunction()
+
+// let counter = 100
+// console.log("Count: ", counter)     //100
+// {
+//     let counter = 10
+//     console.log("Count: ", counter) //10
+// }
+
+// console.log("Count: ", counter)     //100
+
+var counter = 100
+function printCounter()
 {
-    console.log("Hello") // -> Hello
-    console.log("World") // -> World
+    let counter = 200   //shadow variable
+    console.log("Counter: ", counter)   // 200
 }
 
-console.log("let's begin:") // -> let's begin:
-helloWorldFunction()        //Calling / Invoking a function
-console.log("and again:") // -> and again:
-helloWorldFunction()
-console.log("and once more:") // -> and once more:
-helloWorldFunction()
-
-let counter = 100
-console.log("Count: ", counter)
-{
-    let counter = 10
-    console.log("Count: ", counter)
-}
-
-console.log("Count: ", counter)
-
-
+console.log("Counter: ", counter)       // 100
+printCounter()  
+console.log("Counter: ", counter)       // 100
