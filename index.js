@@ -49,8 +49,68 @@ console.log(6)
 // console.log(weight)
 // console.log(count + weight)
 
-const name = "Aditya"
-console.log("Constant: ", name)
+// const name = "Aditya"
+// console.log("Constant: ", name)
 
-name = "Sandeep"
-console.log("Constant: ", name)
+// name = "Sandeep"
+// console.log("Constant: ", name)
+
+// const age = 20
+// console.log("Age: ", age)
+
+// //Programming
+// let counter;
+// console.log(counter); // -> undefined
+// {   //local scope // Programming block
+//     counter = 1;
+//     {
+//         console.log(counter); // -> 1
+//     }
+//     let count = 2   //let defins the local variable
+//     console.log("Count: ", count)
+
+//     var number = 10 // defins all the variable as global for whole file
+//     console.log("Number: ", number)
+// }
+//count = 3
+//console.log("Count: ", count)   // erroneous
+
+//number = 12
+// console.log("Number: ", number) // not erroneous
+
+
+// counter = counter + 1;
+// console.log(counter); // -> 2
+
+// let height = 180
+// {
+//    let weight = 70
+//    console.log(height) // -> 180
+//    console.log(weight) // -> 70   
+// }
+// console.log(height) // -> 180
+// console.log(weight) // -> Uncaught ReferenceError: weight
+
+function helloWorldFunction()
+{
+    console.log("Hello") // -> Hello
+    console.log("World") // -> World
+}
+
+console.log("let's begin:") // -> let's begin:
+helloWorldFunction()        //Calling / Invoking a function
+console.log("and again:") // -> and again:
+helloWorldFunction()
+console.log("and once more:") // -> and once more:
+helloWorldFunction()
+
+let counter = 100
+console.log("Count: ", counter)
+{
+    let counter = 10
+    console.log("Count: ", counter)
+}
+
+console.log("Count: ", counter)
+
+
