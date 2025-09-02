@@ -127,15 +127,39 @@ console.log(6)
 
 //Hoisting -> Javascript
 
-console.log("Counter: ", counter)
+// console.log("Counter: ", counter)
 
-var counter = 100
+// var counter = 100
 
-console.log("Counter: ", counter)
-printCounter()
+// console.log("Counter: ", counter)
+// printCounter()
 
-function printCounter()
+// function printCounter()
+// {
+//     let counter = 200                   //shadow variable
+//     console.log("Counter: ", counter)   // 200
+// }
+
+let year = 1990
+console.log("Year: ", year)
+
+console.log("Type of Year variable is: ", typeof year)
+
+let month
+console.log("Month: ", month)
+console.log("Type of Month variable is: ", typeof month)
+
+let name = "Aditya"
+console.log("name: ", name)
+
+let typeOfName = typeof name
+
+console.log("Type of name variable is: ", typeof name)
+console.log("typeOfName: ", typeOfName)
+
+function a()
 {
-    let counter = 200                   //shadow variable
-    console.log("Counter: ", counter)   // 200
+    
 }
+
+console.log(typeof a)
