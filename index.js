@@ -140,26 +140,69 @@ console.log(6)
 //     console.log("Counter: ", counter)   // 200
 // }
 
-let year = 1990
-console.log("Year: ", year)
+// let year = 1990
+// console.log("Year: ", year)
 
-console.log("Type of Year variable is: ", typeof year)
+// console.log("Type of Year variable is: ", typeof year)
 
-let month
-console.log("Month: ", month)
-console.log("Type of Month variable is: ", typeof month)
+// let month
+// console.log("Month: ", month)
+// console.log("Type of Month variable is: ", typeof month)
 
-let name = "Aditya"
-console.log("name: ", name)
+// let name = "Aditya"
+// console.log("name: ", name)
 
-let typeOfName = typeof name
+// let typeOfName = typeof name
 
-console.log("Type of name variable is: ", typeof name)
-console.log("typeOfName: ", typeOfName)
+// console.log("Type of name variable is: ", typeof name)
+// console.log("typeOfName: ", typeOfName)
 
-function a()
-{
+// function a()
+// {
     
-}
+// }
 
-console.log(typeof a)
+// console.log(typeof a)
+
+// let isDataValid = true;
+// let isStringTooLong = false;
+// let isGameOver = false;
+// continueLoop = true;
+
+// console.log(false); // -> false
+// console.log(typeof false); // -> boolean
+// console.log(isDataValid); // -> true
+// console.log(typeof isDataValid); // -> boolean
+
+
+// const year = 1991
+// let delayInSeconds = 0.00016
+// let area = (16 * 3.14)
+// let halfArea = area / 2
+// console.log(year) // -> 1991
+// console.log(typeof year) // -> number
+// console.log(typeof delayInSeconds)
+
+// let a = 10; // decimal - default 
+// let b = 0x10; // hexadecimal 
+// let c = 0o10; // octal 
+// let d = 0b10; // binary 
+// console.log(a); // -> 10 
+// console.log(b); // -> 16 
+// console.log(c); // -> 8 
+// console.log(d); // -> 2 
+// let x = 9e3;
+// let y = 123e-5;
+// console.log(x); // -> 9000
+// console.log(y); // -> 0.00123
+
+let a = 1 / 0
+let b = -Infinity
+console.log(a) // -> Infinity
+console.log(b) // -> -Infinity
+console.log(typeof a) // -> number
+console.log(typeof b) // -> number
+let s = "it's definitely not a number"
+let n = s * 10
+console.log(n) // -> NaN
+console.log(typeof n) // -> number
