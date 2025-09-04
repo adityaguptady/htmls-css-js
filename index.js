@@ -220,14 +220,84 @@ console.log(6)
 
 // let big4 = 1000n / 0n
 
-let country = "Malawi"
-let continent = 'Africa'
-console.log(country); // -> Malawi
-console.log(typeof country); // -> string
-console.log(continent); // -> Africa
-console.log(typeof continent); // -> string
+// let country = "Malawi"
+// let continent = 'Africa'
+// console.log(country); // -> Malawi
+// console.log(typeof country); // -> string
+// console.log(continent); // -> Africa
+// console.log(typeof continent); // -> string
 
-let dialog = "He said then 'How are you?' and the scene ended!"
-let dialog1 = 'He said then "How are you?" and the scene ended!'
-console.log(dialog)
-console.log(dialog1)
+// let dialog = "He said then 'How are you?' and the scene ended!"
+// let dialog1 = 'He said then "How are you?" and the scene ended!'
+// console.log(dialog)
+// console.log(dialog1)
+
+// let message1 = 'The vessel \'Mars\' called at the port.'
+// let message2 = "Cyclone \"Cilida\" to pass close to Mauritius."
+// console.log(message1); // -> The vessel 'Mars' called at the port.
+// console.log(message2); // -> Cyclone "Cilida" to pass close to Mauritius.
+// let path = "C:\\Windows"
+// console.log(path); // -> C:\Windows
+
+// let path = "C:\\Windows" - "Windows"
+// console.log(path) // -> NaN
+// let test = "100" - "10"
+// console.log(test); // -> 90
+// console.log(typeof test); // -> number
+
+// test = "100" + "10"
+// console.log(test); // -> 90
+// console.log(typeof test); // -> number
+
+// test = "100" * "10"
+// console.log(test); // -> 90
+// console.log(typeof test); // -> number
+
+// test = "100" / "10"
+// console.log(test); // -> 90
+// console.log(typeof test); // -> number
+
+// let country = "Malawi"
+// let continent = "Africa"
+// let sentence = `${country} is located in ${continent}.`
+// let sentence1 = country+" is located in "+continent+"."
+// console.log(sentence) // -> Malawi is located in Africa.
+// console.log(sentence1)
+
+// function myFunction()
+// {
+
+// }
+
+// myFunction()
+
+// console.log(console)
+
+// console.time()
+// console.log("test console") // -> test console
+// console.timeEnd() // -> default: 0.108154296875 ms
+
+// let river = "Mekong"
+// let character = river.charAt(2)
+// console.log(character); // -> k
+
+// let str = "My name is Aditya Gupta!"
+// let str1 = "My-name-is-Aditya-Gupta!"
+
+// console.log(str.length)
+// console.log("--"+str.slice(3,7)+"--")
+// console.log("--"+str.slice(3)+"--")
+// console.log(str1.split("-"))
+// console.log(str.split(" "))
+// console.log(str.split("a"))
+// console.log(str.split("A"))
+
+let declaredVar
+console.log(typeof declaredVar) // -> undefined
+declaredVar = 5;
+console.log(typeof declaredVar) // -> number
+declaredVar = undefined;
+console.log(typeof declaredVar) // -> undefined
+//The undefined value can also be returned by the typeof operator when a non-existent variable is used as an argument.
+console.log(typeof notDeclaredVar); // -> undefined
+console.log(notDeclaredVar); // -> Uncaught ReferenceError:
