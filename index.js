@@ -292,12 +292,103 @@ console.log(6)
 // console.log(str.split("a"))
 // console.log(str.split("A"))
 
-let declaredVar
-console.log(typeof declaredVar) // -> undefined
-declaredVar = 5;
-console.log(typeof declaredVar) // -> number
-declaredVar = undefined;
-console.log(typeof declaredVar) // -> undefined
-//The undefined value can also be returned by the typeof operator when a non-existent variable is used as an argument.
-console.log(typeof notDeclaredVar); // -> undefined
-console.log(notDeclaredVar); // -> Uncaught ReferenceError:
+// let declaredVar
+// console.log(typeof declaredVar) // -> undefined
+// declaredVar = 5;
+// console.log(typeof declaredVar) // -> number
+// declaredVar = undefined;
+// console.log(typeof declaredVar) // -> undefined
+// //The undefined value can also be returned by the typeof operator when a non-existent variable is used as an argument.
+// console.log(typeof notDeclaredVar); // -> undefined
+// console.log(notDeclaredVar); // -> Uncaught ReferenceError:
+
+// let someResource
+// console.log(someResource) // -> undefined
+// console.log(typeof someResource) // -> undefined
+// someResource = null
+// console.log(someResource) // -> null
+// console.log(typeof someResource) // -> object
+
+// const str = String()
+// const num = Number()
+// const bool = Boolean()
+// console.log("str: ", str) // ->
+// console.log("Type of str: ", typeof str) // ->
+// console.log("num: ", num) // -> 0
+// console.log("Type of num: ", typeof num) // ->
+// console.log("bool: ", bool) // -> false
+// console.log("Type of bool: ", typeof bool) // ->
+// const big1 = BigInt(42)
+// console.log(big1) // -> 42n
+// console.log("Type of big1: ", typeof big1) // ->
+// const big2 = BigInt()   // -> Uncaught TypeError: Cannot convert undefined to a BigInt
+
+
+// const num = 42
+// console.log("num: ", num)
+// const strFromNum1 = String(num)
+// console.log("strFromNum1: ", strFromNum1)
+// console.log("typeof strFromNum1: ", typeof strFromNum1)
+// const strFromNum2 = String(8)
+// console.log("strFromNum2: ", strFromNum2)
+// console.log("typeof strFromNum2: ", typeof strFromNum2)
+// const strFromBool = String(true)
+// console.log("strFromBool: ", strFromBool)
+// console.log("typeof strFromBool: ", typeof strFromBool)
+// const numFromStr = Number("312")
+// console.log("numFromStr: ", numFromStr)
+// console.log("typeof numFromStr: ", typeof numFromStr)
+// const boolFromNumber = Boolean(0)
+// console.log("boolFromNumber: ", boolFromNumber)
+// console.log("typeof boolFromNumber: ", typeof boolFromNumber)
+
+// console.log(Number(42)); // -> 42
+// console.log(Number("11")); // -> 11
+// console.log(Number("0x11")); // -> 17 -> 11 => 1 * 16 + 1 * 1
+// console.log(Number("0o11")); // -> 9
+// console.log(Number("0b11")); // -> 3
+// console.log(Number("12e3")); //  -> 12000
+// console.log(Number("Infinity"));// -> Infinity
+// console.log(Number("text")); // -> NaN
+// console.log(Number(14n)); // -> 14
+// console.log(Number(123456789123456789123n)); // - >  123456789123
+// console.log(Number(true)); // -> 1
+// console.log(Number(false)); // -> 0
+// console.log(Number(undefined)); //  -> NaN
+// console.log(Number(null));// -> 0
+
+// console.log(Boolean(true)) // -> true
+// console.log(Boolean(42)) // -> true
+// console.log(Boolean(1)) // -> true
+// console.log(Boolean(0)) // -> false
+// console.log(Boolean(NaN)) // -> false
+// console.log(Boolean("text")) // -> true
+// console.log(Boolean("")) // -> false
+// console.log(Boolean(" "))
+// console.log(Boolean(undefined)) // -> false
+// console.log(Boolean(null)) // -> false
+
+// console.log(BigInt(11)); // -> 11n
+// console.log(BigInt(0x11)); // -> 17n
+// console.log(BigInt(11e2)); // -> 1100n
+// console.log(BigInt(true)); // -> 1n
+// console.log(BigInt("11")); // -> 11n
+// console.log(BigInt("0x11")); // -> 17n
+// console.log(BigInt("hello"))
+// console.log(BigInt(null)); // -> Uncaught TypeError: Cannot convert null to a BigInt
+// console.log(BigInt(undefined)) // -> Uncaught TypeError: Cannot convert undefined to a BigInt
+// console.log(BigInt(NaN)); // -> Uncaught RangeError: The number NaN cannot be converted to a BigInt because it is not an integer
+
+const str1 = "42" + "1"
+//"value1" operation[arithmatic] value2
+//-, *, /   
+//+ -> concatination
+console.log(str1);        // -> 421
+console.log(typeof str1); // -> string
+const str2 = "42" - "1"
+console.log(str2);        // -> 41
+console.log(typeof str2); // -> number
+
+const str3 = 42 - "1t"
+console.log(str3);        // -> 41
+console.log(typeof str3); // -> number
