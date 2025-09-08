@@ -379,16 +379,88 @@ console.log(6)
 // console.log(BigInt(undefined)) // -> Uncaught TypeError: Cannot convert undefined to a BigInt
 // console.log(BigInt(NaN)); // -> Uncaught RangeError: The number NaN cannot be converted to a BigInt because it is not an integer
 
-const str1 = "42" + "1"
+// const str1 = "42" + "1"
 //"value1" operation[arithmatic] value2
 //-, *, /   
 //+ -> concatination
-console.log(str1);        // -> 421
-console.log(typeof str1); // -> string
-const str2 = "42" - "1"
-console.log(str2);        // -> 41
-console.log(typeof str2); // -> number
+// console.log(str1);        // -> 421
+// console.log(typeof str1); // -> string
+// const str2 = "42" - "1"
+// console.log(str2);        // -> 41
+// console.log(typeof str2); // -> number
 
-const str3 = 42 - "1t"
-console.log(str3);        // -> 41
-console.log(typeof str3); // -> number
+// const str3 = 42 - "1t"
+// console.log(str3);        // -> 41
+// console.log(typeof str3); // -> number
+
+// let testObj = {
+//     nr: 600,
+//     str: "My text"
+// }
+// console.log("testObj: ", testObj)
+// console.log(typeof testObj) // -> object
+
+// console.log("nr: ", testObj.nr)
+// console.log("str: ", testObj.str)
+
+// let student_aditya = {
+//     name: "Aditya",
+//     course: "React",
+//     contact: 9876543210,
+//     email: "sdif@fjk.com"
+// }
+
+// let student_diksha = {
+//     name: "Diksha",
+//     course: "HTML",
+//     contact: 98765439009,
+//     email: "diksha@gmail.com"
+// }
+
+// console.log("Name: ", student_aditya.name)
+// console.log("course: ", student_aditya.course)
+// console.log("contact: ", student_aditya.contact)
+// console.log("email: ", student_aditya.email)
+
+// console.log("Name: ", student_diksha.name)
+// console.log("course: ", student_diksha.course)
+// console.log("contact: ", student_diksha.contact)
+// console.log("email: ", student_diksha.email)
+
+// student_aditya.contact = 8899776655
+// student_aditya.email = "aditya@gmail.com"
+
+// console.log("Name: ", student_aditya.name)
+// console.log("course: ", student_aditya.course)
+// console.log("contact: ", student_aditya.contact)
+// console.log("email: ", student_aditya.email)
+
+// student_aditya.age = 20
+// console.log("Aditya's age: ", student_aditya.age)
+
+// console.log("Diksha's age: ", student_diksha.age)
+
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+console.log(days[0]) // -> Sun
+console.log(days[2]) // -> Tue
+console.log(days[5]) // -> Fri
+days[0] = "Sunday"
+console.log(days[0]) // -> Sunday
+let emptyArray = []
+console.log(emptyArray[0]) // -> undefined
+
+let animals = []
+console.log(animals[0]) // -> undefined
+animals[0] = "dog"
+animals[2] = "cat"
+console.log(animals[0]) // -> dog
+console.log(animals[1]) // -> undefined
+console.log(animals[2]) // -> cat
+
+let values = ["Test", 7, 12.3, false]
+console.log(typeof values)
+console.log(values[0])
+console.log(values[1])
+console.log(values[2])
+console.log(values[3])
+
