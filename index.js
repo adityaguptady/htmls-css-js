@@ -440,27 +440,110 @@ console.log(6)
 
 // console.log("Diksha's age: ", student_diksha.age)
 
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-console.log(days[0]) // -> Sun
-console.log(days[2]) // -> Tue
-console.log(days[5]) // -> Fri
-days[0] = "Sunday"
-console.log(days[0]) // -> Sunday
-let emptyArray = []
-console.log(emptyArray[0]) // -> undefined
+// let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+// console.log(days[0]) // -> Sun
+// console.log(days[2]) // -> Tue
+// console.log(days[5]) // -> Fri
+// days[0] = "Sunday"
+// console.log(days[0]) // -> Sunday
+// let emptyArray = []
+// console.log(emptyArray[0]) // -> undefined
 
-let animals = []
-console.log(animals[0]) // -> undefined
-animals[0] = "dog"
-animals[2] = "cat"
-console.log(animals[0]) // -> dog
-console.log(animals[1]) // -> undefined
-console.log(animals[2]) // -> cat
+// let animals = []
+// console.log(animals[0]) // -> undefined
+// animals[0] = "dog"
+// animals[2] = "cat"
+// console.log(animals[0]) // -> dog
+// console.log(animals[1]) // -> undefined
+// console.log(animals[2]) // -> cat
 
-let values = ["Test", 7, 12.3, false]
-console.log(typeof values)
-console.log(values[0])
-console.log(values[1])
-console.log(values[2])
-console.log(values[3])
+// let values = ["Test", 7, 12.3, false]
+// console.log(typeof values)
+// console.log(values[0])
+// console.log(values[1])
+// console.log(values[2])
+// console.log(values[3])
 
+// let names = [["Olivia", "Emma", "Mia", "Sofia"], ["William", "James", "Daniel"]]
+
+// console.log("names: ", names)
+// let myArray = names[0]
+// console.log(names[0])
+// console.log(myArray)
+// console.log(names[0][0])
+// console.log(names[0][3])
+// console.log(names[1][2])
+
+// let user1 = {
+//     name: "Calvin",
+//     surname: "Hart",
+//     age: 66,
+//     email: "CalvinMHart@teleworm.us"
+//  }
+//  let user2 = {
+//     name: "Mateus",
+//     surname: "Pinto",
+//     age: 21,
+//     email: "MateusPinto@dayrep.com"
+//  }
+//  let objArray = [user1, user2]
+//  console.log(objArray)
+//  console.log(objArray[1])
+//  console.log(objArray[1].surname)
+
+//  objArray[2] = {
+//     name: "Aditya",
+//     surname: "Gupta",
+//     age: 20,
+//     email: "aditya@gmail.com"
+//  }
+ 
+//  console.log(objArray)
+
+//  console.log(objArray[2].name)
+
+
+// let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+// let day = "Sunday"
+// console.log(typeof days)
+// console.log(typeof day)
+// console.log(days instanceof Array)
+// console.log(day instanceof Array)
+
+// console.log("Days length: ",days.length)
+// console.log("objArray length: ", objArray.length)
+
+// days[7] = "Someday" //not a good way
+
+// console.log("Days length: ",days.length)
+
+// console.log("index of wednesday: ", days.indexOf("Wed"))
+// console.log("index of wednesday: ", days.indexOf("Wednesday"))
+
+// let names = ["Olivia", "Emma", "Mateo", "Samuel"]
+// console.log(names.length)
+// names.push("Amelia")        //insert at the end of the array
+// console.log(names.length)
+// console.log(names)
+
+
+// let names = ["Olivia", "Emma", "Mateo", "Samuel"];
+// console.log(names.indexOf("Mateo"))
+// console.log(names.indexOf("Victor"))
+
+// names.unshift("Victor")
+// console.log(names.indexOf("Victor"))
+// console.log(names)
+
+let names= ["Olivia", "Emma", "Mateo", "Samuel"]
+console.log(names.length)
+let name = names.pop()
+console.log(names.length)
+console.log(name)
+console.log(names)
+
+console.log(names.length)
+name = names.shift()
+console.log(names.length)
+console.log(name)
+console.log(names)
