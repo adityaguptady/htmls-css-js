@@ -572,61 +572,82 @@ console.log(6)
 // name1 = name1.concat(names)
 // console.log(name1)
 
-let year = 2050
-let newYear = year = 2051
-console.log("Year: ", year)
-console.log("newYear: ", newYear)
+// let year = 2050
+// let newYear = year = 2051
+// console.log("Year: ", year)
+// console.log("newYear: ", newYear)
 
-console.log(2 + 2 * 2)
-console.log(2 + (2 * 2))
-console.log((2 + 2) * 2)
+// console.log(2 + 2 * 2)
+// console.log(2 + (2 * 2))
+// console.log((2 + 2) * 2)
 
-const x = 5
-const y = 2
-console.log("addition: ", x + y)
-console.log("subtraction: ", x - y)
-console.log("multiplication: ", x * y);
-console.log("division: ", x / y)
-console.log("division remainder :", x % y)
-console.log("exponent: ", x ** y)
+// const x = 5
+// const y = 2
+// console.log("addition: ", x + y)
+// console.log("subtraction: ", x - y)
+// console.log("multiplication: ", x * y);
+// console.log("division: ", x / y)
+// console.log("division remainder :", x % y)
+// console.log("exponent: ", x ** y)
 
-let str = "123"
-let n1 = +str
-let n2 = -str
-let n3 = -n2
-let n4 = +"abcd"
+// let str = "123"
+// let n1 = +str
+// let n2 = -str
+// let n3 = -n2
+// let n4 = +"abcd"
 
-console.log(`${str} : ${typeof str}`); // -> 123 : string
-console.log(`${n1} : ${typeof n1}`); // -> 123 : number
-console.log(`${n2} : ${typeof n2}`); // -> -123 : number
-console.log(`${n3} : ${typeof n3}`); // -> 123 : number
-console.log(`${n4} : ${typeof n4}`); // -> NaN : number
+// console.log(`${str} : ${typeof str}`); // -> 123 : string
+// console.log(`${n1} : ${typeof n1}`); // -> 123 : number
+// console.log(`${n2} : ${typeof n2}`); // -> -123 : number
+// console.log(`${n3} : ${typeof n3}`); // -> 123 : number
+// console.log(`${n4} : ${typeof n4}`); // -> NaN : number
 
 
-let a = 10
-console.log("a: ", a)
-console.log("a++: ", a++)
-console.log("a: ", a)
-console.log("++a: ", ++a)
+// let a = 10
+// console.log("a: ", a)
+// console.log("a++: ", a++)
+// console.log("a: ", a)
+// console.log("++a: ", ++a)
 
-console.log("a: ", a)
-console.log("a--: ", a--)
-console.log("a: ", a)
-console.log("--a: ", --a)
+// console.log("a: ", a)
+// console.log("a--: ", a--)
+// console.log("a: ", a)
+// console.log("--a: ", --a)
 
-console.log(0.2 + 0.1);     // 0.30000000000000004
-console.log(0.2 * 0.1);     // 0.020000000000000004
-console.log(0.3 / 0.1);     // 2.9999999999999996
-x = 10;
-x += 2;
-console.log(x); // -> 12
-x -= 4;
-console.log(x); // -> 8
-x *= 3;
-console.log(x); // -> 24
-x /= 6;
-console.log(x); // -> 4
-x **= 3;
-console.log(x); // -> 64
-x %= 10
-console.log(x); // -> 4
+// console.log(0.2 + 0.1);     // 0.30000000000000004
+// console.log(0.2 * 0.1);     // 0.020000000000000004
+// console.log(0.3 / 0.1);     // 2.9999999999999996
+// x = 10;
+// x += 2;
+// console.log(x); // -> 12
+// x -= 4;
+// console.log(x); // -> 8
+// x *= 3;
+// console.log(x); // -> 24
+// x /= 6;
+// console.log(x); // -> 4
+// x **= 3;
+// console.log(x); // -> 64
+// x %= 10
+// console.log(x); // -> 4
+
+console.log(true && true); // -> true
+console.log(true && false); // -> false
+console.log(false && true); // -> false
+console.log(false && false); // -> false
+
+console.log(true || true); // -> true
+console.log(true || false); // -> true
+console.log(false || true); // -> true
+console.log(false || false); // -> false
+
+console.log(!true); // -> false
+console.log(!false); // -> true
+
+const a = false;
+const b = true;
+const c = false;
+const d = true;
+console.log(a && b && c || d)
+console.log(a && b && (c || d))
+
