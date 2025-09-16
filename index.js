@@ -554,7 +554,7 @@ console.log(6)
 // console.log(names)
 
 
-let names = ["Olivia", "Emma", "Mateo", "Samuel"]
+//let names = ["Olivia", "Emma", "Mateo", "Samuel"]
 // let n1 = names.slice(2)
 // console.log(n1)
 // let n2 = names.slice(1,3)
@@ -567,7 +567,26 @@ let names = ["Olivia", "Emma", "Mateo", "Samuel"]
 // console.log(n5)
 // console.log(names)
 
-let name1 = ["Aditya", "George", "Sandeep"]
-//names = names.concat(name1)
-name1 = name1.concat(names)
-console.log(name1)
+// let name1 = ["Aditya", "George", "Sandeep"]
+// //names = names.concat(name1)
+// name1 = name1.concat(names)
+// console.log(name1)
+
+let year = 2050
+let newYear = year = 2051
+console.log("Year: ", year)
+console.log("newYear: ", newYear)
+
+console.log(2 + 2 * 2)
+console.log(2 + (2 * 2))
+console.log((2 + 2) * 2)
+
+const x = 5
+const y = 2
+console.log("addition: ", x + y)
+console.log("subtraction: ", x - y)
+console.log("multiplication: ", x * y);
+console.log("division: ", x / y)
+console.log("division remainder :", x % y)
+console.log("exponent: ", x ** y)
+
