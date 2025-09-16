@@ -603,3 +603,30 @@ console.log(`${n3} : ${typeof n3}`); // -> 123 : number
 console.log(`${n4} : ${typeof n4}`); // -> NaN : number
 
 
+let a = 10
+console.log("a: ", a)
+console.log("a++: ", a++)
+console.log("a: ", a)
+console.log("++a: ", ++a)
+
+console.log("a: ", a)
+console.log("a--: ", a--)
+console.log("a: ", a)
+console.log("--a: ", --a)
+
+console.log(0.2 + 0.1);     // 0.30000000000000004
+console.log(0.2 * 0.1);     // 0.020000000000000004
+console.log(0.3 / 0.1);     // 2.9999999999999996
+x = 10;
+x += 2;
+console.log(x); // -> 12
+x -= 4;
+console.log(x); // -> 8
+x *= 3;
+console.log(x); // -> 24
+x /= 6;
+console.log(x); // -> 4
+x **= 3;
+console.log(x); // -> 64
+x %= 10
+console.log(x); // -> 4
