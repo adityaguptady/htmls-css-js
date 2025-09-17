@@ -631,23 +631,88 @@ console.log(6)
 // x %= 10
 // console.log(x); // -> 4
 
-console.log(true && true); // -> true
-console.log(true && false); // -> false
-console.log(false && true); // -> false
-console.log(false && false); // -> false
+// console.log(true && true); // -> true
+// console.log(true && false); // -> false
+// console.log(false && true); // -> false
+// console.log(false && false); // -> false
 
-console.log(true || true); // -> true
-console.log(true || false); // -> true
-console.log(false || true); // -> true
-console.log(false || false); // -> false
+// console.log(true || true); // -> true
+// console.log(true || false); // -> true
+// console.log(false || true); // -> true
+// console.log(false || false); // -> false
 
-console.log(!true); // -> false
-console.log(!false); // -> true
+// console.log(!true); // -> false
+// console.log(!false); // -> true
 
-const a = false;
-const b = true;
-const c = false;
-const d = true;
-console.log(a && b && c || d)
-console.log(a && b && (c || d))
+// const a = false;
+// const b = true;
+// const c = false;
+// const d = true;
+// console.log(a && b && c || d)
+// console.log(a && b && (c || d))
+
+// let nr = 0
+// let year = 1970
+// let name = "Alice"
+// let empty = ""
+// console.log(!nr); // -> true
+// console.log(!year); // -> false
+// console.log(!name); // -> false
+// console.log(!empty); // -> true
+// console.log(!!nr); // -> false
+// console.log(!!name); // -> true
+
+// console.log(true && 1991); // -> 1991
+// console.log(false && 1991); // -> false
+// console.log(2 && 5); // -> 5
+// console.log(0 && 5); // -> 0
+// console.log("Alice" && "Bob"); // -> Bob
+// console.log("" && "Bob"); // -> empty string
+// console.log(true || 1991); // -> true
+// console.log(false || 1991); // -> 1991
+// console.log(2 || 5); // -> 2
+// console.log(0 || 5); // -> 5
+// console.log("Alice" || "Bob"); // -> Alice
+// console.log("" || "Bob"); // -> Bob
+
+// let x = 0
+// let y = 0
+// console.log(x++ && y++)
+// console.log(x)
+// console.log(y)
+// console.log("--------")
+// x = 1
+// y = 0
+// console.log(x++ && y++)
+// console.log(x)
+// console.log(y)
+
+// let x = 0
+// let y = 0
+// console.log(x++ || y++)
+// console.log(x)
+// console.log(y)
+// console.log("--------")
+// x = 1
+// y = 0
+// console.log(x++ || y++)
+// console.log(x)
+// console.log(y)
+
+// let a = true;
+// console.log(a)
+// a &&= false     // -> a = a && false
+// console.log(a)
+
+// let b = false;
+// console.log(b)
+// b ||= true      // -> b = b || true
+// console.log(b)
+
+let greetings = "Hi";
+console.log(greetings + " " + "Alice"); // -> Hi Alice
+let sentence = "Happy New Year ";
+let newSentence = sentence + 10191;
+console.log(newSentence); // -> Happy New Year 10191
+console.log(typeof newSentence); // -> string
 
