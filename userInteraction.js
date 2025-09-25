@@ -43,11 +43,11 @@ function promptDialogExample()
 // }
 // console.log(total)
 
-let userAge = prompt("Enter your age:")
-let isFemale = false
-let points = 703
-let cartValue = 299
-let shippingCost = 9.99
+// let userAge = prompt("Enter your age:")
+// let isFemale = false
+// let points = 703
+// let cartValue = 299
+// let shippingCost = 9.99
 // if(userAge > 21)
 // { 
 //     if (cartValue >= 300 || points >= 500) 
@@ -55,7 +55,28 @@ let shippingCost = 9.99
 //         shippingCost = 0
 //     }
 // } 
-if(userAge > 21 && (cartValue >= 300 || points >= 500))
-    shippingCost = 0
-alert("Shipping cost: "+shippingCost)
+// if(userAge > 21 && (cartValue >= 300 || points >= 500))
+//     shippingCost = 0
+// alert("Shipping cost: "+shippingCost)
+
+// let num = -1
+// if(num >= 0)
+// {
+//     console.log("The number is positive.")
+// }
+// else 
+// {
+//     console.log("Negative")
+// }
+
+let isUserReady = confirm("Are you ready?"); 
+if (isUserReady) 
+{ 
+    alert("User ready!")
+} 
+else 
+{ 
+    alert("User not ready!")
+}
+
 
