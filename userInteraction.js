@@ -69,14 +69,80 @@ function promptDialogExample()
 //     console.log("Negative")
 // }
 
-let isUserReady = confirm("Are you ready?"); 
-if (isUserReady) 
-{ 
-    alert("User ready!")
-} 
-else 
-{ 
-    alert("User not ready!")
-}
+// let isUserReady = confirm("Are you ready?"); 
+// if (isUserReady) 
+// { 
+//     alert("User ready!")
+// } 
+// else 
+// { 
+//     alert("User not ready!")
+// }
 
+
+// let age = prompt("Enter your age:");
+// if(age >= 18)       //condition #1
+// {
+// 	alert("You are able to vote now!");
+// } 
+// else                //condition #2
+// {
+//     alert("You are a minor, not eligible to vote");
+// }
+
+// let age = prompt("Enter your age:")
+// if(age >= 18)       //condition #1
+// {
+// 	alert("You are able to vote now!")
+// } 
+// else if(age >= 13)  //condition #2
+// {
+//     alert("You are a Teenager, welcome to teenage!")
+// }
+// else
+// {
+//     alert("You are a minor, not eligible to vote")
+// }
+
+// let number = prompt("Enter a number", 0); 
+// if (number < 10)
+// {
+//     alert("<10")
+// } 
+// else if (number < 30) 
+// {
+//     alert("<30")
+// } 
+// else if (number < 60) 
+// { 
+//     alert("<60")
+// }
+// else if(number<80)
+// {
+//     alert("<80")
+// }
+// else if (number < 90)
+// {
+//     alert("<90");
+// } 
+// else if (number < 100) 
+// { 
+//     alert("<100"); 
+// } 
+// else if (number == 100) 
+// {
+//     alert("100")
+// } 
+// else
+// { 
+//     alert(">100") 
+// }
+
+// let price = 48
+// let shippingCost = price > 50 ? 0 : 5
+// console.log(`price = ${price}, shipping = ${shippingCost}`)
+
+
+let start = confirm("Start?")
+start ? alert("Here we go!") : alert("Aborted")
 
