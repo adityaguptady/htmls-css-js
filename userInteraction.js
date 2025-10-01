@@ -143,6 +143,44 @@ function promptDialogExample()
 // console.log(`price = ${price}, shipping = ${shippingCost}`)
 
 
-let start = confirm("Start?")
-start ? alert("Here we go!") : alert("Aborted")
+// let start = confirm("Start?")
+// let message = start ? "Here we go!" : "Aborted"
+// alert(message)
 
+// let age = 20
+// let message = (age >= 18) ? "You are an adult." : "You are a minor."
+// console.log("Checking adult age: ", message)
+
+// let number = 7
+// let result = (number % 2 === 0) ? "Even" : "Odd"
+// console.log("Checking 7 is even or odd : ", result)
+
+// let isLoggedIn = true
+// let welcomeMessage = isLoggedIn ? "Welcome back!" : "Please log in."
+// console.log("Login check: ", welcomeMessage)
+
+// let score = 85
+// let grade = (score >= 90) ? "A" : (score >= 80) ? "B" : (score >= 70) ? "C" : (score >= 60) ? "D" : "F"
+// console.log("Grade: ", grade)
+
+let gate = prompt("Choose gate: a, b, or c")
+let win = false
+switch(gate) 
+{ 
+    case "a": 
+        alert("Gate A: empty")
+ 		break
+ 	case "b":
+        alert("Gate B: main prize")
+        win = true
+        break
+    case "c": 
+        alert("Gate C: empty")
+        break
+    default: 
+        alert("No gate " + String(gate))
+}
+if(win) 
+{ 
+    alert("Winner!")
+}
