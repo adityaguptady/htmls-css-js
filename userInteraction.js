@@ -163,24 +163,41 @@ function promptDialogExample()
 // let grade = (score >= 90) ? "A" : (score >= 80) ? "B" : (score >= 70) ? "C" : (score >= 60) ? "D" : "F"
 // console.log("Grade: ", grade)
 
-let gate = prompt("Choose gate: a, b, or c")
-let win = false
-switch(gate) 
+// let gate = prompt("Choose gate: a, b, or c")
+// let win = false
+// switch(gate) 
+// { 
+//     case "a": 
+//         alert("Gate A: empty")
+//  		break
+//  	case "b":
+//         alert("Gate B: main prize")
+//         win = true
+//         break
+//     case "c": 
+//         alert("Gate C: empty")
+//         break
+//     default: 
+//         alert("No gate " + String(gate))
+// }
+// if(win) 
+// { 
+//     alert("Winner!")
+// }
+
+let number = 16
+switch (number) 
 { 
-    case "a": 
-        alert("Gate A: empty")
- 		break
- 	case "b":
-        alert("Gate B: main prize")
-        win = true
-        break
-    case "c": 
-        alert("Gate C: empty")
-        break
+    case 1: 
+        console.log("One")
+        break; 
+    case 2: 
+        console.log("Two")
+        break; 
+    case 3: 
+        console.log("Three")
+        break;
     default: 
-        alert("No gate " + String(gate))
+        console.log("Unknown number"); 
 }
-if(win) 
-{ 
-    alert("Winner!")
-}
+
