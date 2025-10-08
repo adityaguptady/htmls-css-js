@@ -185,19 +185,88 @@ function promptDialogExample()
 //     alert("Winner!")
 // }
 
-let number = 16
-switch (number) 
-{ 
-    case 1: 
-        console.log("One")
-        break; 
-    case 2: 
-        console.log("Two")
-        break; 
-    case 3: 
-        console.log("Three")
-        break;
-    default: 
-        console.log("Unknown number"); 
+// let number = 16
+// switch (number) 
+// { 
+//     case 1: 
+//         console.log("One")
+//         break; 
+//     case 2: 
+//         console.log("Two")
+//         break; 
+//     case 3: 
+//         console.log("Three")
+//         break;
+//     default: 
+//         console.log("Unknown number"); 
+// }
+
+
+// console.log(0)
+// console.log(10)
+// console.log(20)
+// console.log(30)
+// console.log(40)
+// console.log(50)
+// console.log(60)
+// console.log(70)
+// console.log(80)
+// console.log(90)
+
+// let n = 0
+// console.log(n) 
+// n += 10
+// console.log(n)
+// n += 10
+// console.log(n)
+// n += 10
+// console.log(n)
+// n += 10
+// console.log(n)
+// n += 10
+// console.log(n) 
+// n += 10;
+// console.log(n)
+// n += 10;
+// console.log(n)
+// n += 10;
+// console.log(n)
+// n += 10;
+// console.log(n)
+// n += 10;
+
+// let n = 0           //initialised
+// while(n < 91)       //loop -> condition
+// {
+//     console.log(n)  //console
+//     n += 10         //increment
+// }
+
+// let isOver = false
+// let counter = 1
+// while(isOver != true)
+// {
+//     let continueLoop = confirm(`[${counter}] Continue the loop?`)
+//     isOver = continueLoop === true ? false : true
+//     counter = counter + 1
+// }
+// while (!isOver) 
+// {
+//     isOver = !confirm(`[${counter++}] Continue the loop?`)
+// }
+
+// alert("Completed the loop!")
+
+let fruits = ["apple", "banana", "mango", "Grapes", "Orange"]
+let index = 0
+let myLine = ""
+while (index < fruits.length) 
+{
+    //console.log(fruits[index])
+    //myLine += fruits[index]+" "
+    document.write(fruits[index]+" ")
+    index++
 }
+//console.log(myLine)
+//console.log(fruits.join(" "))
 
