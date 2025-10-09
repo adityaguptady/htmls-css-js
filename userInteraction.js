@@ -269,14 +269,64 @@ function promptDialogExample()
 // }
 //console.log(myLine)
 //console.log(fruits.join(" "))
-let num = 0
-let str = ""
-while(num < 20)
+// let num = 0
+// let str = ""
+// while(num < 20)
+// {
+//     num += 2
+//     str += num
+//     str+= " "
+//     //console.log("Num: ", num += 2)
+//     // 2->4->6->8...20->22
+// }
+// console.log(str)
+
+// let num = 20
+// while(num >=2)
+// {
+//     console.log("Num", num)
+//     num -= 2
+// }
+
+// let isOver
+// let counter = 1
+// do
+// {
+//     isOver = !confirm(`[${counter++}] Continue the loop?`)
+// }
+// while(!isOver);
+
+// let condition = false
+// while(condition)
+// {
+//     console.log("A while loop iteration.") // never executed
+// }
+
+// do 
+// {
+//     console.log("A do ... while loop iteration.") // executed once
+// } 
+// while (condition);
+
+// console.log("Out of the loop")
+
+// let text = "Divya"
+// let i = 0
+// do 
+// {
+//     console.log(text[i])
+//     i++
+// } 
+// while (i < text.length);
+
+// for(let i = 0; i <= 10; i++) 
+// { 
+//     console.log(i)
+// }
+let values = [10, 30, 50, 100]
+let sum = 0
+for(let index = 0; index < values.length; index++) 
 {
-    num += 2
-    str += num
-    str+= " "
-    //console.log("Num: ", num += 2)
-    // 2->4->6->8...20->22
-}
-console.log(str)
+    sum += values[index]
+}					
+console.log(sum)  // 190
