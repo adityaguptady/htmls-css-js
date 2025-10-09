@@ -257,16 +257,26 @@ function promptDialogExample()
 
 // alert("Completed the loop!")
 
-let fruits = ["apple", "banana", "mango", "Grapes", "Orange"]
-let index = 0
-let myLine = ""
-while (index < fruits.length) 
-{
-    //console.log(fruits[index])
-    //myLine += fruits[index]+" "
-    document.write(fruits[index]+" ")
-    index++
-}
+// let fruits = ["apple", "banana", "mango", "Grapes", "Orange"]
+// let index = 0
+// let myLine = ""
+// while (index < fruits.length) 
+// {
+//     //console.log(fruits[index])
+//     //myLine += fruits[index]+" "
+//     document.write(fruits[index]+" ")
+//     index++
+// }
 //console.log(myLine)
 //console.log(fruits.join(" "))
-
+let num = 0
+let str = ""
+while(num < 20)
+{
+    num += 2
+    str += num
+    str+= " "
+    //console.log("Num: ", num += 2)
+    // 2->4->6->8...20->22
+}
+console.log(str)
