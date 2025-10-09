@@ -323,10 +323,28 @@ function promptDialogExample()
 // { 
 //     console.log(i)
 // }
-let values = [10, 30, 50, 100]
-let sum = 0
-for(let index = 0; index < values.length; index++) 
+// let values = [10, 30, 50, 100]
+// let sum = 0
+// for(let index = 0; index < values.length; index++) 
+// {
+//     sum += values[index]
+// }					
+// console.log(sum)  // 190
+
+
+// let numbers = [2, 5, 8, 11, 14, 15, 16, 21, 101, 102]
+// let evenCount = 0
+// for (let i = 0; i < numbers.length; i++) 
+// {
+//    	if(numbers[i] % 2 === 0) 
+//     {
+//         evenCount++
+//     }
+// }
+// console.log("Even numbers count:", evenCount)
+
+let fruits = ["apple", "banana", "mango", "grape"]
+for(let i = fruits.length-1; i >= 0; i--) 
 {
-    sum += values[index]
-}					
-console.log(sum)  // 190
+    console.log(fruits[i])
+}
