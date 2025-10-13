@@ -428,15 +428,109 @@ function promptDialogExample()
 
 // myObject.abc
 
-let user = 
+// let user = 
+// {
+//     name: "Calvin",
+//     surname: "Hart",
+//     age: 66,
+//     email: "CalvinMHart@teleworm.us"
+// };
+// for(let key in user) 
+// {
+//   	console.log("Key: ", key)
+//     console.log("Value: ", user[key])
+// };
+
+// let user = 
+//     { 
+//         name: "Swati", 
+//         age: 25 
+//     }
+// for(let key in user) 
+// { 
+//     console.log(`${key}: ${user[key]}`)
+// }
+
+// const array1 = ["a", "b", "c"]
+// for(element of array1)
+// {
+//   	console.log(element)
+// }
+
+// let i = 0
+// while(true)
+// {
+//     console.log(i)
+//     i++
+//     console.log("...")
+//     if(i >= 5) 
+//     {
+//         console.log("now Breaking")
+//         break
+//         console.log("Breaked now!")
+//     }
+// }
+// console.log('Exited the loop with break')
+
+// for(let i = 0; i < 10; i++) 
+// {
+//     if(i == 3)
+//     {
+//         continue
+//     }
+//     console.log("i: ", i)
+// }
+
+// let fruits = ["apple", "banana", "mango", "orange", "grapes"]
+// for(let i = 0; i < fruits.length; i++) 
+// {
+//     if (fruits[i] === "mango") 
+//     {
+//         console.log("Mango found at index " + i)
+//         break
+//     }
+//     console.log("Fruit: ", fruits[i])
+// }
+// console.log("Outside the loop!")
+
+// for (let i = 1; i <= 10; i++) 
+// {
+//     if (i % 2 !== 0) 
+//     {
+//         continue
+//     }
+//     console.log("i: ", i)
+// }
+
+let gate = prompt("Choose gate: a, b, or c");
+let win = false
+switch(gate) 
 {
-    name: "Calvin",
-    surname: "Hart",
-    age: 66,
-    email: "CalvinMHart@teleworm.us"
-};
-for(let key in user) 
+    case 1:
+    case "1":
+    case "A":
+    case "a":
+        alert("Gate A: empty")
+        break
+    case 2:
+    case "2":
+    case "B":
+    case "b":
+        alert("Gate B: main prize")
+        win = true
+        break
+    case 3:
+    case "3":
+    case "C":
+    case "c":
+        alert("Gate C: empty")
+        break
+    default:
+        alert("No gate " + String(gate))
+}
+if (win) 
 {
-  	console.log("Key: ", key)
-    console.log("Value: ", user[key])
-};
+    alert("Winner!");
+}
+    
+
