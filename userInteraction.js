@@ -502,35 +502,67 @@ function promptDialogExample()
 //     console.log("i: ", i)
 // }
 
-let gate = prompt("Choose gate: a, b, or c");
-let win = false
-switch(gate) 
-{
-    case 1:
-    case "1":
-    case "A":
-    case "a":
-        alert("Gate A: empty")
-        break
-    case 2:
-    case "2":
-    case "B":
-    case "b":
-        alert("Gate B: main prize")
-        win = true
-        break
-    case 3:
-    case "3":
-    case "C":
-    case "c":
-        alert("Gate C: empty")
-        break
-    default:
-        alert("No gate " + String(gate))
-}
-if (win) 
-{
-    alert("Winner!");
-}
+// let gate = prompt("Choose gate: a, b, or c");
+// let win = false
+// switch(gate) 
+// {
+//     case 1:
+//     case "1":
+//     case "A":
+//     case "a":
+//         alert("Gate A: empty")
+//         break
+//     case 2:
+//     case "2":
+//     case "B":
+//     case "b":
+//         alert("Gate B: main prize")
+//         win = true
+//         break
+//     case 3:
+//     case "3":
+//     case "C":
+//     case "c":
+//         alert("Gate C: empty")
+//         break
+//     default:
+//         alert("No gate " + String(gate))
+// }
+// if (win) 
+// {
+//     alert("Winner!");
+// }
     
 
+let temperatures;
+let sum;
+let meanTemp;
+temperatures = [12, 12, 11, 11, 10, 9, 9, 10, 12, 13, 15, 18, 21, 24, 24, 23, 25, 25, 23, 21, 20, 19, 17, 16];sum = 0;
+// for (let i = 0; i < temperatures.length; i++) 
+// {
+//     sum += temperatures[i];
+// }
+// meanTemp = sum / temperatures.length;
+// console.log(`mean: ${meanTemp}`);
+getMenTemp(temperatures)
+console.log("---------------")
+temperatures = [17, 16, 14, 12, 10, 10, 10, 11, 13, 14, 15, 17, 22, 27, 29, 29, 27, 26, 24, 21, 19, 18, 17, 16];
+// sum = 0;
+// for (let i = 0; i < temperatures.length; i++) 
+// {
+//     sum += temperatures[i];
+// }
+// meanTemp = sum / temperatures.length;
+// console.log(`mean: ${meanTemp}`);
+getMenTemp(temperatures)
+
+function getMenTemp(temperatures)
+{
+    sum = 0;
+    for (let i = 0; i < temperatures.length; i++) 
+    {
+        sum += temperatures[i]
+    }
+    meanTemp = sum / temperatures.length
+    console.log(`mean: ${meanTemp}`)
+}
