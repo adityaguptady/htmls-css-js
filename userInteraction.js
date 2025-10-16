@@ -534,19 +534,19 @@ function promptDialogExample()
 // }
     
 
-let temperatures;
-let sum;
-let meanTemp;
-temperatures = [12, 12, 11, 11, 10, 9, 9, 10, 12, 13, 15, 18, 21, 24, 24, 23, 25, 25, 23, 21, 20, 19, 17, 16];sum = 0;
+// let temperatures;
+// let sum;
+// let meanTemp;
+// temperatures = [12, 12, 11, 11, 10, 9, 9, 10, 12, 13, 15, 18, 21, 24, 24, 23, 25, 25, 23, 21, 20, 19, 17, 16]
 // for (let i = 0; i < temperatures.length; i++) 
 // {
 //     sum += temperatures[i];
 // }
 // meanTemp = sum / temperatures.length;
 // console.log(`mean: ${meanTemp}`);
-getMenTemp(temperatures)
-console.log("---------------")
-temperatures = [17, 16, 14, 12, 10, 10, 10, 11, 13, 14, 15, 17, 22, 27, 29, 29, 27, 26, 24, 21, 19, 18, 17, 16];
+// getMenTemp(temperatures)
+// console.log("---------------")
+// temperatures = [17, 16, 14, 12, 10, 10, 10, 11, 13, 14, 15, 17, 22, 27, 29, 29, 27, 26, 24, 21, 19, 18, 17, 16];
 // sum = 0;
 // for (let i = 0; i < temperatures.length; i++) 
 // {
@@ -554,7 +554,90 @@ temperatures = [17, 16, 14, 12, 10, 10, 10, 11, 13, 14, 15, 17, 22, 27, 29, 29, 
 // }
 // meanTemp = sum / temperatures.length;
 // console.log(`mean: ${meanTemp}`);
-getMenTemp(temperatures)
+// getMenTemp(temperatures)
+
+// function getMenTemp(temperatures)
+// {
+//     sum = 0;
+//     for (let i = 0; i < temperatures.length; i++) 
+//     {
+//         sum += temperatures[i]
+//     }
+//     meanTemp = sum / temperatures.length
+//     console.log(`mean: ${meanTemp}`)
+// }
+
+// showName()
+// function showName() 
+// {
+//     console.log(name)
+// }
+//let name = "Alice"
+//var name = "Alice"
+
+// let name = "Alice"
+// function showName()
+// {
+//     console.log(name);
+// }
+// showName()
+
+// function sayHello()
+// {
+//   	console.log("Hello, world!");
+// }
+// console.log("About to call the function...");
+// sayHello(); 
+// console.log("Function call finished.");
+// function showMessage() 
+// {
+//     alert( 'Hello everyone!')
+// }
+// showMessage();
+
+// let userName = 'John';
+// function showMessage() 
+// {
+//   let message = 'Hello, ' + userName
+//   console.log("Message: ", message)
+// }
+// showMessage()
+// //console.log("Message: ", message)
+// console.log("userName: ", userName)
+
+// function showMsg()
+// {
+//     console.log("message 2")
+//     return
+//     console.log("message 3")
+// }
+// console.log("message 1")
+// showMsg()
+// console.log("message 4")
+
+// function getTrue() 
+// {
+//    	return true
+// }
+// let test = getTrue()
+// console.log(test)
+// if(test)
+// {
+//     console.log("Yay!")
+// }
+// else
+// {
+//     console.log("Oh No!")
+// }
+let temperatures;
+let sum;
+let meanTemp;
+temperatures = [12, 12, 11, 11, 10, 9, 9, 10, 12, 13, 15, 18, 21, 24, 24, 23, 25, 25, 23, 21, 20, 19, 17, 16]
+console.log("Mean Temp: ", getMenTemp(temperatures))
+console.log("---------------")
+temperatures = [17, 16, 14, 12, 10, 10, 10, 11, 13, 14, 15, 17, 22, 27, 29, 29, 27, 26, 24, 21, 19, 18, 17, 16];
+meanTemp = getMenTemp(temperatures)
+console.log("Mean Temp: ", meanTemp)
 
 function getMenTemp(temperatures)
 {
@@ -563,6 +646,6 @@ function getMenTemp(temperatures)
     {
         sum += temperatures[i]
     }
-    meanTemp = sum / temperatures.length
-    console.log(`mean: ${meanTemp}`)
+    //meanTemp = sum / temperatures.length
+    return sum / temperatures.length
 }
