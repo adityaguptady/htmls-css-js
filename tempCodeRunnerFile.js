@@ -1,1 +1,4 @@
-console.log("Mean Temp: ", getMenTemp(temperatures))
+let sm = showMessage
+console.log("sm: ", sm)
+sm()
+showMessage()

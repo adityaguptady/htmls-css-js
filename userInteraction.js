@@ -629,23 +629,106 @@ function promptDialogExample()
 // {
 //     console.log("Oh No!")
 // }
-let temperatures;
-let sum;
-let meanTemp;
-temperatures = [12, 12, 11, 11, 10, 9, 9, 10, 12, 13, 15, 18, 21, 24, 24, 23, 25, 25, 23, 21, 20, 19, 17, 16]
-console.log("Mean Temp: ", getMenTemp(temperatures))
-console.log("---------------")
-temperatures = [17, 16, 14, 12, 10, 10, 10, 11, 13, 14, 15, 17, 22, 27, 29, 29, 27, 26, 24, 21, 19, 18, 17, 16];
-meanTemp = getMenTemp(temperatures)
-console.log("Mean Temp: ", meanTemp)
+// let temperatures;
+// let sum;
+// let meanTemp;
+// temperatures = [12, 12, 11, 11, 10, 9, 9, 10, 12, 13, 15, 18, 21, 24, 24, 23, 25, 25, 23, 21, 20, 19, 17, 16]
+// console.log("Mean Temp: ", getMenTemp(temperatures))    //temperatures -> argument
+// console.log("---------------")
+// temperatures = [17, 16, 14, 12, 10, 10, 10, 11, 13, 14, 15, 17, 22, 27, 29, 29, 27, 26, 24, 21, 19, 18, 17, 16];
+// meanTemp = getMenTemp(temperatures)
+// console.log("Mean Temp: ", meanTemp)
 
-function getMenTemp(temperatures)
+// function getMenTemp(temp)   //temp -> parameter
+// {
+//     let a = 0;
+//     sum = 0;
+//     for (let i = 0; i < temp.length; i++) 
+//     {
+//         sum += temp[i]
+//     }
+//     //meanTemp = sum / temperatures.length
+//     return sum / temp.length
+// }
+
+// function add(first, second) 
+// {
+//     console.log("First Param: ", first)
+//     console.log("Second Param: ", second)
+//   	return first + second
+// }
+// let result = add(7, 5)
+// console.log(result)
+
+// function checkAge(name, age, contact)
+// {
+//     console.log("Name : ", name)
+//     console.log("age : ", age)
+//     console.log("contact : ", contact)
+//     if(age>=18)
+//     {
+//         console.log("You can vote now!")
+//     }
+//     else
+//     {
+//         console.log("Oh no, you have to wait to vote!")
+//     }
+// }
+// checkAge(10, 9876543210, "Aditya")
+// checkAge("Aditya", 10, 9876543210)
+
+// let names = ["Alice", "Bob", "Eve", "John"];
+// let name = getElement(names, 2)
+// console.log(name); 
+
+// function getElement(array, index)
+// {
+//     return array[index]
+// }
+
+// let count = 0
+// console.log("count from global: ", count)
+// syaHello()
+// console.log("count from global: ", count)
+// function syaHello()
+// {
+//     let count = 10  // shadows the global variable inside the function
+//     console.log("count from function: ", count)
+// }
+
+// function add(first, second) 
+// {
+//     return first + second
+// }
+// let first = 10, second = 20, third = 40, fourth = 80
+// console.log(add(first, second))//
+// console.log(add(second, third))
+// console.log(add(third, fourth))
+
+// let a = 100, b = 200, c = 300;
+// //global scope -> parent
+// function test(a) 
+// {
+//     //local scope -> child
+//     let b = 10;
+//     console.log(a)
+//     console.log(b)
+//     console.log(c)
+// }
+// test(1)
+// console.log(a);
+// console.log(b); 
+// console.log(c); 
+
+function showMessage(message) 
 {
-    sum = 0;
-    for (let i = 0; i < temperatures.length; i++) 
-    {
-        sum += temperatures[i]
-    }
-    //meanTemp = sum / temperatures.length
-    return sum / temperatures.length
+    console.log(`Message: ${message}`);
 }
+console.log(showMessage)
+
+let sm = showMessage
+console.log("sm: ", sm)
+sm("sm")
+showMessage("Show Message")
+
+
