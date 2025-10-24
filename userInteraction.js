@@ -720,15 +720,73 @@ function promptDialogExample()
 // console.log(b); 
 // console.log(c); 
 
-function showMessage(message) 
+// function showMessage(message) 
+// {
+//     console.log(`Message: ${message}`);
+// }
+// console.log(showMessage)
+
+// let sm = showMessage
+// console.log("sm: ", sm)
+// sm("sm")
+// showMessage("Show Message")
+
+// function doNothing() 
+// {
+//     return undefined
+// }
+
+// let a = doNothing(); // assign result of function call
+// let b = doNothing;   // assign a function
+// console.log(typeof a); // -> undefined
+// console.log(typeof b); // -> function
+
+function add(a, b) 
 {
-    console.log(`Message: ${message}`);
+    if (typeof a !== "number" || typeof b !== "number") 
+    {
+        return "Invalid input: numbers expected";
+   	}
+  	return a + b;
 }
-console.log(showMessage)
+console.log(operation(add, "ten", 20))
+console.log(operation(add, 10, "Twenty"))
+function multiply(a, b) 
+{
+ 	return a * b;
+}
+function operation(func, first, second) 
+{
+ 	return func(first, second);
+}
+console.log(operation(add, 10, 20))//30 
+console.log(operation(function(a,b)
+{
+    return a + b
+}, 40, 60))//30 
+console.log(operation(multiply, 10, 20))//200
 
-let sm = showMessage
-console.log("sm: ", sm)
-sm("sm")
-showMessage("Show Message")
 
+//Named function expression
+// let myAdd = function(a, b) 
+// {
+//     return a + b;
+// }
 
+// console.log(myAdd(20, 40))
+
+// function getMeanTemp(temperatures) 
+// {
+//     if (!(temperatures instanceof Array)) 
+//     {
+//         return NaN;
+//     }
+//     let sum = 0;
+//     for (let i = 0; i < temperatures.length; i++) 
+//     {
+//     	sum += temperatures[i];
+//     }
+//    	return sum / temperatures.length;
+// }
+// console.log(getMeanTemp([10, 20, 30])); 
+// console.log(getMeanTemp("not an array")); 
