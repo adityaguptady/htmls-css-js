@@ -741,30 +741,30 @@ function promptDialogExample()
 // console.log(typeof a); // -> undefined
 // console.log(typeof b); // -> function
 
-function add(a, b) 
-{
-    if (typeof a !== "number" || typeof b !== "number") 
-    {
-        return "Invalid input: numbers expected";
-   	}
-  	return a + b;
-}
-console.log(operation(add, "ten", 20))
-console.log(operation(add, 10, "Twenty"))
-function multiply(a, b) 
-{
- 	return a * b;
-}
-function operation(func, first, second) 
-{
- 	return func(first, second);
-}
-console.log(operation(add, 10, 20))//30 
-console.log(operation(function(a,b)
-{
-    return a + b
-}, 40, 60))//30 
-console.log(operation(multiply, 10, 20))//200
+// function add(a, b) 
+// {
+//     if (typeof a !== "number" || typeof b !== "number") 
+//     {
+//         return "Invalid input: numbers expected";
+//    	}
+//   	return a + b;
+// }
+// console.log(operation(add, "ten", 20))
+// console.log(operation(add, 10, "Twenty"))
+// function multiply(a, b) 
+// {
+//  	return a * b;
+// }
+// function operation(func, first, second) 
+// {
+//  	return func(first, second);
+// }
+// console.log(operation(add, 10, 20))//30 
+// console.log(operation(function(a,b)
+// {
+//     return a + b
+// }, 40, 60))//30 
+// console.log(operation(multiply, 10, 20))//200
 
 
 //Named function expression
@@ -790,3 +790,51 @@ console.log(operation(multiply, 10, 20))//200
 // }
 // console.log(getMeanTemp([10, 20, 30])); 
 // console.log(getMeanTemp("not an array")); 
+
+// let inner = function() 
+// {
+//   	console.log('inner 1')
+// }
+// let outer = function(callback) 
+// {
+//  	console.log('outer 1')
+//   	callback()
+//    	console.log('outer 2')
+// }
+// console.log('test 1')
+// outer(inner)
+// console.log('test 2')
+
+// test 1
+// outer 1
+// inner 1
+// outer 2
+// test 2
+
+// function calculate(a, b, operation) 
+// {
+//     return operation(a, b)
+// }
+// function add(x, y) 
+// {
+//     return x + y
+// }
+// function subtract(x, y) 
+// {
+//    	return x - y
+// }
+// console.log(calculate(5, 3, add))
+// console.log(calculate(5, 3, subtract))
+
+console.log("Start")
+setTimeout(function() 
+{
+  	console.log("This runs after 1 second");
+}, 1000)
+console.log("End")
+
+/*
+Start
+End
+This runs after 1 second
+*/
