@@ -826,15 +826,33 @@ function promptDialogExample()
 // console.log(calculate(5, 3, add))
 // console.log(calculate(5, 3, subtract))
 
-console.log("Start")
-setTimeout(function() 
-{
-  	console.log("This runs after 1 second");
-}, 1000)
-console.log("End")
+// console.log("Start")
+// setTimeout(function() 
+// {
+//   	console.log("This runs after 1 second");
+// }, 1000)
+// console.log("End")
 
 /*
 Start
 End
 This runs after 1 second
 */
+
+// let counter = 0
+// console.log("Start")
+// let intervalId = setInterval(function() 
+// {
+//    	console.log("Repeating:", ++counter)
+// }, 1000)
+// setTimeout(function() 
+// {
+//    	clearInterval(intervalId);
+//    	console.log("Stopped");
+// }, 5500)
+// console.log("End!")
+
+window.addEventListener("click", function() 
+{
+    console.log("clicked!")
+})
