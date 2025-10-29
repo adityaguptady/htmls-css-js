@@ -852,7 +852,69 @@ This runs after 1 second
 // }, 5500)
 // console.log("End!")
 
-window.addEventListener("click", function() 
+// window.addEventListener("click", function() 
+// {
+//     console.log("clicked!")
+// })
+
+// let evenArray = []
+// for(let count = 0; count<array.length; count++)
+// {
+//     if(array[count] %2 === 0)
+//     {
+//         evenArray.push(array[count])
+//     }
+// }
+// let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// let evenArray = array.filter(function(element)
+// {
+//     if(element %2 === 1)
+//     {
+//         return true
+//     }
+//     return false
+// })
+
+// console.log(array)
+// console.log(evenArray)
+
+// let array = ["Aditya", "Sandeep", "Diksha", "George", "Chandresh", "Anjali", "Kuljot"]
+//Aditya, Diksha, Chandresh
+
+// let newArray = array.filter(function(element)
+// {
+//     return element !== "Aditya" && element !== "Diksha" && element !== "Chandresh"
+// })
+// console.log(newArray)
+
+//Aditya => Aditya Gupta
+
+// let newArray = array.map(function(element)
+// {
+//     if(element === "Aditya")
+//         return "Aditya Gupta"
+//     return element+"--"
+// })
+// console.log(array)
+// console.log(newArray)
+
+// let array1= [10, 20, 30, 40, 50, 60, 70]
+
+// let newArray1 = array1.map(function(element)
+// {
+//     return element+2
+// })
+// console.log(array1)
+// console.log(newArray1)
+
+function sum(a, b)
 {
-    console.log("clicked!")
-})
+    return a+b
+}
+
+console.log(sum(5, 3))
+let newSum = (a,b) => 
+{ 
+    return a+b 
+}
+console.log(newSum(5, 4))
