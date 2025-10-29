@@ -907,14 +907,64 @@ This runs after 1 second
 // console.log(array1)
 // console.log(newArray1)
 
-function sum(a, b)
-{
-    return a+b
-}
+// function sum(a, b)
+// {
+//     return a+b
+// }
 
-console.log(sum(5, 3))
-let newSum = (a,b) => 
-{ 
-    return a+b 
+// console.log(sum(5, 3))
+// let newSum = (a,b) => 
+// { 
+//     return a+b 
+// }
+// console.log(newSum(5, 4))
+
+// let names = ['Alice', 'Eve', 'John']
+// function showName(element) 
+// {
+//     console.log(element)
+// }
+
+// let showName = (element) => console.log(element)
+// names.forEach(showName) // -> Alice, Eve, John
+// showName("Aditya")
+
+// let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// let myFunction = (element) => console.log(element+11)
+// array.forEach(myFunction)
+// console.log(array)
+
+// let square = x => x * x
+// console.log(square(5))
+
+function factorial(n) 
+{
+    return n > 1 ? n * factorial(n - 1) : 1
 }
-console.log(newSum(5, 4))
+// function factorial(n) 
+// {
+//     let result = 1;
+//     while (n > 1) 
+//     {
+//         result *= n;
+//         n--;
+//      }
+//     return result;
+// }
+console.log(factorial(5))
+/*
+120
+n => 5
+returns => 5 * 24
+               n = 4
+               returns => 4 * 6
+                              n = 3
+                              returns => 3 * 2
+                                             n = 2
+                                             returns => 2 * 1
+                                                            n = 1
+                                                            returns => 1
+
+
+
+*/
