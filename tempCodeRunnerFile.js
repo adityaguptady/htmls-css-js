@@ -1,1 +1,1 @@
-newSum
+console.log(count++)

@@ -937,10 +937,10 @@ This runs after 1 second
 // let square = x => x * x
 // console.log(square(5))
 
-function factorial(n) 
-{
-    return n > 1 ? n * factorial(n - 1) : 1
-}
+// function factorial(n) 
+// {
+//     return n > 1 ? n * factorial(n - 1) : 1
+// }
 // function factorial(n) 
 // {
 //     let result = 1;
@@ -951,7 +951,7 @@ function factorial(n)
 //      }
 //     return result;
 // }
-console.log(factorial(5))
+// console.log(factorial(5))
 /*
 120
 n => 5
@@ -964,7 +964,25 @@ returns => 5 * 24
                                              returns => 2 * 1
                                                             n = 1
                                                             returns => 1
-
-
-
 */
+
+// Write a program that will print out (to the console) consecutive integers 10 times, in two-second intervals (start with the number 1). Use the functions setInterval, clearInterval and setTimeout. 
+// Example of use and expected results:1,2,3,4,5,6,7,8,9,10.
+// 1-> print consicutive number till 10
+// 2-> every number should be printed with 2 sec interval
+// 
+// for(let count = 1; count<=10; count++)
+// {
+//     setTimeout(function(){
+//         console.log(count)
+//     }, 2 * 1000)
+// }
+
+let count = 1
+let intervalID = setInterval(() => {
+    console.log(count++)
+}, 1000);
+
+setTimeout(() => {
+    clearInterval(intervalID)
+}, (10 * 1000)+100);
