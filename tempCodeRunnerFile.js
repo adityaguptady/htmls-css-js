@@ -1,1 +1,1 @@
-console.log(count++)
+lg

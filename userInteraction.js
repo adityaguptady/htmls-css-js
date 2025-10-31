@@ -978,11 +978,30 @@ returns => 5 * 24
 //     }, 2 * 1000)
 // }
 
-let count = 1
-let intervalID = setInterval(() => {
-    console.log(count++)
-}, 1000);
+// let count = 1
+// let intervalID = setInterval(() => {
+//     console.log(count++)
+// }, 1000);
 
-setTimeout(() => {
-    clearInterval(intervalID)
-}, (10 * 1000)+100);
+// setTimeout(() => {
+//     clearInterval(intervalID)
+// }, (10 * 1000)+100);
+
+// try
+// {
+//     console.log("Starting of Try")
+//     let a = 10
+//     console.log(a/0)
+//     console.log("Ending of Try")
+// }
+// catch(error)
+// {
+//     console.log("Hey that crashed, no issues, please check the code again and try!")
+// }
+
+let value = 100 * "xyz";
+console.log("Value: ", value)
+if (isNaN(value)) 
+{
+    console.log("Error: Result is not a number."); 
+}
