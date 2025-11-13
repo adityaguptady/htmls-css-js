@@ -999,9 +999,94 @@ returns => 5 * 24
 //     console.log("Hey that crashed, no issues, please check the code again and try!")
 // }
 
-let value = 100 * "xyz";
-console.log("Value: ", value)
-if (isNaN(value)) 
+// let value = 100 * "xyz";
+// console.log("Value: ", value)
+// if (isNaN(value)) 
+// {
+//     console.log("Error: Result is not a number."); 
+//     //Try again function
+// }
+
+// let array = 1//[1, 2, 3, 4, 5]
+// if(array instanceof Array)
+// {
+//     console.log("Yes, we got the Array")
+// }
+// else
+// {
+//     console.log("Error: Not an array!!!")
+// }
+
+// let a = -2
+// try 
+// {
+//     a = 2
+// } 
+// catch(error)
+// {
+//     if (error instanceof ReferenceError)
+//     {
+//         console.log("Reference error, reset a to -2")
+//         a = -2
+//    	}
+//     else
+//     {
+//         console.log("Other error - " + error);
+//     }
+// }
+// console.log(a)
+
+// let a = 10;
+// try 
+// {
+//     a = b;
+// }
+// catch(error)
+// {
+//     console.log("Error: ", error)
+// }
+// finally 
+// {
+//     console.log("Finally: ", a);
+// }
+// console.log("Outside:", a)
+
+// let a = 10;
+// try 
+// {
+//     a = b; 
+// } 
+// catch(error) 
+// {
+//     try 
+//     {
+//    	    console.log(b);
+//     } 
+//     catch(error2)
+//     {
+//      	console.log("Second catch!", error2); 
+//     }
+// } 
+// finally 
+// {
+//     console.log("Finally!"); 
+// }
+
+// console.log("start");
+// throw 100;
+// console.log("end");
+
+// console.log("start");
+// throw ReferenceError("This is my Custom Reference Error!!!")
+// console.log("end");
+
+console.log("start"); 
+try 
 {
-    console.log("Error: Result is not a number."); 
+    throw 100;
+} 
+catch (error) 
+{
+    console.log(error); 
 }
+console.log("end"); 
