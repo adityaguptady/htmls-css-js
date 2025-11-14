@@ -1,31 +1,31 @@
 // All JavaScript code will come here
-console.log("This is a sample JavaScript code inside my webpage!")
+// console.log("This is a sample JavaScript code inside my webpage!")
 
-function helloWorld()
-{
-    console.log("Hello World!")
-}
+// function helloWorld()
+// {
+//     console.log("Hello World!")
+// }
 
-function confirmDialog()
-{
-    let decision = window.confirm("Is it OK?")
-    console.log(decision)
-}
+// function confirmDialog()
+// {
+//     let decision = window.confirm("Is it OK?")
+//     console.log(decision)
+// }
 
-function confirmDialog1()
-{
-    let remove = confirm("Remove all data?")
-    let message = remove ? "Deleting Data" : "Cancelled"
-    console.log(message)
-}
+// function confirmDialog1()
+// {
+//     let remove = confirm("Remove all data?")
+//     let message = remove ? "Deleting Data" : "Cancelled"
+//     console.log(message)
+// }
 
-function promptDialogExample()
-{
-    let name = window.prompt("What is your name?", "Aditya")
-    name = name ? name : "anonymous"
-    let age = prompt("Hello " + name + ", how old are you?")
-    alert(name + " is " + age + " years old")
-}
+// function promptDialogExample()
+// {
+//     let name = window.prompt("What is your name?", "Aditya")
+//     name = name ? name : "anonymous"
+//     let age = prompt("Hello " + name + ", how old are you?")
+//     alert(name + " is " + age + " years old")
+// }
 
 // let isUserReady = confirm("Are you ready?")
 // console.log(isUserReady)
@@ -1080,13 +1080,80 @@ returns => 5 * 24
 // throw ReferenceError("This is my Custom Reference Error!!!")
 // console.log("end");
 
-console.log("start"); 
-try 
+// console.log("start"); 
+// try 
+// {
+//     throw 100;
+// } 
+// catch (error) 
+// {
+//     console.log(error); 
+// }
+// console.log("end"); 
+// function factorial(n) 
+// {
+//     if (n > 20) 
+//     {
+//         throw new RangeError("Max value 20");
+//     }
+
+//     let result = 1
+//     for (; n > 1; n--) 
+//     {
+//         result = result * n
+//    	}
+//     return result;
+// }
+
+// console.log(factorial(3))
+// console.log(factorial(5))
+// console.log(factorial(8))
+// console.log(factorial(20))
+// console.log(factorial(1000))
+
+// function average(a, b) 
+// {
+//     return a + b / 2;
+// }
+// console.log(average(2, 10));   
+// console.log(average(5, 5)); 
+
+// function largest(a, b, c) 
+// {
+//     if (a > b && a > c) 
+//     {
+//         return a;
+//     } 
+//     else if (b > a && b > c) 
+//     {
+//         return b;
+//     } 
+//     else 
+//     {
+//         return c;
+//     }
+// }
+// console.log(largest(1, 1, 2)); 
+// console.log(largest(1, 2, 3)); 
+// console.log(largest(3, 2, 1)); 
+// console.log(largest(2, 2, 1)); //failed
+
+// console.log("Before debugger");
+// debugger;
+// console.log("After debugger");
+function outer() 
 {
-    throw 100;
-} 
-catch (error) 
-{
-    console.log(error); 
+    let name = "outer";
+    let str = inner();
+    return str;
 }
-console.log("end"); 
+
+function inner() 
+{
+    let name = "inner";
+    return "Hello !";
+}
+console.log("before outer() call");
+debugger;
+console.log(outer());
+console.log("after outer() call");
