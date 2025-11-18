@@ -1141,19 +1141,30 @@ returns => 5 * 24
 // console.log("Before debugger");
 // debugger;
 // console.log("After debugger");
-function outer() 
-{
-    let name = "outer";
-    let str = inner();
-    return str;
-}
+// function outer() 
+// {
+//     let name = "outer";
+//     let str = inner();
+//     return str;
+// }
 
-function inner() 
+// function inner() 
+// {
+//     let name = "inner";
+//     name = "new game"
+//     return "Hello !";
+// }
+// console.log("before outer() call");
+// //debugger;
+// console.log(outer());
+// console.log("after outer() call");
+
+let part = 0;
+console.time("Leibniz")
+for (let k = 0; k < 10000000; k++) 
 {
-    let name = "inner";
-    return "Hello !";
+    part = part + ((-1) ** k) / (2 * k + 1)
 }
-console.log("before outer() call");
-debugger;
-console.log(outer());
-console.log("after outer() call");
+console.timeEnd("Leibniz")
+let pi = part * 4;
+console.log(pi); // -> 3.1415925535897915 
