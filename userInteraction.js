@@ -1159,12 +1159,30 @@ returns => 5 * 24
 // console.log(outer());
 // console.log("after outer() call");
 
-let part = 0;
-console.time("Leibniz")
-for (let k = 0; k < 10000000; k++) 
-{
-    part = part + ((-1) ** k) / (2 * k + 1)
-}
-console.timeEnd("Leibniz")
-let pi = part * 4;
-console.log(pi); // -> 3.1415925535897915 
+// let part = 0;
+// console.time("Leibniz")
+// for (let k = 0; k < 10000000; k++) 
+// {
+//     part = part + ((-1) ** k) / (2 * k + 1)
+// }
+// console.timeEnd("Leibniz")
+// let pi = part * 4;
+// console.log(pi); // -> 3.1415925535897915 
+
+// let end = 2; 
+// for(let i=1; i<end; i++)
+// { 
+//     console.log(i); 
+// }
+
+let counter = 0; 
+let maxValue = 10; 
+let result = 1; 
+debugger; 
+for (counter = 0; counter < maxValue; counter++) 
+{ 
+    console.log(result); 
+    result *= maxValue - counter - 1; 
+} 
+ 
+console.log("Final result: ", result);
