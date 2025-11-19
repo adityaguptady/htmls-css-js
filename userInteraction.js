@@ -1175,14 +1175,93 @@ returns => 5 * 24
 //     console.log(i); 
 // }
 
-let counter = 0; 
-let maxValue = 10; 
-let result = 1; 
-debugger; 
-for (counter = 0; counter < maxValue; counter++) 
-{ 
-    console.log(result); 
-    result *= maxValue - counter - 1; 
-} 
+// let counter = 0; 
+// let maxValue = 10; 
+// let result = 1; 
+// debugger; 
+// for (counter = 0; counter < maxValue; counter++) 
+// { 
+//     console.log(result); 
+//     result *= maxValue - counter - 1; 
+// } 
  
-console.log("Final result: ", result);
+// console.log("Final result: ", result);
+
+// console.log(typeof 2.5); 
+// console.log(typeof "one two three"); 
+// console.log(typeof false);
+// let nr = 2.5; 
+// nr = nr / 2;
+// console.log("nr:", nr);
+// console.log(typeof nr);
+
+// let a = [10, 20, "en to tre", true, 50]
+// a[4] = a[4] * 2;
+// console.log(a[0]);  
+// console.log(a[2]);  
+// console.log(a[4]);  
+// console.log(a)
+// console.log(typeof a)
+
+// let sampleObject = 
+// {
+//     id: 10, 
+//     delay: 20,
+//     name: "en to tre",
+//     isPresent: true,
+//     delay: 50
+// }
+// sampleObject.delay = sampleObject.delay * 2;
+// console.log(sampleObject.id);   
+// console.log(sampleObject.name); 
+// console.log(sampleObject.delay);
+
+// let contact = {}
+// console.log("Contact: ", contact)
+// console.log(typeof contact)
+// contact.tel = "207-662-5412";
+// console.log(contact);
+// console.log(contact.tel);
+// console.log("Contact: ", contact)
+// console.log(typeof contact)
+
+// contact["#code"] = 123
+// console.log(contact["#code"])//flexibility
+
+// contact["email.work"] = "abc@work.com"
+// contact["email.personal"] = "def@work.com"
+
+//console.log(contact"email.work")
+// console.log(contact["email.work"])
+// console.log(contact["email.personal"])
+
+//contact.first name = "Aditya"
+// contact["first name"] = "Aditya"
+// console.log(contact["first name"])
+
+// let contact = 
+// {
+//     email_1: "RonaldSMurphy@freepost.org",
+//     email_2: "rsmurphy@briazz.com"
+// };
+// for(i=1; i<=2; i++) 
+// {
+//     let key = "email_" + i;
+//     console.log(key);
+//     console.log(contact[key]);
+// }
+
+let contact = {}
+let email = prompt("Enetr email....")
+let count = 1
+while(email)
+{
+    contact["email_"+count] = email
+    count++
+    email = prompt("Enetr email....")
+}
+console.log("contact: ", contact)
+for(let count1 = 1; count1<=Object.keys(contact).length; count1++)
+{
+    console.log(contact["email_"+count1])
+}
