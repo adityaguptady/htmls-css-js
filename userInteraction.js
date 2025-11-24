@@ -1251,17 +1251,86 @@ returns => 5 * 24
 //     console.log(contact[key]);
 // }
 
-let contact = {}
-let email = prompt("Enetr email....")
-let count = 1
-while(email)
+// let contact = {}
+// let email = prompt("Enter email....")
+// let count = 1
+// while(email)
+// {
+//     contact["email_"+count] = email
+//     count++
+//     email = prompt("Enter email....")
+// }
+// console.log("contact: ", contact)
+// for(let count1 = 1; count1<=Object.keys(contact).length; count1++)
+// {
+//     console.log(contact["email_"+count1])
+// }
+
+// let test = 
+// {
+//     nr: 10, 
+//     b: false, 
+//     str: "uno dos tres", 
+//     arr: [10, 20, 30], 
+//     obj: {
+//         x: 10, 
+//         y: 20
+//     }, 
+//     fn: function(arg) {console.log(arg)} 
+// };
+// test.fn(123)
+// console.log("1 index:", test.arr[1])
+// console.log("Y from object of object: ", test.obj.y)
+// console.log("String form object: ", test.str)
+// console.log("Number form object: ", test.nr)
+// console.log("Boolean form object: ", test.b)
+
+// let point = 
+// {
+//     x: 0,
+//     y: 0,
+//     moveHorizontally: function(distance) 
+//     {
+//         this.x = this.x + distance;
+//     },
+//     moveVertically: function(distance) 
+//     {
+//         this.y = this.y + distance;
+//     }
+// }
+// console.log(point.x)
+// point.moveHorizontally(30);
+// console.log(point.x)
+
+let contact = 
 {
-    contact["email_"+count] = email
-    count++
-    email = prompt("Enetr email....")
-}
-console.log("contact: ", contact)
-for(let count1 = 1; count1<=Object.keys(contact).length; count1++)
+    tel: "207-662-5412",
+    email: "RonaldSMurphy@freepost.org"
+};
+console.log("tel:" , contact.tel)
+console.log("email:" , contact.email)
+contact.email = ["RonaldSMurphy@freepost.org", "rsmurphy@briazz.com" ]
+console.log("email:" , contact.email[0])
+console.log("email:" , contact.email[1])
+contact.email = 
 {
-    console.log(contact["email_"+count1])
+    private: "RonaldSMurphy@freepost.org",
+    work: "rsmurphy@briazz.com" 
+};
+console.log("Work email:", contact.email.work)
+console.log("Private email:", contact.email.private)
+delete contact.email.work
+console.log("Work email:",contact.email.work)
+console.log("Private email:",contact.email.private)
+if(contact.email.work)
+{
+    console.log("This is if executing")
 }
+
+if("private" in contact.email)
+{
+    console.log("This is private email: ", contact.email.private)
+}
+//primitive
+//Falsy values: "", undefined, null, 0, [], {}
+//Truthy values: " ", 1, {one: 1}, [1]

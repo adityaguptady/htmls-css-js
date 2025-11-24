@@ -1,2 +1,1 @@
-email.work"])
-console.log(contact["email.personal"
+console.log("This is if executing")
