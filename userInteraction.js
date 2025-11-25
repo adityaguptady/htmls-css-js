@@ -1302,35 +1302,84 @@ returns => 5 * 24
 // point.moveHorizontally(30);
 // console.log(point.x)
 
-let contact = 
-{
-    tel: "207-662-5412",
-    email: "RonaldSMurphy@freepost.org"
-};
-console.log("tel:" , contact.tel)
-console.log("email:" , contact.email)
-contact.email = ["RonaldSMurphy@freepost.org", "rsmurphy@briazz.com" ]
-console.log("email:" , contact.email[0])
-console.log("email:" , contact.email[1])
-contact.email = 
-{
-    private: "RonaldSMurphy@freepost.org",
-    work: "rsmurphy@briazz.com" 
-};
-console.log("Work email:", contact.email.work)
-console.log("Private email:", contact.email.private)
-delete contact.email.work
-console.log("Work email:",contact.email.work)
-console.log("Private email:",contact.email.private)
-if(contact.email.work)
-{
-    console.log("This is if executing")
-}
+// let contact = 
+// {
+//     tel: "207-662-5412",
+//     email: "RonaldSMurphy@freepost.org"
+// };
+// console.log("tel:" , contact.tel)
+// console.log("email:" , contact.email)
+// contact.email = ["RonaldSMurphy@freepost.org", "rsmurphy@briazz.com" ]
+// console.log("email:" , contact.email[0])
+// console.log("email:" , contact.email[1])
+// contact.email = 
+// {
+//     private: "RonaldSMurphy@freepost.org",
+//     work: "rsmurphy@briazz.com" 
+// }
+// console.log("Work email:", contact.email.work)
+// console.log("Private email:", contact.email.private)
+// delete contact.email.work
+// console.log("Work email:",contact.email.work)
+// console.log("Private email:",contact.email.private)
+// if(contact.email.work)
+// {
+//     console.log("This is if executing")
+// }
 
-if("private" in contact.email)
-{
-    console.log("This is private email: ", contact.email.private)
-}
+// if("private" in contact.email)
+// {
+//     console.log("This is private email: ", contact.email.private)
+// }
 //primitive
 //Falsy values: "", undefined, null, 0, [], {}
 //Truthy values: " ", 1, {one: 1}, [1]
+
+// const contact = 
+// {
+//     tel: "207-662-5412",
+//     email: "RonaldSMurphy@freepost.org"
+// }
+// for(x in contact)
+// {
+//     // print property name
+//    console.log(x)
+//    console.log(x+": "+contact[x])
+// }
+// let propArray = Object.keys(contact)
+// console.log("PropArray: ", propArray)
+
+// contact = {
+//     tel: "207-662-5412",
+//     email: "RonaldSMurphy@freepost.org"
+// }
+// contact.tel = "+91 9876543210"
+// console.log("contact.tel: ", contact.tel)
+// contact.name = "Aditya"
+// console.log("contact.name: ", contact.name)
+
+// var point1 = {x: 10, y: 20}
+// var point2 = {x: 10, y: 20}
+// console.log(point1 === point2)
+// let point3 = point1 //copying
+// console.log(point1 === point3) //true or false?
+// point1.x = 30
+// console.log("point1.x: ", point1.x)
+// console.log("point3.x: ", point3.x)
+
+let point0 = {x:10, y: 20 };
+let point1 = point0;    // copy reference
+let point2 = {};
+Object.assign(point2, point0);  //  copy properties into the new object
+console.log(point2.x);
+console.log(point2.y);
+
+point1.x = 30
+point1.y = 50
+console.log("point1.x: ", point1.x);
+console.log("point1.y: ", point1.y);
+console.log("point2.x: ", point2.x);
+console.log("point2.y: ", point2.y);
+
+console.log(point1 === point0); // true
+console.log(point1 === point2); // false
