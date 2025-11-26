@@ -1367,19 +1367,110 @@ returns => 5 * 24
 // console.log("point1.x: ", point1.x)
 // console.log("point3.x: ", point3.x)
 
-let point0 = {x:10, y: 20 };
-let point1 = point0;    // copy reference
-let point2 = {};
-Object.assign(point2, point0);  //  copy properties into the new object
-console.log(point2.x);
-console.log(point2.y);
+// let point0 = {x:10, y: 20 };
+// let point1 = point0;    // copy reference
+// let point2 = {};
+// Object.assign(point2, point0);  //  copy properties into the new object
+// console.log(point2.x);
+// console.log(point2.y);
 
-point1.x = 30
-point1.y = 50
-console.log("point1.x: ", point1.x);
-console.log("point1.y: ", point1.y);
-console.log("point2.x: ", point2.x);
-console.log("point2.y: ", point2.y);
+// point1.x = 30
+// point1.y = 50
+// console.log("point1.x: ", point1.x);
+// console.log("point1.y: ", point1.y);
+// console.log("point2.x: ", point2.x);
+// console.log("point2.y: ", point2.y);
 
-console.log(point1 === point0); // true
-console.log(point1 === point2); // false
+// console.log(point1 === point0); // true
+// console.log(point1 === point2); // false
+
+// let point3 = {};
+// Object.assign(point3, point0, {z: 100});
+// // console.log(point3.x)
+// // console.log(point3.y)
+// // console.log(point3.z)
+// console.log("point3: ", point3)
+
+// let point4 = {}
+// Object.assign(point4, point3, {z: 120, color: "Red"});
+// console.log("point4: ", point4)
+
+// let point5 = {}
+// point5 = { ...point4}
+// console.log("point5: ", point5)
+// console.log("point5 === point4: ", point5 === point4)
+// //...-> Spread operator
+// const arr1 = [1,2]
+// const arr2 = [3,4]
+// const combinedArray = [ ...arr1, ...arr2]
+// console.log("arr1", arr1)
+// console.log("arr2", arr2)
+// console.log("combinedArray", combinedArray)
+
+// const array1 = [1,2,3,4]
+// const resultArray = [ ...array1]
+// console.log("array1", array1)
+// console.log("resultArray", resultArray)
+
+// let resultArray1 = [ ...array1, 5, 6, 7, 8]
+// console.log("resultArray1", resultArray1)
+
+// resultArray1 = [ 5, 6, 7, 8, ...array1]
+// console.log("resultArray1", resultArray1)
+
+// resultArray1 = [ 5, 6, ...array1, 7, 8]
+// console.log("resultArray1", resultArray1)
+
+// function sum(a, b, c)
+// {
+//     return a + b +c
+// }
+
+// let numbers = [10, 12, 23]
+// const result = sum( ...numbers)
+// console.log("result:", result)
+
+// const string1 = "Aditya"
+// let charArray = [ ...string1]
+// console.log("charArray:", charArray)
+
+let deepClone = function(obj) 
+{
+    let newObj = {...obj};
+    for(property in newObj) 
+    {
+    	if(typeof newObj[property] === "object") 
+        {
+        	newObj[property] = deepClone(newObj[property]);
+    	}
+    }
+    return newObj;
+}
+
+let obj = {
+    x: 10, 
+    y: 20,
+    z:
+    {
+        a: 100,
+        b: 200
+    }
+}
+let obj1 = {}
+//Object.assign(obj1, obj)
+//obj1 = { ...obj}
+obj1 = deepClone(obj)
+console.log("obj:", obj)
+console.log("obj1:", obj1)
+console.log("obj === obj1:", obj === obj1)
+
+obj.z.a = 150
+obj.x = 15
+console.log("Changing obj.z.a to 150")
+console.log("Changing obj.x to 15")
+console.log("obj:", obj)
+console.log("obj1:", obj1)
+
+
+
+
