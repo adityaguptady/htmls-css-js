@@ -1434,43 +1434,106 @@ returns => 5 * 24
 // let charArray = [ ...string1]
 // console.log("charArray:", charArray)
 
-let deepClone = function(obj) 
+// let deepClone = function(obj) 
+// {
+//     let newObj = {...obj};
+//     for(property in newObj) 
+//     {
+//     	if(typeof newObj[property] === "object") 
+//         {
+//         	newObj[property] = deepClone(newObj[property]);
+//     	}
+//     }
+//     return newObj;
+// }
+
+// let obj = {
+//     x: 10, 
+//     y: 20,
+//     z:
+//     {
+//         a: 100,
+//         b: 200
+//     }
+// }
+// let obj1 = {}
+// //Object.assign(obj1, obj)
+// //obj1 = { ...obj}
+// obj1 = deepClone(obj)
+// console.log("obj:", obj)
+// console.log("obj1:", obj1)
+// console.log("obj === obj1:", obj === obj1)
+
+// obj.z.a = 150
+// obj.x = 15
+// console.log("Changing obj.z.a to 150")
+// console.log("Changing obj.x to 15")
+// console.log("obj:", obj)
+// console.log("obj1:", obj1)
+
+// let circle = 
+// {
+//     radius: 100,
+//     center: 
+//     {
+//         x:0,
+//         y:0
+// 	},
+//     // getType: function() 
+//     // {
+//     //    	return "circle";
+//  	// }
+//     getType() 
+//     {
+//        	//return "circle";
+//         return (typeof this.radius === "number") ? "circle" : "unknown"
+//  	},
+//     getRadius()
+//     {
+//         return this.radius
+//     }
+// };
+// console.log("circle.radius: ", circle.radius)
+// console.log("circle.center.x: ", circle.center.x)
+// console.log("getType(): ", circle.getType())
+// console.log("getType(): ", circle["getType"]())
+// console.log("getRadius(): ", circle.getRadius())
+// let circle1 = {...circle}
+// circle1.radius = "abc"
+// console.log("getRadius(): ", circle1.getRadius())
+// console.log("getType(): ", circle1.getType())
+// circle.radius:  100
+//circle.center.x:  0
+//getType():  circle
+
+
+let circle = 
 {
-    let newObj = {...obj};
-    for(property in newObj) 
+    radius: 100,
+    center: 
     {
-    	if(typeof newObj[property] === "object") 
+        x:0,
+        y:0,
+        show()
         {
-        	newObj[property] = deepClone(newObj[property]);
-    	}
+            console.log(`${this.x}, ${this.y}`)
+        }
     }
-    return newObj;
 }
 
-let obj = {
-    x: 10, 
-    y: 20,
-    z:
+circle.center.show()
+let user = 
+{
+    name: "Divya",
+    city: "abc",
+    address: 
     {
-        a: 100,
-        b: 200
-    }
-}
-let obj1 = {}
-//Object.assign(obj1, obj)
-//obj1 = { ...obj}
-obj1 = deepClone(obj)
-console.log("obj:", obj)
-console.log("obj1:", obj1)
-console.log("obj === obj1:", obj === obj1)
+    	city: "Indore",
+    	showCity() 
+        {
+     	    console.log("City is:", this.city);
+   		}
+ 	}
+};
 
-obj.z.a = 150
-obj.x = 15
-console.log("Changing obj.z.a to 150")
-console.log("Changing obj.x to 15")
-console.log("obj:", obj)
-console.log("obj1:", obj1)
-
-
-
-
+user.address.showCity();
