@@ -1507,33 +1507,79 @@ returns => 5 * 24
 //getType():  circle
 
 
-let circle = 
+// let circle = 
+// {
+//     radius: 100,
+//     center: 
+//     {
+//         x:0,
+//         y:0,
+//         show()
+//         {
+//             console.log(`${this.x}, ${this.y}`)
+//         }
+//     }
+// }
+
+// circle.center.show()
+// let user = 
+// {
+//     name: "Divya",
+//     city: "abc",
+//     address: 
+//     {
+//     	city: "Indore",
+//     	showCity() 
+//         {
+//      	    console.log("City is:", this.city);
+//    		}
+//  	}
+// };
+
+// user.address.showCity();
+
+// let contact = 
+// {
+//     _tel: "207-662-5412",//private
+//     get tel() 
+//     {
+//         console.log("Calling getter for _tel")
+//         return this._tel
+//     },
+//     set tel(t) 
+//     { 
+//         console.log("Setting tel!")
+//         this._tel = t
+//     }
+// };
+// console.log(contact.tel)    //getter is called
+// contact.tel = "100-100-1000"    //setter is called
+// console.log(contact.tel)    //getter is called
+// contact.email = "RonaldSMurphy@freepost.org"
+// console.log(contact.email)
+
+let contact = 
 {
-    radius: 100,
-    center: 
+    _age: 36,
+    _firstName : "David",
+    _lastName : "Taylor",
+    get fullName() 
     {
-        x:0,
-        y:0,
-        show()
-        {
-            console.log(`${this.x}, ${this.y}`)
-        }
+        return `${this._firstName} ${this._lastName}`;
+    },
+    get age()
+    { 
+        return this._age
+    },
+    set age(a) 
+    { 
+        if( a > 0) 
+            this._age = a
+        else
+            console.log("Setting age with invalid number is not allowed!")
     }
-}
-
-circle.center.show()
-let user = 
-{
-    name: "Divya",
-    city: "abc",
-    address: 
-    {
-    	city: "Indore",
-    	showCity() 
-        {
-     	    console.log("City is:", this.city);
-   		}
- 	}
 };
+console.log(contact.fullName)
+contact.age = -20
+console.log(contact.age)
 
-user.address.showCity();
