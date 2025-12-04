@@ -1638,15 +1638,57 @@ returns => 5 * 24
 // 	set age(a) { if( a > 0) this._age = a;}
 // };
 
-let createPoint  = function(x, y) 
-{
-    let obj = {};
-    obj.x = x;
-    obj.y = y;
-    return obj;
-};
+//let createPoint = (x,y)=> ({x, y})
+// = function(x, y) 
+// {
+//     // let obj = {};
+//     // obj.x = x;
+//     // obj.y = y;
+//     return {
+//         x:x,
+//         y:y
+//     }
+// };
 
-let point1 = createPoint(1,1);
-let point2 = createPoint(2,2);
-console.log("point1: ", point1); // ->  1
-console.log("point2: ", point2); // -> 2
+// let point1 = createPoint(1,1);
+// let point2 = createPoint(2,2);
+// console.log("point1: ", point1); // ->  1
+// console.log("point2: ", point2); // -> 2
+
+// let createColoredPoint  = function(x, y, color) 
+// {
+//     let _info = "... object under construction";
+//     let _color = color;
+//     console.log(_info);
+//     return {
+//         x,
+//         y,
+//         getColor()
+//         {return _color}
+//     }
+// };
+// let coloredPoint1 = createColoredPoint(1, 1, "red");// -> ... object under construction
+// let coloredPoint2 = createColoredPoint(2, 2, "green");// ->...object under construction 
+// console.log("coloredPoint1.getColor(): ", coloredPoint1.getColor());	// -> red
+// console.log("coloredPoint2.getColor(): ", coloredPoint2.getColor());	// -> green
+// console.log("coloredPoint1._color: ", coloredPoint1._color);   // -> undefined !!!
+
+
+let ColoredPoint = function(x, y, color) 
+{
+    let _info = "... object under construction";
+    let _color = color;
+    console.log(_info);
+
+    this.x = x;
+    this.y = y;
+    this.getColor = function() {return _color};
+};
+let coloredPoint1 = new ColoredPoint(1, 1, "red");
+let coloredPoint2 = new ColoredPoint(2, 2, "green"); 
+console.log(coloredPoint1.getColor());	// -> red
+console.log(coloredPoint2.getColor());	// -> green
+console.log(coloredPoint1._color);   // -> undefined !!!
+console.log("coloredPoint.constructor.name: ", coloredPoint1.constructor.name);
+console.log("coloredPoint.constructor: ", coloredPoint1.constructor);
+console.log("typeof coloredPoint.constructor: ", typeof coloredPoint1.constructor);
