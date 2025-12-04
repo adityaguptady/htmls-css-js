@@ -1674,21 +1674,85 @@ returns => 5 * 24
 // console.log("coloredPoint1._color: ", coloredPoint1._color);   // -> undefined !!!
 
 
-let ColoredPoint = function(x, y, color) 
-{
-    let _info = "... object under construction";
-    let _color = color;
-    console.log(_info);
+// let ColoredPoint = function(x, y, color) 
+// {
+//     let _info = "... object under construction";
+//     let _color = color;
+//     console.log(_info);
 
-    this.x = x;
-    this.y = y;
-    this.getColor = function() {return _color};
+//     this.x = x;
+//     this.y = y;
+//     this.getColor = function() {return _color};
+// };
+// let coloredPoint1 = new ColoredPoint(1, 1, "red");
+// let coloredPoint2 = new ColoredPoint(2, 2, "green"); 
+// console.log(coloredPoint1.getColor());	// -> red
+// console.log(coloredPoint2.getColor());	// -> green
+// console.log(coloredPoint1._color);   // -> undefined !!!
+// console.log("coloredPoint.constructor.name: ", coloredPoint1.constructor.name);
+// console.log("coloredPoint.constructor: ", coloredPoint1.constructor);
+// console.log("typeof coloredPoint.constructor: ", typeof coloredPoint1.constructor);
+
+// let reallyEmptyObject = Object.create(null);
+// console.log("reallyEmptyObject: ",reallyEmptyObject);
+// console.log("typeof reallyEmptyObject.constructor: ", typeof reallyEmptyObject.constructor);
+
+// let point = {
+//     x:0, 
+//     y:0,
+//     printX()
+//     {
+//         console.log("getter for x is called")
+//         return this.x
+//     }
+// };
+// let coloredPoint = {color: "red"};
+// console.log("point: ", point)
+// console.log("point.__proto__: ", point.__proto__)
+// console.log("coloredPoint: ", coloredPoint)
+// console.log("coloredPoint.__proto__: ", coloredPoint.__proto__)
+// console.log("Before changing proto of colouredPoint object")
+// console.log("coloredPoint.x: ", coloredPoint.x)
+// coloredPoint.__proto__ = point;
+
+// console.log("point: ", point)
+// console.log("point.__proto__: ", point.__proto__)
+// console.log("coloredPoint: ", coloredPoint)
+// console.log("coloredPoint.__proto__: ", coloredPoint.__proto__)
+
+// console.log("Object.getOwnPropertyNames(coloredPoint): ", Object.getOwnPropertyNames(coloredPoint));
+// console.log("coloredPoint.color: ", coloredPoint.color);
+// console.log("coloredPoint.x: ", coloredPoint.x);	
+
+// coloredPoint.x = 100;   // new property
+// console.log(coloredPoint.x);//
+// console.log(point.x);//
+// console.log(Object.getOwnPropertyNames(coloredPoint));	
+
+// point.y = 200;
+// console.log(coloredPoint.y);//
+// console.log(point.y);
+// console.log(point.printX())
+// console.log(coloredPoint.printX())
+
+let figure = 
+{
+    getType: function() 
+    {
+        return this.type ? this.type : "unknown";
+    }
 };
-let coloredPoint1 = new ColoredPoint(1, 1, "red");
-let coloredPoint2 = new ColoredPoint(2, 2, "green"); 
-console.log(coloredPoint1.getColor());	// -> red
-console.log(coloredPoint2.getColor());	// -> green
-console.log(coloredPoint1._color);   // -> undefined !!!
-console.log("coloredPoint.constructor.name: ", coloredPoint1.constructor.name);
-console.log("coloredPoint.constructor: ", coloredPoint1.constructor);
-console.log("typeof coloredPoint.constructor: ", typeof coloredPoint1.constructor);
+
+let circle = 
+{
+    type: "circle",
+    center: {x:0, y:0},
+    radius: 100
+};
+//circle.__proto__ = figure;//deprectaed
+let proto = Object.getPrototypeOf(circle);
+console.log("proto of circle:", proto)
+Object.setPrototypeOf(circle, figure);//modern / new solution
+proto = Object.getPrototypeOf(circle);
+console.log("proto of circle:", proto)
+console.log(circle.getType());
