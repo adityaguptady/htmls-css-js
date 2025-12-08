@@ -1735,24 +1735,41 @@ returns => 5 * 24
 // console.log(point.printX())
 // console.log(coloredPoint.printX())
 
-let figure = 
-{
-    getType: function() 
-    {
-        return this.type ? this.type : "unknown";
-    }
-};
+// let figure = 
+// {
+//     getType: function() 
+//     {
+//         return this.type ? this.type : "unknown";
+//     }
+// };
 
-let circle = 
-{
-    type: "circle",
-    center: {x:0, y:0},
-    radius: 100
+// let circle = 
+// {
+//     type: "circle",
+//     center: {x:0, y:0},
+//     radius: 100
+// };
+// //circle.__proto__ = figure;//deprectaed
+// let proto = Object.getPrototypeOf(circle);
+// console.log("proto of circle:", proto)
+// Object.setPrototypeOf(circle, figure);//modern / new solution
+// proto = Object.getPrototypeOf(circle);
+// console.log("proto of circle:", proto)
+// console.log(circle.getType());
+// console.log(1+(-"2"))  //  12 => 2 | 1=>3
+// console.log("2"+1)  //  21 => 3| 3 =>0
+
+// console.log(4*"2")
+
+let testString = new String("unu doi trei");
+console.log("testString.length: ", testString.length);
+console.log("testString.toUpperCase(): ", testString.toUpperCase())
+
+String.prototype.hi = function(){
+    console.log("Hi!")
 };
-//circle.__proto__ = figure;//deprectaed
-let proto = Object.getPrototypeOf(circle);
-console.log("proto of circle:", proto)
-Object.setPrototypeOf(circle, figure);//modern / new solution
-proto = Object.getPrototypeOf(circle);
-console.log("proto of circle:", proto)
-console.log(circle.getType());
+testString.hi()
+
+let myString = String()
+console.log(myString)
+console.log(typeof myString)
