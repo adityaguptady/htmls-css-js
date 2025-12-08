@@ -1761,15 +1761,140 @@ returns => 5 * 24
 
 // console.log(4*"2")
 
-let testString = new String("unu doi trei");
-console.log("testString.length: ", testString.length);
-console.log("testString.toUpperCase(): ", testString.toUpperCase())
+// let testString = new String("unu doi trei");
+// console.log("testString.length: ", testString.length);
+// console.log("testString.toUpperCase(): ", testString.toUpperCase())
 
-String.prototype.hi = function(){
-    console.log("Hi!")
-};
-testString.hi()
+// String.prototype.hi = function(){
+//     console.log("Hi!")
+// };
+// testString.hi()
 
-let myString = String()
-console.log(myString)
-console.log(typeof myString)
+// let myString = String()
+// console.log(myString)
+// console.log(typeof myString)
+// var a = 10
+// class Student
+// {
+// 	name
+// 	age
+// 	gender
+// 	rollNumber
+
+//     // constructor()
+//     // {
+//     //     console.log("This this is a constructur called!")
+//     // }//Default Constructor
+//     constructor(name, age, gender, rollNumber)
+//     {
+//         console.log("This this is a constructur called!")
+//         this.name = name
+//         this.age = age
+//         this.gender = gender
+//         this.rollNumber = rollNumber
+//     }//Parameterised constructor
+
+//     printStudent()
+//     {
+//         console.log("Name: ", this.name)
+//         console.log("Age: ", this.age)
+//         console.log("Gender: ", this.gender)
+//         console.log("Roll Number: ", this.rollNumber)
+//     }
+// }
+// console.log("Creating a new Object")
+// let sandeep = new Student("Sandeep Solanki", 20, "Male", 101)
+// console.log("Created the Object")
+// // sandeep.name = "Sandeep Solanki"
+// // sandeep.age = 20
+// // sandeep.gender = "Male"
+// // sandeep.rollNumber = 121
+// // console.log("Name: ", sandeep.name)
+// // console.log("Age: ", sandeep.age)
+// // console.log("Gender: ", sandeep.gender)
+// // console.log("Roll Number: ", sandeep.rollNumber)
+// sandeep.printStudent()
+
+// let aditya = new Student("Aditya",21, "Male", 102)
+// aditya.printStudent()
+
+class Vehicle
+{
+	transportMode
+	weight
+	capacity
+	color
+
+    print()
+    {
+        console.log("transportMode: ", this.transportMode)
+        console.log("weight: ", this.weight)
+        console.log("capacity: ", this.capacity)
+        console.log("color: ", this.color)
+    }
+}
+
+class MotorBike extends Vehicle
+{
+	maxSpeed
+	fuelType
+	peopleCapacity
+	average
+
+    print()
+    {
+        super.print()
+        console.log("maxSpeed: ", this.maxSpeed)
+        console.log("fuelType: ", this.fuelType)
+        console.log("peopleCapacity: ", this.peopleCapacity)
+        console.log("average: ", this.average)
+    }
+}
+
+class Car extends Vehicle
+{
+	maxSpeed
+	fuelType
+	peopleCapacity
+	average
+	gears
+	canReverse
+
+    print()
+    {
+        super.print()
+        console.log("maxSpeed: ", this.maxSpeed)
+        console.log("fuelType: ", this.fuelType)
+        console.log("peopleCapacity: ", this.peopleCapacity)
+        console.log("average: ", this.average)
+        console.log("gears: ", this.gears)
+        console.log("canReverse: ", this.canReverse)
+    }
+}
+
+let honda = new Car()
+honda.transportMode = "Road"
+honda.weight = "150 Kgs"
+honda.capacity = "2.5l"
+honda.color = "Yello"
+honda.maxSpeed = "220 Kmps"
+honda.fuelType = "Disel"
+honda.peopleCapacity = "6"
+honda.average = "18Kmpl"
+honda.gears = "5"
+honda.canReverse = true
+//console.log("honda: ", honda)
+honda.print()
+console.log("------")
+
+let motorBike = new MotorBike()
+motorBike.transportMode = "Road"
+motorBike.weight = "100 Kgs"
+motorBike.capacity = "1.5l"
+motorBike.color = "Red"
+motorBike.maxSpeed = "150 KMPS"
+motorBike.fuelType = "Petrol"
+motorBike.peopleCapacity = 2
+motorBike.average = "50 KMPL"
+//console.log("motorBike: ", motorBike)
+motorBike.print()
