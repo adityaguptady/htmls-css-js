@@ -1,2 +1,6 @@
-let aditya = new Student("Aditya",21, "Male", 102)
-aditya.printStudent()
+console.log("motorBike:", motorBike)
+
+// let { transportMode, weight, fuelType} = motorBike
+// console.log("transportMode: ", transportMode)
+// console.log("weight: ", weight)
+// console.log("fuelType: ", fuelType)

@@ -1776,19 +1776,21 @@ returns => 5 * 24
 // var a = 10
 // class Student
 // {
-// 	name
+// 	firstName
+//     lastName
 // 	age
 // 	gender
 // 	rollNumber
+//     fullName
 
 //     // constructor()
 //     // {
 //     //     console.log("This this is a constructur called!")
 //     // }//Default Constructor
-//     constructor(name, age, gender, rollNumber)
+//     constructor(firstName, lastName, age, gender, rollNumber)
 //     {
 //         console.log("This this is a constructur called!")
-//         this.name = name
+//         this.fullName = firstName+" "+lastName
 //         this.age = age
 //         this.gender = gender
 //         this.rollNumber = rollNumber
@@ -1796,105 +1798,170 @@ returns => 5 * 24
 
 //     printStudent()
 //     {
-//         console.log("Name: ", this.name)
+//         console.log("Name: ", this.fullName)
 //         console.log("Age: ", this.age)
 //         console.log("Gender: ", this.gender)
 //         console.log("Roll Number: ", this.rollNumber)
 //     }
 // }
+
+// let aditya = new Student()
+// aditya.name = "Aditya Gupta"
+// aditya.age = 25
+// aditya.gender = "Male"
+// aditya.rollNumber = 12
+
+// console.log("Name: ", aditya.name)
+// console.log("age: ", aditya.age)
+// console.log("gender: ", aditya.gender)
+// console.log("rollNumber: ", aditya.rollNumber)
+
+
 // console.log("Creating a new Object")
-// let sandeep = new Student("Sandeep Solanki", 20, "Male", 101)
+// let sandeep = new Student("Sandeep", "Solanki", 20, "Male", 101, "Aditya")
 // console.log("Created the Object")
 // // sandeep.name = "Sandeep Solanki"
 // // sandeep.age = 20
 // // sandeep.gender = "Male"
 // // sandeep.rollNumber = 121
-// // console.log("Name: ", sandeep.name)
-// // console.log("Age: ", sandeep.age)
-// // console.log("Gender: ", sandeep.gender)
-// // console.log("Roll Number: ", sandeep.rollNumber)
-// sandeep.printStudent()
+// console.log("Name: ", sandeep.name)
+// console.log("Age: ", sandeep.age)
+// console.log("Gender: ", sandeep.gender)
+// console.log("Roll Number: ", sandeep.rollNumber)
+//sandeep.printStudent()
 
 // let aditya = new Student("Aditya",21, "Male", 102)
 // aditya.printStudent()
 
-class Vehicle
+// class Vehicle
+// {
+// 	transportMode
+// 	weight
+// 	capacity
+// 	color
+
+//     print()
+//     {
+//         console.log("transportMode: ", this.transportMode)
+//         console.log("weight: ", this.weight)
+//         console.log("capacity: ", this.capacity)
+//         console.log("color: ", this.color)
+//     }
+// }
+
+// class MotorBike extends Vehicle
+// {
+// 	maxSpeed
+// 	fuelType
+// 	peopleCapacity
+// 	average
+
+//     print()
+//     {
+//         super.print()
+//         console.log("maxSpeed: ", this.maxSpeed)
+//         console.log("fuelType: ", this.fuelType)
+//         console.log("peopleCapacity: ", this.peopleCapacity)
+//         console.log("average: ", this.average)
+//     }
+// }
+
+// class Car extends Vehicle
+// {
+// 	maxSpeed
+// 	fuelType
+// 	peopleCapacity
+// 	average
+// 	gears
+// 	canReverse
+
+//     print()
+//     {
+//         super.print()
+//         console.log("maxSpeed: ", this.maxSpeed)
+//         console.log("fuelType: ", this.fuelType)
+//         console.log("peopleCapacity: ", this.peopleCapacity)
+//         console.log("average: ", this.average)
+//         console.log("gears: ", this.gears)
+//         console.log("canReverse: ", this.canReverse)
+//     }
+// }
+
+// let honda = new Car()
+// honda.transportMode = "Road"
+// honda.weight = "150 Kgs"
+// honda.capacity = "2.5l"
+// honda.color = "Yello"
+// honda.maxSpeed = "220 Kmps"
+// honda.fuelType = "Disel"
+// honda.peopleCapacity = "6"
+// honda.average = "18Kmpl"
+// honda.gears = "5"
+// honda.canReverse = true
+// //console.log("honda: ", honda)
+// honda.print()
+// console.log("------")
+
+// let motorBike = new MotorBike()
+// motorBike.transportMode = "Road"
+// motorBike.weight = "100 Kgs"
+// motorBike.capacity = "1.5l"
+// motorBike.color = "Red"
+// motorBike.maxSpeed = "150 KMPS"
+// motorBike.fuelType = "Petrol"
+// motorBike.peopleCapacity = 2
+// motorBike.average = "50 KMPL"
+// //console.log("motorBike: ", motorBike)
+// motorBike.print()
+
+// console.log("type: motorBike"+motorBike+".")
+// console.log(typeof motorBike)
+// if(motorBike instanceof MotorBike)
+// {
+//     console.log("motorBike is the instance of MotorBike class")
+// }
+
+// console.log("Date.now(): ", Date.now())
+
+// class Test
+// {
+//     name
+//     description
+//     marking
+//     rank
+// }
+// let physicsTest = new Test()
+// physicsTest.name = "Physics Test"
+// physicsTest.description = "adwgblwbv lijvb iqwebj"
+// physicsTest.marking = "50"
+// physicsTest.rank = 100
+
+// console.log("physicsTest:", physicsTest)
+// let { name, marking, rank} = physicsTest
+// console.log("name:", name)
+// console.log("marking:", marking)
+// console.log("rank:", rank)
+
+
+// console.log("motorBike:", motorBike)
+
+// let { transportMode, weight, fuelType} = motorBike
+// console.log("transportMode: ", transportMode)
+// console.log("weight: ", weight)
+// console.log("fuelType: ", fuelType)
+
+let Vehicle = function(initialData)
 {
-	transportMode
-	weight
-	capacity
-	color
-
-    print()
+    let {id, latitude, longitude} = initialData
+    this.setPosition = function(latitude, longitude) 
     {
-        console.log("transportMode: ", this.transportMode)
-        console.log("weight: ", this.weight)
-        console.log("capacity: ", this.capacity)
-        console.log("color: ", this.color)
-    }
+            this.time = Date.now();
+                this.longitude = longitude;
+                this.latitude = latitude;
+    };
+    this.id = id;
+    this.status = "unavailable";
+    this.setPosition(latitude, longitude);
 }
-
-class MotorBike extends Vehicle
-{
-	maxSpeed
-	fuelType
-	peopleCapacity
-	average
-
-    print()
-    {
-        super.print()
-        console.log("maxSpeed: ", this.maxSpeed)
-        console.log("fuelType: ", this.fuelType)
-        console.log("peopleCapacity: ", this.peopleCapacity)
-        console.log("average: ", this.average)
-    }
-}
-
-class Car extends Vehicle
-{
-	maxSpeed
-	fuelType
-	peopleCapacity
-	average
-	gears
-	canReverse
-
-    print()
-    {
-        super.print()
-        console.log("maxSpeed: ", this.maxSpeed)
-        console.log("fuelType: ", this.fuelType)
-        console.log("peopleCapacity: ", this.peopleCapacity)
-        console.log("average: ", this.average)
-        console.log("gears: ", this.gears)
-        console.log("canReverse: ", this.canReverse)
-    }
-}
-
-let honda = new Car()
-honda.transportMode = "Road"
-honda.weight = "150 Kgs"
-honda.capacity = "2.5l"
-honda.color = "Yello"
-honda.maxSpeed = "220 Kmps"
-honda.fuelType = "Disel"
-honda.peopleCapacity = "6"
-honda.average = "18Kmpl"
-honda.gears = "5"
-honda.canReverse = true
-//console.log("honda: ", honda)
-honda.print()
-console.log("------")
-
-let motorBike = new MotorBike()
-motorBike.transportMode = "Road"
-motorBike.weight = "100 Kgs"
-motorBike.capacity = "1.5l"
-motorBike.color = "Red"
-motorBike.maxSpeed = "150 KMPS"
-motorBike.fuelType = "Petrol"
-motorBike.peopleCapacity = 2
-motorBike.average = "50 KMPL"
-//console.log("motorBike: ", motorBike)
-motorBike.print()
+let car = new Vehicle({id:"XE9", latitude: 12.9090909, longitude: 24.4979457})
+console.log("car:", car)
