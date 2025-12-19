@@ -1950,18 +1950,27 @@ returns => 5 * 24
 // console.log("weight: ", weight)
 // console.log("fuelType: ", fuelType)
 
-let Vehicle = function(initialData)
+let Vehicle = function({id, latitude, longitude})
 {
-    let {id, latitude, longitude} = initialData
     this.setPosition = function(latitude, longitude) 
     {
-            this.time = Date.now();
-                this.longitude = longitude;
-                this.latitude = latitude;
+        this.time = Date.now();
+        this.longitude = longitude;
+        this.latitude = latitude;
     };
+
+    this.getPosition = function() 
+    {
+        return {latitude: this.latitude, longitude: this.longitude}
+    };
+
     this.id = id;
     this.status = "unavailable";
     this.setPosition(latitude, longitude);
 }
 let car = new Vehicle({id:"XE9", latitude: 12.9090909, longitude: 24.4979457})
 console.log("car:", car)
+console.log("Lat Long:", car.getPosition())
+let {latitude, longitude} = car.getPosition()
+console.log("latitude:", latitude)
+console.log("longitude:", longitude)
