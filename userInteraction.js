@@ -2001,18 +2001,37 @@ returns => 5 * 24
 // vehicle.setPosition({longitude: 18.193121, latitude: 59.378654});
 // console.log(vehicle.getPosition())
 
-function namedFunction() 
-{ 
-    console.log("I'm nj, I hope ..") 
-};
-let anonymousFunction = function() 
+// function namedFunction() 
+// { 
+//     console.log("I'm nj, I hope ..") 
+// }
+// let anonymousFunction = function() 
+// {
+//     console.log("I'm a bit anonymous ...")
+// }
+// let notExactlyAnonymousFunction = function anotherNamedFunction() 
+// {
+//     console.log("I'm confused ...")
+// }
+// namedFunction();	// -> I'm named, I hope ...
+// anonymousFunction();	// -> I'm a bit anonymous ...
+// notExactlyAnonymousFunction();	// -> I'm confused …
+
+let AlmostEmptyClass = class
 {
-    console.log("I'm a bit anonymous ...")
-};
-let notExactlyAnonymousFunction = function anotherNamedFunction() 
-{
-    console.log("I'm confused ...")
-};
-namedFunction();	// -> I'm named, I hope ...
-anonymousFunction();	// -> I'm a bit anonymous ...
-notExactlyAnonymousFunction();	// -> I'm confused …
+    constructor(sth) 
+    {
+        console.log(sth)
+    }
+    sayHi() 
+    {
+        console.log("Hi!")
+    }
+}
+let almostEmptyObject = new AlmostEmptyClass(120) // 120
+almostEmptyObject.sayHi() // -> Hi!
+
+console.log("almostEmptyObject instanceof AlmostEmptyClass: ", almostEmptyObject instanceof AlmostEmptyClass) // -> true
+console.log("almostEmptyObject instanceof String", almostEmptyObject instanceof String); // -> false
+let str = new String("test me")
+console.log("str instanceof String: ", str instanceof String); // -> true
