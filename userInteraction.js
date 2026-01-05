@@ -2017,21 +2017,104 @@ returns => 5 * 24
 // anonymousFunction();	// -> I'm a bit anonymous ...
 // notExactlyAnonymousFunction();	// -> I'm confused …
 
-let AlmostEmptyClass = class
-{
-    constructor(sth) 
-    {
-        console.log(sth)
+// let AlmostEmptyClass = class
+// {
+//     constructor(sth) 
+//     {
+//         console.log(sth)
+//     }
+//     sayHi() 
+//     {
+//         console.log("Hi!")
+//     }
+// }
+// let almostEmptyObject = new AlmostEmptyClass(120) // 120
+// almostEmptyObject.sayHi() // -> Hi!
+
+// console.log("almostEmptyObject instanceof AlmostEmptyClass: ", almostEmptyObject instanceof AlmostEmptyClass) // -> true
+// console.log("almostEmptyObject instanceof String", almostEmptyObject instanceof String); // -> false
+// let str = new String("test me")
+// console.log("str instanceof String: ", str instanceof String); // -> true
+
+// class ABC
+// {
+//     a
+// }
+
+// class DEF extends ABC
+// {
+//     b
+// }
+
+// class GHI extends DEF
+// {
+//     c
+// }
+
+// let abc = new ABC()
+// let def = new DEF()
+// let ghi = new GHI()
+
+// console.log("abc instanceof ABC:", abc instanceof ABC)
+// console.log("def instanceof DEF:", def instanceof DEF)
+// console.log("ghi instanceof GHI:", ghi instanceof GHI)
+
+// console.log("ghi instanceof DEF:", ghi instanceof DEF)
+// console.log("ghi instanceof ABC:", ghi instanceof ABC)
+// console.log("ghi instanceof object:", ghi instanceof Object)
+
+// console.log("def instanceof GHI:", def instanceof GHI)
+
+// console.log(abc.a)  //getting the value
+// abc.a = 25          //setting the value
+// console.log(abc.a)  //getting the value
+
+// let myObject = {
+//     a: 1,
+//     b: 2,
+//     c: "C"
+// }
+
+// console.log("myObject: ", myObject)
+// console.log("a: ", myObject.a)
+// console.log("b: ", myObject.b)
+// console.log("c: ", myObject.c)
+
+// let {a, c} = myObject        //desctruction
+
+// console.log("a: ", a)
+// //console.log("b: ", b)
+// console.log("c: ", c)
+
+
+
+class Vehicle 
+{ 
+    constructor({id, latitude, longitude})
+    { 
+        this.id = id
+        this.position = {latitude, longitude}
+        this.status = "unavailable"
     }
-    sayHi() 
+    set position({latitude, longitude}) 
+    { 
+        console.log("Setting position values!")
+        this.time = Date.now()
+        this.longitude = longitude
+        this.latitude = latitude
+    }
+    get position() 
     {
-        console.log("Hi!")
+        console.log("Getting Position now!")
+        return{ 
+            latitude: this.latitude,
+            longitude: this.longitude
+        }
     }
 }
-let almostEmptyObject = new AlmostEmptyClass(120) // 120
-almostEmptyObject.sayHi() // -> Hi!
 
-console.log("almostEmptyObject instanceof AlmostEmptyClass: ", almostEmptyObject instanceof AlmostEmptyClass) // -> true
-console.log("almostEmptyObject instanceof String", almostEmptyObject instanceof String); // -> false
-let str = new String("test me")
-console.log("str instanceof String: ", str instanceof String); // -> true
+let vehicle = new Vehicle({longitude: 18.213423, latitude: 59.367628, id: "AL1024"})
+
+vehicle.position = {longitude: 18.193121, latitude: 59.378654}
+
+console.log(vehicle.position)
