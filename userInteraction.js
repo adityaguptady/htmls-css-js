@@ -2086,12 +2086,16 @@ returns => 5 * 24
 // //console.log("b: ", b)
 // console.log("c: ", c)
 
-
-
 class Vehicle 
 { 
+    id
+    position
+    status
+    time
+    #latitude
+    #longitude
     constructor({id, latitude, longitude})
-    { 
+    {
         this.id = id
         this.position = {latitude, longitude}
         this.status = "unavailable"
@@ -2100,16 +2104,22 @@ class Vehicle
     { 
         console.log("Setting position values!")
         this.time = Date.now()
-        this.longitude = longitude
-        this.latitude = latitude
+        this.#longitude = longitude
+        this.#latitude = latitude
     }
     get position() 
     {
         console.log("Getting Position now!")
         return{ 
-            latitude: this.latitude,
-            longitude: this.longitude
+            latitude: this.#latitude,
+            longitude: this.#longitude
         }
+    }
+    print()
+    {
+        console.log("id:", this.id)
+        console.log("Position:", this.position)
+        console.log("Time:", this.time)
     }
 }
 
@@ -2118,3 +2128,28 @@ let vehicle = new Vehicle({longitude: 18.213423, latitude: 59.367628, id: "AL102
 vehicle.position = {longitude: 18.193121, latitude: 59.378654}
 
 console.log(vehicle.position)
+console.log("vehicle.latitude:",vehicle.latitude)
+
+console.log("----------")
+vehicle.print()
+
+class Car extends Vehicle
+{
+    color
+    gears
+    constructor({color, gears, id, latitude, longitude})
+    {
+        super({id, latitude, longitude})     //
+        this.color = color
+        this.gears = gears
+    }
+    print()
+    {
+        super.print()       //shadowing
+        console.log("color:", this.color)
+        console.log("gears:", this.gears)
+    }
+}
+console.log("==========")//
+let toyota = new Car({color: "Black", gears: 6, id: "ABC", latitude: 12.9875653, longitude: 14.87654765})
+toyota.print()
