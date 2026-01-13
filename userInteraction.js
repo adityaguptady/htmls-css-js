@@ -2199,49 +2199,124 @@ returns => 5 * 24
 // AlmostEmptyClass.sayHello() // -> Hello!
 
 
-class Vehicle 
-{
-    constructor({id, latitude, longitude})
-    {
-        this.id = id
-        this.status = "unavailable"
-        this.setPosition({latitude, longitude})
-    }
-    setPosition({latitude, longitude})
-    {
-        this.time = Date.now()
-        this.longitude = longitude
-        this.latitude = latitude
-    }
-    getPosition() 
-    {
-        return{
-            latitude: this.latitude,
-            longitude: this.longitude
-        }
-    }
-    // static isSameId(v1, v2)
-    // {
-    //     return v1.id === v2.id
-    // }
+// class Vehicle 
+// {
+//     constructor({id, latitude, longitude})
+//     {
+//         this.id = id
+//         this.status = "unavailable"
+//         this.setPosition({latitude, longitude})
+//     }
+//     setPosition({latitude, longitude})
+//     {
+//         this.time = Date.now()
+//         this.longitude = longitude
+//         this.latitude = latitude
+//     }
+//     getPosition() 
+//     {
+//         return{
+//             latitude: this.latitude,
+//             longitude: this.longitude
+//         }
+//     }
+//     // static isSameId(v1, v2)
+//     // {
+//     //     return v1.id === v2.id
+//     // }
 
-    static isSameLongitude(v1, v2)
-    {
-        return v1.longitude === v2.longitude
-    }
+//     static isSameLongitude(v1, v2)
+//     {
+//         return v1.longitude === v2.longitude
+//     }
+// }
+
+// Vehicle.isSameId =  function(v1, v2) 
+// {
+//     return v1.id === v2.id
+// }
+
+
+// let vehicle1 = new Vehicle({longitude: 18.213423, latitude: 59.367628, id: "AL1024"})
+// let vehicle2 = new Vehicle({longitude: 0, latitude: 0, id: "AL1024"})
+// let vehicle3 = new Vehicle({longitude: 18.213423, latitude: 59.367628, id: "AL1026"})
+// console.log("Vehicle.isSameId(vehicle1, vehicle2)", Vehicle.isSameId(vehicle1, vehicle2)) // -> true
+// console.log("Vehicle.isSameId(vehicle1, vehicle3)", Vehicle.isSameId(vehicle1, vehicle3)) // -> false
+// console.log("Vehicle.isSameLongitude(vehicle1, vehicle2)", Vehicle.isSameLongitude(vehicle1, vehicle2))
+// console.log("Vehicle.isSameLongitude(vehicle1, vehicle3)", Vehicle.isSameLongitude(vehicle1, vehicle3))
+
+// class Student 
+// {
+//     property1
+//     property2
+//     constructor()
+//     {
+//     }
+//     method1()
+//     {
+//     }
+//     method2()
+//     {
+//     }
+// }//classical way of creating a class
+
+// //child class
+// class Monitor extends Student
+// {
+
+// }
+
+// let Student = function()
+// {
+//     property1
+//     property2
+//     let method1 = function()
+//     {
+//     }
+//     let method2 = function()
+//     {
+//     }
+// }//class expression & Constructor function
+
+// let Monitor = Object.create(Student)
+// let adtya = new Student()
+
+// class TestClass 
+// { 
+//     constructor(arg) 
+//     {
+//         this.arg = arg
+//         console.log(this.arg)
+//     }
+//     showSth() 
+//     { 
+//         console.log("I'm prototyped!")
+//     }
+//     static showSth() 
+//     { 
+//         console.log(`Hi, I'm static!`)
+//     }  
+// } 
+
+let TestClass = function(arg) 
+{ 
+    this.arg = arg
+    console.log(this.arg)
 }
 
-Vehicle.isSameId =  function(v1, v2) 
-{
-    return v1.id === v2.id
+TestClass.prototype.showSth = function() 
+{ 
+    console.log("I'm prototyped!")
+}
+    
+TestClass.showSth = function() 
+{ 
+    console.log(`Hi, I'm static!`)
 }
 
+let test = new TestClass("Hello")
+test.showSth() // -> I'm prototyped!
+TestClass.showSth() // -> I'm static!
+console.log(test instanceof TestClass)
 
-let vehicle1 = new Vehicle({longitude: 18.213423, latitude: 59.367628, id: "AL1024"})
-let vehicle2 = new Vehicle({longitude: 0, latitude: 0, id: "AL1024"})
-let vehicle3 = new Vehicle({longitude: 18.213423, latitude: 59.367628, id: "AL1026"})
-console.log("Vehicle.isSameId(vehicle1, vehicle2)", Vehicle.isSameId(vehicle1, vehicle2)) // -> true
-console.log("Vehicle.isSameId(vehicle1, vehicle3)", Vehicle.isSameId(vehicle1, vehicle3)) // -> false
-console.log("Vehicle.isSameLongitude(vehicle1, vehicle2)", Vehicle.isSameLongitude(vehicle1, vehicle2))
-console.log("Vehicle.isSameLongitude(vehicle1, vehicle3)", Vehicle.isSameLongitude(vehicle1, vehicle3))
 
