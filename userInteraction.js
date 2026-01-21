@@ -2298,25 +2298,50 @@ returns => 5 * 24
 //     }  
 // } 
 
-let TestClass = function(arg) 
-{ 
-    this.arg = arg
-    console.log(this.arg)
-}
+// let TestClass = function(arg) 
+// { 
+//     this.arg = arg
+//     console.log(this.arg)
+// }
 
-TestClass.prototype.showSth = function() 
-{ 
-    console.log("I'm prototyped!")
-}
+// TestClass.prototype.showSth = function() 
+// { 
+//     console.log("I'm prototyped!")
+// }
     
-TestClass.showSth = function() 
-{ 
-    console.log(`Hi, I'm static!`)
-}
+// TestClass.showSth = function() 
+// { 
+//     console.log(`Hi, I'm static!`)
+// }
 
-let test = new TestClass("Hello")
-test.showSth() // -> I'm prototyped!
-TestClass.showSth() // -> I'm static!
-console.log(test instanceof TestClass)
+// let test = new TestClass("Hello")
+// test.showSth() // -> I'm prototyped!
+// TestClass.showSth() // -> I'm static!
+// console.log(test instanceof TestClass)
 
+
+// console.log("0.1 + 0.2 == 0.3 => ", 0.1 + 0.2 == 0.3)
+// console.log("0.3 == 0.3 => ", 0.3 == 0.3)
+// console.log("0.3 === 0.3 => ", 0.3 === 0.3)
+
+// let nrStr1 = (11).toString()
+// let nrStr2 = (11).toString(16)
+// console.log(`nrStr1 : ${typeof nrStr1} : ${nrStr1}`) // -> nrStr1 : string : 11
+// console.log(`nrStr2 : ${typeof nrStr2} : ${nrStr2}`) // -> nrStr1 : string : b
+
+let nr2 = 102.55
+console.log(nr2.toFixed(1)) 
+//console.log(nr2.toFixed(20)) 
+//console.log(((nr2 * 10).toFixed(0) / 10))
+let nr1 = 10.55
+console.log(nr1.toFixed(1)) 
+// console.log(nr1.toFixed(20))
+// console.log(nr1.toFixed(0)) 
+// console.log(nr1.toFixed(3)) 
+
+let n = 4.55
+console.log(n.toFixed(1)) 
+
+let n1 = 7.55
+console.log(n1.toFixed(1)) 
 
