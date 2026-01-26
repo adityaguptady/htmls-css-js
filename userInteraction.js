@@ -2329,19 +2329,121 @@ returns => 5 * 24
 // console.log(`nrStr1 : ${typeof nrStr1} : ${nrStr1}`) // -> nrStr1 : string : 11
 // console.log(`nrStr2 : ${typeof nrStr2} : ${nrStr2}`) // -> nrStr1 : string : b
 
-let nr2 = 102.55
-console.log(nr2.toFixed(1)) 
-//console.log(nr2.toFixed(20)) 
-//console.log(((nr2 * 10).toFixed(0) / 10))
-let nr1 = 10.55
-console.log(nr1.toFixed(1)) 
-// console.log(nr1.toFixed(20))
-// console.log(nr1.toFixed(0)) 
-// console.log(nr1.toFixed(3)) 
+// let nr2 = 2.55
+// console.log(nr2.toFixed(1))
+// console.log(nr2.toFixed(2))
+// //console.log(nr2.toFixed(20)) 
+// //console.log(((nr2 * 10).toFixed(0) / 10))
+// let nr1 = 10.55
+// console.log(nr1.toFixed(1)) 
+// console.log(nr1.toFixed(2)) 
+// // console.log(nr1.toFixed(20))
+// // console.log(nr1.toFixed(0)) 
+// // console.log(nr1.toFixed(3)) 
 
-let n = 4.55
-console.log(n.toFixed(1)) 
+// let n = 4.55
+// console.log(n.toFixed(1)) 
 
-let n1 = 7.55
-console.log(n1.toFixed(1)) 
+// let n1 = 7.55
+// console.log(n1.toFixed(1)) 
 
+// let n2 = 7.55
+// console.log(n1.toFixed(2)) 
+
+// let n = 1.55
+// console.log("n: ", n.toFixed(1))
+
+// let n1 = 2.55
+// console.log("n1: ", n1.toFixed(1))
+
+// let n2 = 3.55
+// console.log("n2: ", n2.toFixed(1))
+
+// let n3 = 4.55
+// console.log("n3: ", n3.toFixed(1))
+
+// let n4 = 5.55
+// console.log("n4: ", n4.toFixed(1))
+
+// let n5 = 6.55
+// console.log("n5: ", n5.toFixed(1))
+
+// let n6 = 7.55
+// console.log("n6: ", n6.toFixed(1))
+
+// let n7 = 8.55
+// console.log("n7: ", n7.toFixed(1))
+
+// let n8 = 9.55
+// console.log("n8: ", n8.toFixed(1))
+
+// let n9 = 10.55
+// console.log("n9: ", n9.toFixed(1))
+
+// let n10 = 31.55
+// console.log("n10: ", n10.toFixed(1))
+
+// let n11 = 32.55
+// console.log("n11: ", n11.toFixed(1))
+
+// let nr = 123456.789
+// console.log(nr.toLocaleString("en-GB")) //-> 123,456.789
+// console.log(nr.toLocaleString("fr-FR")) //-> 123·456,789
+// console.log(nr.toLocaleString("de-DE")) //-> 123.456,789
+// console.log(nr.toLocaleString("ar-EG")) //-> ١٢٣٬٤٥٦٫٧٨٩
+// console.log(nr.toLocaleString("hi-IN"))
+// console.log(nr.toLocaleString("sa-IN"))
+// console.log(nr.toLocaleString("pu-IN"))
+// console.log(nr.toLocaleString({
+//     style: "currency",
+//     currency: "EUR"
+// })) //-> 123.456,79 €
+
+// console.log(nr.toLocaleString())
+
+
+// console.log("Number.MAX_VALUE: ", Number.MAX_VALUE)
+// console.log("Number.MIN_VALUE: ", Number.MIN_VALUE)
+// console.log("Number.MAX_SAFE_INTEGER: ", Number.MAX_SAFE_INTEGER)
+// console.log("Number.MIN_SAFE_INTEGER: ", Number.MIN_SAFE_INTEGER)
+
+// let numbers = [2e100, 200000, 1.5, Infinity]
+// for(let i=0; i<numbers.length; i++) 
+// {
+//     console.log(`is ${numbers[i]} Integer: ${Number.isInteger(numbers[i])}`)
+//     console.log(`is ${numbers[i]} safe Integer: ${Number.isSafeInteger(numbers[i])}`)
+//     console.log(`is ${numbers[i]} finite number: ${Number.isFinite(numbers[i])}`)
+// }
+
+// console.log(Number.parseFloat("123.12.12")) // -> 123.12
+// console.log(Number("123.12.12")) // -> NaN
+// console.log(Number.parseInt("1204ab123")) // -> 1204
+// console.log(Number("1204px")) // -> NaN
+
+// let a = "this is my name: \"Aditya\" "
+// console.log(a)
+// a = "this is my name: 'Aditya' Aditya "    //premitive
+// console.log(a)
+// console.log(a.length)
+// console.log(a[0])
+// console.log(a[1])
+// console.log(a[2])
+// console.log(a.charAt(3))
+// console.log(a.charAt(56))
+// console.log(a.toUpperCase())
+// console.log(a.toLowerCase())
+// let ab = new String("this is my name: 'Aditya' ")   //Wrapper object
+// console.log(ab)
+// console.log(ab.length)
+
+// console.log(a.split(" "))
+// console.log(a.split(" ")[1])
+// console.log(a)
+// console.log(a.replace("Aditya", "Kuljot"))
+// console.log(a)
+// console.log(a.replaceAll("Aditya", "Chandresh"))
+
+let text = "Lorem, ipsum, dolor, ...."
+let words = text.toLowerCase().replaceAll('.','').replaceAll(',','').split(' ')
+console.log(words)
+console.log(words.length) // -> 30
