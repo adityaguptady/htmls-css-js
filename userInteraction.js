@@ -2443,7 +2443,26 @@ returns => 5 * 24
 // console.log(a)
 // console.log(a.replaceAll("Aditya", "Chandresh"))
 
-let text = "Lorem, ipsum, dolor, ...."
-let words = text.toLowerCase().replaceAll('.','').replaceAll(',','').split(' ')
-console.log(words)
-console.log(words.length) // -> 30
+// let text = "Lorem, ipsum, dolor, ...."
+// let words = text.toLowerCase().replaceAll('.','').replaceAll(',','').split(' ')
+// console.log(words)
+// console.log(words.length) // -> 30
+
+//let batch = "JavaScript + ReactJS"
+// console.log("Includes example: ", batch.toLowerCase().includes("reactjs"))
+// console.log("Indexof example: ", batch.toLowerCase().indexOf("a"))
+// console.log("Indexof example: ", batch.toLowerCase().lastIndexOf("a"))
+// console.log("Indexof example: ", batch.toLowerCase().charAt(15))
+// console.log("Indexof example: ", batch.toLowerCase().charAt(batch.toLowerCase().lastIndexOf("a")))
+// console.log("Includes example: ", batch.includes("REactjs"))
+// console.log("Includes example: ", batch.includes("REActjs"))
+// console.log("Includes example: ", batch.includes("Reactjs"))
+
+// console.log("substr check:", batch.substr(4, 6))
+// console.log("substr check:", batch.substr(4, 1))
+// console.log("substring check:", batch.substring(4, -2))
+// console.log("slice check:", batch.slice(4, -2))
+
+// let num = "1234567890"
+// console.log("Includes example: ", num.includes("5"))
+
