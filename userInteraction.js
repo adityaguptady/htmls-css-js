@@ -2466,3 +2466,10 @@ returns => 5 * 24
 // let num = "1234567890"
 // console.log("Includes example: ", num.includes("5"))
 
+let numbers = [100, 5, 66]
+for(let i=0; i<numbers.length; i++) 
+{
+    console.log(String(numbers[i]).padStart(10, '0').padEnd(15, '-'))
+    console.log(String(numbers[i]).padStart(10, 'abc').padEnd(15, '-'))
+    console.log(String(numbers[i]).padStart(10).padEnd(15, '-'))
+}
