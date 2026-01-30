@@ -2474,17 +2474,34 @@ returns => 5 * 24
 //     console.log(String(numbers[i]).padStart(10).padEnd(15, '-'))
 // }
 
-let city = " Bergen  "
-let street = "\t Dokkeboder\n"  // one tab = 8 spaces
-console.log("Actual City String: --"+city+"--")
-console.log("Length of City String: --"+city.length+"--")
-console.log("Actual Street String: --"+street+"--")
-console.log("Length of Street String: --"+street.length+"--")
-console.log("Trim Left City String: --"+city.trimLeft()+"--")
-console.log(city.trimLeft().length) // -> 8 -> "Bergen  "
-console.log("Trim Rigth City String: --"+city.trimRight()+"--")
-console.log(city.trimRight().length) // -> 7 -> " Bergen"
-console.log("Trim City String: --"+city.trim()+"--")
-console.log(city.trim().length) // -> 6 -> "Berge"
-console.log("Trim Street String: --"+street.trim()+"--")
-console.log(street.trim().length) // -> 10 -> "Dokkeboder"
+// let city = " Bergen  "
+// let street = "\t Dokkeboder\n"  // one tab = 8 spaces
+// console.log("Actual City String: --"+city+"--")
+// console.log("Length of City String: --"+city.length+"--")
+// console.log("Actual Street String: --"+street+"--")
+// console.log("Length of Street String: --"+street.length+"--")
+// console.log("Trim Left City String: --"+city.trimStart()+"--")
+// console.log(city.trimStart().length) // -> 8 -> "Bergen  "
+// console.log("Trim Rigth City String: --"+city.trimEnd()+"--")
+// console.log(city.trimEnd().length) // -> 7 -> " Bergen"
+// console.log("Trim City String: --"+city.trim()+"--")
+// console.log(city.trim().length) // -> 6 -> "Berge"
+// console.log("Trim Street String: --"+street.trim()+"--")
+// console.log(street.trim().length) // -> 10 -> "Dokkeboder"
+
+console.log("a" < "b") // -> true
+console.log("abc" < "acd") // -> true
+console.log("b" < "acd") // -> false
+
+console.log("4" < "5") // -> true
+console.log("2" < "12") // -> false
+console.log("34" < "332") // -> false
+
+console.log("brettesnes" < "Sundsfjord") // -> false
+console.log("Brettesnes" < "Sundsfjord") // -> true
+
+console.log("Ørnes" < "Sundsfjord") // -> false
+
+console.log("Ørnes".localeCompare("Sundsfjord", "nn")) // -> 1
+console.log("Ørnes".localeCompare("Brettesnes", "nn")) // -> 1
+
