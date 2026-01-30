@@ -2489,19 +2489,29 @@ returns => 5 * 24
 // console.log("Trim Street String: --"+street.trim()+"--")
 // console.log(street.trim().length) // -> 10 -> "Dokkeboder"
 
-console.log("a" < "b") // -> true
-console.log("abc" < "acd") // -> true
-console.log("b" < "acd") // -> false
+// console.log("a" < "b") // -> true
+// console.log("abc" < "acd") // -> true
+// console.log("b" < "acd") // -> false
 
-console.log("4" < "5") // -> true
-console.log("2" < "12") // -> false
-console.log("34" < "332") // -> false
+// console.log("4" < "5") // -> true
+// console.log("2" < "12") // -> false
+// console.log("34" < "332") // -> false
 
-console.log("brettesnes" < "Sundsfjord") // -> false
-console.log("Brettesnes" < "Sundsfjord") // -> true
+// console.log("brettesnes" < "Sundsfjord") // -> false
+// console.log("Brettesnes" < "Sundsfjord") // -> true
 
-console.log("Ørnes" < "Sundsfjord") // -> false
+// console.log("Ørnes" < "Sundsfjord") // -> false
 
-console.log("Ørnes".localeCompare("Sundsfjord", "nn")) // -> 1
-console.log("Ørnes".localeCompare("Brettesnes", "nn")) // -> 1
+// console.log("Ørnes".localeCompare("Sundsfjord", "nn")) // -> 1
+// console.log("Ørnes".localeCompare("Brettesnes", "nn")) // -> 1
+
+console.log(Date.now())
+console.log(new Date())
+console.log(new Date().toLocaleString())
+console.log(Date.now().toLocaleString())
+
+let date1 = new Date(0)
+let date2 = new Date(1000*60*60*10)
+console.log(date1.toUTCString()) // -> Thu, 01 Jan 1970 00:00:00 GMT
+console.log(date2.toUTCString()) // -> Thu, 01 Jan 1970 10:00:00 GMT
 
