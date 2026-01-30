@@ -2475,7 +2475,7 @@ returns => 5 * 24
 // }
 
 let city = " Bergen  "
-let street = "\t Dokkeboder\n"
+let street = "\t Dokkeboder\n"  // one tab = 8 spaces
 console.log("Actual City String: --"+city+"--")
 console.log("Length of City String: --"+city.length+"--")
 console.log("Actual Street String: --"+street+"--")
