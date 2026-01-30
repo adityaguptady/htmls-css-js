@@ -2466,10 +2466,25 @@ returns => 5 * 24
 // let num = "1234567890"
 // console.log("Includes example: ", num.includes("5"))
 
-let numbers = [100, 5, 66]
-for(let i=0; i<numbers.length; i++) 
-{
-    console.log(String(numbers[i]).padStart(10, '0').padEnd(15, '-'))
-    console.log(String(numbers[i]).padStart(10, 'abc').padEnd(15, '-'))
-    console.log(String(numbers[i]).padStart(10).padEnd(15, '-'))
-}
+// let numbers = [100, 5, 66]
+// for(let i=0; i<numbers.length; i++) 
+// {
+//     console.log(String(numbers[i]).padStart(10, '0').padEnd(15, '-'))
+//     console.log(String(numbers[i]).padStart(10, 'abc').padEnd(15, '-'))
+//     console.log(String(numbers[i]).padStart(10).padEnd(15, '-'))
+// }
+
+let city = " Bergen  "
+let street = "\t Dokkeboder\n"
+console.log("Actual City String: --"+city+"--")
+console.log("Length of City String: --"+city.length+"--")
+console.log("Actual Street String: --"+street+"--")
+console.log("Length of Street String: --"+street.length+"--")
+console.log("Trim Left City String: --"+city.trimLeft()+"--")
+console.log(city.trimLeft().length) // -> 8 -> "Bergen  "
+console.log("Trim Rigth City String: --"+city.trimRight()+"--")
+console.log(city.trimRight().length) // -> 7 -> " Bergen"
+console.log("Trim City String: --"+city.trim()+"--")
+console.log(city.trim().length) // -> 6 -> "Berge"
+console.log("Trim Street String: --"+street.trim()+"--")
+console.log(street.trim().length) // -> 10 -> "Dokkeboder"
