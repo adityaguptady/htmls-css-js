@@ -2638,10 +2638,23 @@ returns => 5 * 24
 // {
 //     console.log(`${index} : ${item}`)
 // }
-let array1 = [2, 4, "six"] 
+//let array1 = [2, 4, "six"] 
 // array1.forEach(function toConsole(item, index, array)
 // {
 //     console.log(`${index} : ${item}`)
 // }) 
 
-array1.forEach((item, index, array)=> console.log(`${index} : ${item}`) )
+// array1.forEach((item, index, array)=> console.log(`${index} : ${item}`) )
+
+// const nestedArray = [1, 2, [3, 4], [5, [6, 7]]]
+// const flattenedArray = nestedArray.flat() 
+// console.log(flattenedArray)
+// const deeplyFlattenedArray = nestedArray.flat(Infinity) 
+// console.log(deeplyFlattenedArray)
+
+const array = [1, 2, 'a', true]
+const stringRepresentation = array.toString () 
+console. log(stringRepresentation) 
+const nestedArray = [1, [2, 3], [4, [5, 6]]] 
+const nestedStringRepresentation = nestedArray.toString() 
+console.log(nestedStringRepresentation)
