@@ -2595,17 +2595,29 @@ returns => 5 * 24
 // console.log("minutes:", minutes)
 // console.log("seconds:", seconds)
 
-let startTime = Date.now()
-for(i=0; i<10000000; i++)
-{}
-let endTime = Date.now()
-console.log(endTime - startTime) 
-let milliDiff = endTime - startTime
-let seconds = milliDiff / 1000
-let minutes = seconds / 60
-let hours = minutes / 60
-let days = hours / 24
-console.log("Days:", days)
-console.log("hours:", hours)
-console.log("minutes:", minutes)
-console.log("seconds:", seconds)
+// let startTime = Date.now()
+// for(i=0; i<10000000; i++)
+// {}
+// let endTime = Date.now()
+// console.log(endTime - startTime) 
+// let milliDiff = endTime - startTime
+// let seconds = milliDiff / 1000
+// let minutes = seconds / 60
+// let hours = minutes / 60
+// let days = hours / 24
+// console.log("Days:", days)
+// console.log("hours:", hours)
+// console.log("minutes:", minutes)
+// console.log("seconds:", seconds)
+
+let date = new Date("2020-07-08T10:20:00")
+console.log(date.getMonth()) // -> 6 
+console.log(date.getDay()) // -> 3
+console.log(date.getDate()) // 8
+console.log(date.getHours()) // -> 10
+date.setHours(12)
+console.log(date.getHours()) // -> 12
+
+console.log(date.toLocaleDateString()) // -> 08/07/2020
+console.log(date.toLocaleTimeString()) // -> 10:20:00
+
