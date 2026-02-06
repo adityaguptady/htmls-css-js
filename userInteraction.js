@@ -2583,9 +2583,24 @@ returns => 5 * 24
 // let date10 = new Date("Mon Mar 02 2020 10:00:00 UTC-4")
 // console.log(date10)
 
-let date1 = new Date(2020, 6, 8, 10, 20, 0)
-let date2 = new Date(2020, 6, 9, 10, 20, 0)
-let milliDiff = date2.getTime() - date1.getTime()
+// let date1 = new Date(2020, 6, 8, 10, 20, 0)
+// let date2 = new Date(2020, 6, 9, 10, 20, 0)
+// let milliDiff = date2.getTime() - date1.getTime()
+// let seconds = milliDiff / 1000
+// let minutes = seconds / 60
+// let hours = minutes / 60
+// let days = hours / 24
+// console.log("Days:", days)
+// console.log("hours:", hours)
+// console.log("minutes:", minutes)
+// console.log("seconds:", seconds)
+
+let startTime = Date.now()
+for(i=0; i<10000000; i++)
+{}
+let endTime = Date.now()
+console.log(endTime - startTime) 
+let milliDiff = endTime - startTime
 let seconds = milliDiff / 1000
 let minutes = seconds / 60
 let hours = minutes / 60
