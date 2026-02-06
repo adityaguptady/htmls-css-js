@@ -2542,12 +2542,43 @@ returns => 5 * 24
 // console.log(`now : ${typeof now} : ${now}`)
 // console.log(`now : ${typeof nowObj1} : ${nowObj1}`)
 
-let date1 = new Date(2020, 6)
-let date2 = new Date(2020, 6, 8)
-let date3 = new Date(2020, 6, 8, 10)
-let date4 = new Date(2020, 6, 8, 10, 20, 45)
+// let date1 = new Date(2020, 6)
+// let date2 = new Date(2020, 6, 8)
+// let date3 = new Date(2020, 6, 8, 10)
+// let date4 = new Date(2020, 6, 8, 10, 20, 45)
 
-console.log(date1.toLocaleString()) // -> 01/07/2020, 00:00:00
-console.log(date2.toLocaleString()) // -> 08/07/2020, 00:00:00
-console.log(date3.toLocaleString()) // -> 08/07/2020, 10:00:00
-console.log(date4.toLocaleString()) // -> 08/07/2020, 10:20:45
+// console.log(date1.toLocaleString()) // -> 01/07/2020, 00:00:00
+// console.log(date2.toLocaleString()) // -> 08/07/2020, 00:00:00
+// console.log(date3.toLocaleString()) // -> 08/07/2020, 10:00:00
+// console.log(date4.toLocaleString()) // -> 08/07/2020, 10:20:45
+
+// let date1 = new Date("2020-07-08")
+// let date2 = new Date("2020-07-08T10:20:00")
+// let date3 = new Date("2020-07-08T10:20:00Z")
+
+// console.log(date1)
+// console.log(date2)
+// console.log(date3)
+
+let date1 = new Date("Mon Mar 02 2020 10:00:00")
+console.log(date1)
+let date2 = new Date("Mon March 2 2020 10:00")
+console.log(date2)
+let date3 = new Date("Mar 02 2020 10:00:00")
+console.log(date3)
+let date4 = new Date("2 March 2020, 10:")
+console.log(date4)
+
+let date5 = new Date("3.2.2020")
+console.log(date5)
+let date6 = Date("03/02-2020, 10:00")
+console.log(date6)
+let date7 = new Date("2020, 10:00")
+console.log(date7)
+let date8 = new Date("2020 march-02, 10:00")
+console.log(date8)
+
+let date9 = new Date("3.2.2020 GMT+0400")
+console.log(date9)
+let date10 = new Date("Mon Mar 02 2020 10:00:00 UTC-4")
+console.log(date10)
