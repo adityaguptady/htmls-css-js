@@ -2610,14 +2610,38 @@ returns => 5 * 24
 // console.log("minutes:", minutes)
 // console.log("seconds:", seconds)
 
-let date = new Date("2020-07-08T10:20:00")
-console.log(date.getMonth()) // -> 6 
-console.log(date.getDay()) // -> 3
-console.log(date.getDate()) // 8
-console.log(date.getHours()) // -> 10
-date.setHours(12)
-console.log(date.getHours()) // -> 12
+// let date = new Date("2020-07-08T10:20:00")
+// console.log(date.getMonth()) // -> 6 
+// console.log(date.getDay()) // -> 3
+// console.log(date.getDate()) // 8
+// console.log(date.getHours()) // -> 10
+// date.setHours(12)
+// console.log(date.getHours()) // -> 12
 
-console.log(date.toLocaleDateString()) // -> 08/07/2020
-console.log(date.toLocaleTimeString()) // -> 10:20:00
+// console.log(date.toLocaleDateString()) // -> 08/07/2020
+// console.log(date.toLocaleTimeString()) // -> 10:20:00
 
+// let array1 = [] 
+// console.log(array1)
+// let array2 = [2, 4, "six"] 
+// console.log(array2)
+// let array3 = new Array()
+// console.log(array3)
+// let array4 = new Array(2) // let array5 = new Array(2, 4, "six")
+// console.log(array4)
+// let array5 = new Array("2") 
+// console.log(array5)
+// console.log(`array2 : ${typeof array2} : ${array2 instanceof Array} : ${array2.length}`) 
+// console.log(`array5 : ${typeof array5} : ${array5 instanceof Array} : ${array5.length}`) 
+
+// function toConsole(item, index, array)
+// {
+//     console.log(`${index} : ${item}`)
+// }
+let array1 = [2, 4, "six"] 
+// array1.forEach(function toConsole(item, index, array)
+// {
+//     console.log(`${index} : ${item}`)
+// }) 
+
+array1.forEach((item, index, array)=> console.log(`${index} : ${item}`) )
