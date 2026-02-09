@@ -2659,10 +2659,20 @@ returns => 5 * 24
 // const nestedStringRepresentation = nestedArray.toString() 
 // console.log(nestedStringRepresentation)
 
-const array = [1, 2, 'a', true]
-const joinedString = array.join()
-console.log(joinedString)
-const customSeparator = array.join(' -') 
-console.log(customSeparator) 
-const noSeparator = array.join('') 
-console.log(noSeparator) 
+// const array = [1, 2, 'a', true]
+// const joinedString = array.join()
+// console.log(joinedString)
+// const customSeparator = array.join(' -') 
+// console.log(customSeparator) 
+// const noSeparator = array.join('') 
+// console.log(noSeparator) 
+
+// let array1 = ["90", "80", "10", "20", "30","100", "dog"]
+// let anyNumberPresent = array1.some( item => typeof item === "number")
+// console.log("anyNumberPresent: ", anyNumberPresent)
+
+let array2 = [90, 80, 10, 20, 30, 100, 50, -1]
+let allPositive = array2.every(item => item > 0)
+console.log("allPositive: ", allPositive)
+
+
