@@ -2652,9 +2652,17 @@ returns => 5 * 24
 // const deeplyFlattenedArray = nestedArray.flat(Infinity) 
 // console.log(deeplyFlattenedArray)
 
+// const array = [1, 2, 'a', true]
+// const stringRepresentation = array.toString () 
+// console. log(stringRepresentation) 
+// const nestedArray = [1, [2, 3], [4, [5, 6]]] 
+// const nestedStringRepresentation = nestedArray.toString() 
+// console.log(nestedStringRepresentation)
+
 const array = [1, 2, 'a', true]
-const stringRepresentation = array.toString () 
-console. log(stringRepresentation) 
-const nestedArray = [1, [2, 3], [4, [5, 6]]] 
-const nestedStringRepresentation = nestedArray.toString() 
-console.log(nestedStringRepresentation)
+const joinedString = array.join()
+console.log(joinedString)
+const customSeparator = array.join(' -') 
+console.log(customSeparator) 
+const noSeparator = array.join('') 
+console.log(noSeparator) 
