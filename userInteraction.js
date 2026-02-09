@@ -2671,8 +2671,22 @@ returns => 5 * 24
 // let anyNumberPresent = array1.some( item => typeof item === "number")
 // console.log("anyNumberPresent: ", anyNumberPresent)
 
-let array2 = [90, 80, 10, 20, 30, 100, 50, -1]
-let allPositive = array2.every(item => item > 0)
-console.log("allPositive: ", allPositive)
+// let array2 = [90, 80, 10, 20, 30, 100, 50, -1]
+// let allPositive = array2.every(item => item > 0)
+// console.log("allPositive: ", allPositive)
 
+// let array1 = ["cat", 90, 80, 10, 20, 30, 100, 50, "dog"]
+// console.log(array1.length) 
+// console.log(array1) 
+// let numbers = array1.filter(item => typeof item === "number")
+// console.log(numbers.length) 
+// console.log(numbers) 
+// console.log(array1.length) 
+
+let array1 = ["cat", 90, 80, 10, 20, 30, 100, 50, "dog"]
+let squarePower = array1
+  .filter(item => typeof item === "number")
+  .map(item => item * item)
+
+console.log(squarePower) 
 
