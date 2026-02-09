@@ -2683,10 +2683,29 @@ returns => 5 * 24
 // console.log(numbers) 
 // console.log(array1.length) 
 
+// let array1 = ["cat", 90, 80, 10, 20, 30, 100, 50, "dog"]
+// let squarePower = array1
+//   .filter(item => typeof item === "number")
+//   .map(item => item * item)
+
+// console.log(squarePower)
+
 let array1 = ["cat", 90, 80, 10, 20, 30, 100, 50, "dog"]
-let squarePower = array1
-  .filter(item => typeof item === "number")
-  .map(item => item * item)
-
-console.log(squarePower) 
-
+let numbers = array1.filter(item => typeof item === "number") 
+console.log(numbers)
+numbers.sort((first, second) => 
+{
+    if( first < second) 
+    {
+        return -1
+    } 
+    else if(first == second) 
+    {
+        return 0
+    } 
+    else 
+    {
+        return 1
+    }
+}) 
+console.log(numbers)
