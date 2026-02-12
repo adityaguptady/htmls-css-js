@@ -2726,11 +2726,33 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // obj["key2"] = "My Another value"
 // console.log(obj)
 
-console.log("numbers[0]: ", numbers[0]) 
-console.log("numbers: ", numbers) 
-numbers.reverse()
-console.log("numbers[0]: ", numbers[0]) 
-console.log("numbers: ", numbers) 
-numbers.reverse() 
-console.log("numbers[0]: ", numbers[0])
-console.log("numbers: ", numbers) 
+// console.log("numbers[0]: ", numbers[0]) 
+// console.log("numbers: ", numbers) 
+// numbers.reverse()
+// console.log("numbers[0]: ", numbers[0]) 
+// console.log("numbers: ", numbers) 
+// numbers.reverse() 
+// console.log("numbers[0]: ", numbers[0])
+// console.log("numbers: ", numbers) 
+
+let myPets = ["cat", "dog", "hamster", "canary", "shark", "cat", "dog"]
+// myPets.reverse()
+// console.log(myPets)
+// myPets.reverse()
+
+// console.log(myPets.find(item => item.length > 3)) // -> hamster
+// console.log(myPets.find(item => item.includes("og"))) // -> dog
+// console.log(myPets.find(item => item.includes("fish"))) // -> undefined
+
+// console.log(myPets.findIndex(item => item.length > 3)) // -> 2
+// console.log(myPets.findIndex(item => item.includes("og"))) // -> 1
+// console.log(myPets.findIndex(item => item.includes("fish"))) // -> -1
+
+let p1 = myPets.slice(3) // ->  ["canary", "shark", "cat", "dog"]
+console.log(p1)
+let p2 = myPets.slice(3, 5) // -> ["canary", "shark"]
+console.log(p2)
+let p3 = myPets.slice(-3) // -> ["shark", "cat", "dog"]
+console.log(p3)
+let p4 = myPets.slice(-3, -1) // -> ["shark", "cat"]
+console.log(p4)
