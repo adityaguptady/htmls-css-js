@@ -2690,22 +2690,47 @@ returns => 5 * 24
 
 // console.log(squarePower)
 
-let array1 = ["cat", 90, 80, 10, 20, 30, 100, 50, "dog"]
-let numbers = array1.filter(item => typeof item === "number") 
-console.log(numbers)
-numbers.sort((first, second) => 
-{
-    if( first < second) 
-    {
-        return -1
-    } 
-    else if(first == second) 
-    {
-        return 0
-    } 
-    else 
-    {
-        return 1
-    }
-}) 
-console.log(numbers)
+// let array1 = ["cat", 90, 80, 10, 20, 30, 100, 50, "dog"]
+// let numbers = array1.filter(item => typeof item === "number") 
+// console.log(numbers)
+// numbers.sort((first, second) => 
+// {
+//     if( first < second) 
+//     {
+//         return -1
+//     } 
+//     else if(first == second) 
+//     {
+//         return 0
+//     } 
+//     else 
+//     {
+//         return 1
+//     }
+// }) 
+// console.log(numbers)
+
+let numbers = [10, 20, 30, 50, 80, 90, 100] 
+// let sum = numbers.reduce((accumulator, item) => accumulator + item, 100)
+// console.log(sum)
+// let strangeObj = numbers.reduce((accumulator, item, index) => 
+// {
+//     accumulator[item] = index
+//     return accumulator
+// } , {})
+// console.log(strangeObj)
+
+// let obj = {}
+// obj.key1 = "my Value"
+
+// obj["key2"] = "My Another value"
+// console.log(obj)
+
+console.log("numbers[0]: ", numbers[0]) 
+console.log("numbers: ", numbers) 
+numbers.reverse()
+console.log("numbers[0]: ", numbers[0]) 
+console.log("numbers: ", numbers) 
+numbers.reverse() 
+console.log("numbers[0]: ", numbers[0])
+console.log("numbers: ", numbers) 
