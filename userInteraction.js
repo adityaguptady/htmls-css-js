@@ -2788,6 +2788,36 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // console.log(array1)
 // console.log(array2)
 
-let testFn = (a, b, c, d) => a + b + c + d
-let array = [10, 20, 30, 40]
-console.log(testFn(...array))
+// let testFn = (a, b, c, d) => a + b + c + d
+// let array = [10, 20, 30, 40]
+// console.log(testFn(...array))
+
+// let emptySet = new Set()
+// console.log(emptySet.size)
+// console.log(emptySet)
+// let petsSet = new Set(["cat", "dog", "cat"]) 
+// console.log(petsSet.size)
+// console.log(petsSet)
+// petsSet.add("cat")
+// console.log(petsSet)
+// petsSet.add("Cat")
+// console.log(petsSet)
+// petsSet.add("cat1")
+// console.log(petsSet)
+
+let petsSet = new Set(["cat", "dog"])
+// console.log("petsSet.has(cat)", petsSet.has("cat"))
+// console.log("petsSet.has(shark)", petsSet.has("shark"))
+
+console.log("petsSet.size: ", petsSet.size)
+petsSet.add("shark")
+petsSet.add("hamster")
+console.log("petsSet.size: ", petsSet.size)
+console.log("petsSet.has(shark): ", petsSet.has("shark"))
+petsSet.delete("dog")
+petsSet.delete("dog")
+console.log("petsSet.size: ", petsSet.size)
+petsSet.clear()
+console.log("petsSet.size: ", petsSet.size)
+
+
