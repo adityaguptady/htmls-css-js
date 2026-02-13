@@ -2770,13 +2770,21 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // console.log(pet3) // -> hamster
 // console.log(pet4) // -> hamster
 
-let myPets = [,"cat", "dog"]
-// let [pet1, , pet3] = myPets
+// let myPets = [,"cat", "dog"]
+// // let [pet1, , pet3] = myPets
+// // console.log(pet1)
+// // console.log(pet3)
+
+// let [pet1 = "fish", , pet3 = "fish"] = myPets
 // console.log(pet1)
 // console.log(pet3)
 
-let [pet1 = "fish", , pet3 = "fish"] = myPets
-console.log(pet1)
-console.log(pet3)
 
+let array1 = [100, 200, 300]
+let array2 = [1000, 2000]
+let array3 = [10, 20, ...array1, 500, ...array2] 
+
+console.log(array3)
+console.log(array1)
+console.log(array2)
 
