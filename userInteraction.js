@@ -2735,7 +2735,7 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // console.log("numbers[0]: ", numbers[0])
 // console.log("numbers: ", numbers) 
 
-let myPets = ["cat", "dog", "hamster", "canary", "shark", "cat", "dog"]
+//let myPets = ["cat", "dog", "hamster", "canary", "shark", "cat", "dog"]
 // myPets.reverse()
 // console.log(myPets)
 // myPets.reverse()
@@ -2748,11 +2748,24 @@ let myPets = ["cat", "dog", "hamster", "canary", "shark", "cat", "dog"]
 // console.log(myPets.findIndex(item => item.includes("og"))) // -> 1
 // console.log(myPets.findIndex(item => item.includes("fish"))) // -> -1
 
-let p1 = myPets.slice(3) // ->  ["canary", "shark", "cat", "dog"]
-console.log(p1)
-let p2 = myPets.slice(3, 5) // -> ["canary", "shark"]
-console.log(p2)
-let p3 = myPets.slice(-3) // -> ["shark", "cat", "dog"]
-console.log(p3)
-let p4 = myPets.slice(-3, -1) // -> ["shark", "cat"]
-console.log(p4)
+// let p1 = myPets.slice(3) // ->  ["canary", "shark", "cat", "dog"]
+// console.log(p1)
+// let p2 = myPets.slice(3, 5) // -> ["canary", "shark"]
+// console.log(p2)
+// let p3 = myPets.slice(-3) // -> ["shark", "cat", "dog"]
+// console.log(p3)
+// let p4 = myPets.slice(-3, -1) // -> ["shark", "cat"]
+// console.log(p4)
+
+// let removedPets = myPets.splice(2, 3) 
+// console.log(myPets) // -> ["cat", "dog", "cat", "dog"]
+// console.log(removedPets) // -> ["hamster", "canary", "shark"]
+
+// myPets.splice(2, 0, "rabbit", "guinea pig")
+// console.log(myPets) 
+
+let myPets = ["cat", "dog", "hamster", "canary", "shark", "cat", "dog"]
+let [pet1,, pet3,, pet4] = myPets
+console.log(pet1) // -> cat
+console.log(pet3) // -> hamster
+console.log(pet4) // -> hamster
