@@ -2764,8 +2764,19 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // myPets.splice(2, 0, "rabbit", "guinea pig")
 // console.log(myPets) 
 
-let myPets = ["cat", "dog", "hamster", "canary", "shark", "cat", "dog"]
-let [pet1,, pet3,, pet4] = myPets
-console.log(pet1) // -> cat
-console.log(pet3) // -> hamster
-console.log(pet4) // -> hamster
+// let myPets = ["cat", "dog", "hamster", "canary", "shark", "cat", "dog"]
+// let [pet1,, pet3,, pet4] = myPets
+// console.log(pet1) // -> cat
+// console.log(pet3) // -> hamster
+// console.log(pet4) // -> hamster
+
+let myPets = [,"cat", "dog"]
+// let [pet1, , pet3] = myPets
+// console.log(pet1)
+// console.log(pet3)
+
+let [pet1 = "fish", , pet3 = "fish"] = myPets
+console.log(pet1)
+console.log(pet3)
+
+
