@@ -2805,19 +2805,29 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // petsSet.add("cat1")
 // console.log(petsSet)
 
-let petsSet = new Set(["cat", "dog"])
+//let petsSet = new Set(["cat", "dog"])
 // console.log("petsSet.has(cat)", petsSet.has("cat"))
 // console.log("petsSet.has(shark)", petsSet.has("shark"))
 
-console.log("petsSet.size: ", petsSet.size)
-petsSet.add("shark")
-petsSet.add("hamster")
-console.log("petsSet.size: ", petsSet.size)
-console.log("petsSet.has(shark): ", petsSet.has("shark"))
-petsSet.delete("dog")
-petsSet.delete("dog")
-console.log("petsSet.size: ", petsSet.size)
-petsSet.clear()
-console.log("petsSet.size: ", petsSet.size)
+// console.log("petsSet.size: ", petsSet.size)
+// petsSet.add("shark")
+// petsSet.add("hamster")
+// console.log("petsSet.size: ", petsSet.size)
+// console.log("petsSet.has(shark): ", petsSet.has("shark"))
+// petsSet.delete("dog")
+// petsSet.delete("dog")
+// console.log("petsSet.size: ", petsSet.size)
+// petsSet.clear()
+// console.log("petsSet.size: ", petsSet.size)
 
+
+let petsSet = new Set(["cat", "dog", "hamster"]) 
+petsSet.forEach(value => console.log(value)) 
+
+petsSet.forEach((value, key) => console.log(`(${value}:${key})`))
+
+let petsIterator = petsSet.values()
+console.log(petsIterator.next().value) // -> cat
+console.log(petsIterator.next().value) // -> dog
+console.log(petsIterator.next().value) // -> hamster
 
