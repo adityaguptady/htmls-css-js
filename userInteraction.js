@@ -2821,13 +2821,28 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // console.log("petsSet.size: ", petsSet.size)
 
 
-let petsSet = new Set(["cat", "dog", "hamster"]) 
-petsSet.forEach(value => console.log(value)) 
+// let petsSet = new Set(["cat", "dog", "hamster"]) 
+// // petsSet.forEach(value => console.log(value)) 
 
-petsSet.forEach((value, key) => console.log(`(${value}:${key})`))
+// // petsSet.forEach((value, key) => console.log(`(${value}:${key})`))
 
-let petsIterator = petsSet.values()
-console.log(petsIterator.next().value) // -> cat
-console.log(petsIterator.next().value) // -> dog
-console.log(petsIterator.next().value) // -> hamster
+// // let petsIterator = petsSet.values()
+// // console.log(petsIterator.next().value) // -> cat
+// // console.log(petsIterator.next().value) // -> dog
+// // console.log(petsIterator.next().value) // -> hamster
+// // console.log(petsIterator.next().value)
 
+// let petsIterator = petsSet.values()
+// let result = petsIterator.next()
+// while (!result.done) 
+// {
+//  	console.log(result.value) // -> cat -> dog -> hamster
+//  	result = petsIterator.next()
+// }
+
+let petsSet = new Set(["cat", "dog", "hamster"])
+console.log("petsSet: ", petsSet)
+console.log(petsSet instanceof Set)
+let petsArray = [...petsSet]
+console.log("petsArray: ", petsArray)
+console.log(petsArray instanceof Array)
