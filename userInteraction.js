@@ -2840,9 +2840,39 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 //  	result = petsIterator.next()
 // }
 
-let petsSet = new Set(["cat", "dog", "hamster"])
-console.log("petsSet: ", petsSet)
-console.log(petsSet instanceof Set)
-let petsArray = [...petsSet]
-console.log("petsArray: ", petsArray)
-console.log(petsArray instanceof Array)
+// let petsSet = new Set(["cat", "dog", "hamster"])
+// console.log("petsSet: ", petsSet)
+// console.log(petsSet instanceof Set)
+// let petsArray = [...petsSet]
+// console.log("petsArray: ", petsArray)
+// console.log(petsArray instanceof Array)
+
+// let emptyMap = new Map()
+// let petsMap = new Map([["cats", 1],[ "dogs", 2],[ "hamsters", 5]])
+// console.log(emptyMap.size)
+// console.log(petsMap.size)
+// console.log(emptyMap)
+// console.log(petsMap)
+// // Primitive -> String, number {Integer & float}, boolean, undefined, NaN, null
+// // Non-Primitive -> Objects, Arrays, Sets, Map, Functionn
+
+// console.log(petsMap.has("dogs")) // -> true
+// console.log(petsMap.has("sharks")) // -> false
+// console.log(petsMap.has(1)) // -> false
+// console.log(petsMap.get("hamsters")) // -> 5
+// petsMap.set("hamsters", 6)
+// console.log(petsMap.get("hamsters")) // -> 6
+// petsMap.delete("hamsters")
+// console.log(petsMap.get("hamsters")) // -> undefined
+// petsMap.clear()
+// console.log(petsMap.size) // -> 0
+
+let anotherPetsMap = new Map([["snakes", 1],["cats", 3],["dogs", 2]])
+//anotherPetsMap.forEach((value, key) => console.log(`${key} : ${value}`))
+
+let petValuesIterator = anotherPetsMap.values()
+let petKeysIterator = anotherPetsMap.keys()
+
+console.log(petKeysIterator.next().value+":"+petValuesIterator.next().value) // -> 1
+console.log(petKeysIterator.next().value+":"+petValuesIterator.next().value) // -> 3
+console.log(petKeysIterator.next().value+":"+petValuesIterator.next().value) // -> 2
