@@ -2867,7 +2867,7 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // petsMap.clear()
 // console.log(petsMap.size) // -> 0
 
-let anotherPetsMap = new Map([["snakes", 1],["cats", 3],["dogs", 2]])
+// let anotherPetsMap = new Map([["snakes", 1],["cats", 3],["dogs", 2]])
 //anotherPetsMap.forEach((value, key) => console.log(`${key} : ${value}`))
 
 // let petValuesIterator = anotherPetsMap.values()
@@ -2877,10 +2877,27 @@ let anotherPetsMap = new Map([["snakes", 1],["cats", 3],["dogs", 2]])
 // console.log(petKeysIterator.next().value+":"+petValuesIterator.next().value) // -> 3
 // console.log(petKeysIterator.next().value+":"+petValuesIterator.next().value) // -> 2
 
-let petsIterator = anotherPetsMap.entries()
-let result = petsIterator.next()
-while (!result.done) 
+// let petsIterator = anotherPetsMap.entries()
+// let result = petsIterator.next()
+// while (!result.done) 
+// {
+//     console.log(result.value) 
+//  	result = petsIterator.next()
+// }
+
+let petsArray = ["cat", "dog", "hamster"]   //Array
+for(let pet of petsArray) 
 {
-    console.log(result.value) 
- 	result = petsIterator.next()
+    console.log(pet)
+}
+let petsSet = new Set(["cat", "dog", "hamster"])
+for( let pet of petsSet) 
+{
+    console.log(pet) 
+}
+let petsMap = new Map([["cats", 1], ["dogs", 3], ["hamsters", 2]])
+for( let pet of petsMap) 
+{
+    console.log(pet)
+    console.log(pet[0]) 
 }
