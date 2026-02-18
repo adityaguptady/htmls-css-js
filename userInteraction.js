@@ -2870,9 +2870,17 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 let anotherPetsMap = new Map([["snakes", 1],["cats", 3],["dogs", 2]])
 //anotherPetsMap.forEach((value, key) => console.log(`${key} : ${value}`))
 
-let petValuesIterator = anotherPetsMap.values()
-let petKeysIterator = anotherPetsMap.keys()
+// let petValuesIterator = anotherPetsMap.values()
+// let petKeysIterator = anotherPetsMap.keys()
 
-console.log(petKeysIterator.next().value+":"+petValuesIterator.next().value) // -> 1
-console.log(petKeysIterator.next().value+":"+petValuesIterator.next().value) // -> 3
-console.log(petKeysIterator.next().value+":"+petValuesIterator.next().value) // -> 2
+// console.log(petKeysIterator.next().value+":"+petValuesIterator.next().value) // -> 1
+// console.log(petKeysIterator.next().value+":"+petValuesIterator.next().value) // -> 3
+// console.log(petKeysIterator.next().value+":"+petValuesIterator.next().value) // -> 2
+
+let petsIterator = anotherPetsMap.entries()
+let result = petsIterator.next()
+while (!result.done) 
+{
+    console.log(result.value) 
+ 	result = petsIterator.next()
+}
