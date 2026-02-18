@@ -2902,9 +2902,42 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 //     console.log(pet[0]) 
 // }
 
-let petsMap = new Map([["cats", 1], ["dogs", 3], ["hamsters", 2]])
-console.log(petsMap)
-console.log(petsMap instanceof Map) // -> true
-let petsArray = [...petsMap] // -> [["cats", 1], ["dogs", 3], ["hamsters", 2]]
-console.log(petsArray)
-console.log(petsArray instanceof Array) // -> true
+// let petsMap = new Map([["cats", 1], ["dogs", 3], ["hamsters", 2]])
+// console.log(petsMap)
+// console.log(petsMap instanceof Map) // -> true
+// let petsArray = [...petsMap] // -> [["cats", 1], ["dogs", 3], ["hamsters", 2]]
+// console.log(petsArray)
+// console.log(petsArray instanceof Array) // -> true
+// let vehicle2 = 
+// {
+//     id: "AK12113",
+//     longitude: 59.358615, 
+//     latitude: 17.947589,
+//     getId: function() 
+//     {
+//         return this.id
+//     }
+// }
+// console.log(vehicle2)
+// console.log(typeof vehicle2)
+// let vehicle2JSON = JSON.stringify(vehicle2)
+// console.log(typeof vehicle2JSON) // -> string
+// console.log(vehicle2JSON) // -> 
+
+// console.log(window)
+// JSON.stringify(window) 
+
+let Vehicle = function(id, latitude, longitude)
+{ 
+    this.id = id
+    this.latitude = latitude     
+    this.longitude = longitude
+}
+let ids = ["AK12113", "AL1024", "BA1001"]
+let vehicles = []
+ids.forEach(id => vehicles.push(new Vehicle(id, 59.358615, 17.947589)))
+let vehcilesJSONstr = JSON.stringify(vehicles)
+console.log(vehcilesJSONstr)
+let vehicalJSON = JSON.parse(vehcilesJSONstr)
+console.log(vehicalJSON)
+console.log(typeof vehicalJSON)
