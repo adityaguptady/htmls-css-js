@@ -2927,17 +2927,35 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // console.log(window)
 // JSON.stringify(window) 
 
-let Vehicle = function(id, latitude, longitude)
-{ 
-    this.id = id
-    this.latitude = latitude     
-    this.longitude = longitude
-}
-let ids = ["AK12113", "AL1024", "BA1001"]
-let vehicles = []
-ids.forEach(id => vehicles.push(new Vehicle(id, 59.358615, 17.947589)))
-let vehcilesJSONstr = JSON.stringify(vehicles)
-console.log(vehcilesJSONstr)
-let vehicalJSON = JSON.parse(vehcilesJSONstr)
-console.log(vehicalJSON)
-console.log(typeof vehicalJSON)
+// let Vehicle = function(id, latitude, longitude)
+// { 
+//     this.id = id
+//     this.latitude = latitude     
+//     this.longitude = longitude
+// }
+// let ids = ["AK12113", "AL1024", "BA1001"]
+// let vehicles = []
+// ids.forEach(id => vehicles.push(new Vehicle(id, 59.358615, 17.947589)))
+// let vehcilesJSONstr = JSON.stringify(vehicles)
+// console.log(vehcilesJSONstr)
+// let vehicalJSON = JSON.parse(vehcilesJSONstr)
+// console.log(vehicalJSON)
+// console.log(typeof vehicalJSON)
+// console.log(Math.PI) // -> 3.141592653589793
+// console.log(Math.E) // -> 2.718281828459045
+
+console.log(Math.ceil(10.2)) // -> 11
+console.log(Math.floor(10.2)) // -> 10
+console.log(Math.round(10.2)) // -> 10
+
+console.log(Math.ceil(10.499999)) // -> 11 
+console.log(Math.floor(10.499999)) // -> 10
+console.log(Math.round(10.499999)) // -> 10
+
+console.log(Math.ceil(10.5)) // -> 11
+console.log(Math.floor(10.5)) // -> 10
+console.log(Math.round(10.5)) // -> 11
+
+console.log(Math.ceil(10.8)) // -> 11
+console.log(Math.floor(10.8)) // -> 10
+console.log(Math.round(10.8)) // -> 11
