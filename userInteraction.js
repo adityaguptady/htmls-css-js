@@ -2885,19 +2885,26 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 //  	result = petsIterator.next()
 // }
 
-let petsArray = ["cat", "dog", "hamster"]   //Array
-for(let pet of petsArray) 
-{
-    console.log(pet)
-}
-let petsSet = new Set(["cat", "dog", "hamster"])
-for( let pet of petsSet) 
-{
-    console.log(pet) 
-}
+// let petsArray = ["cat", "dog", "hamster"]   //Array
+// for(let pet of petsArray) 
+// {
+//     console.log(pet)
+// }
+// let petsSet = new Set(["cat", "dog", "hamster"])
+// for( let pet of petsSet) 
+// {
+//     console.log(pet) 
+// }
+// let petsMap = new Map([["cats", 1], ["dogs", 3], ["hamsters", 2]])
+// for( let pet of petsMap) 
+// {
+//     console.log(pet)
+//     console.log(pet[0]) 
+// }
+
 let petsMap = new Map([["cats", 1], ["dogs", 3], ["hamsters", 2]])
-for( let pet of petsMap) 
-{
-    console.log(pet)
-    console.log(pet[0]) 
-}
+console.log(petsMap)
+console.log(petsMap instanceof Map) // -> true
+let petsArray = [...petsMap] // -> [["cats", 1], ["dogs", 3], ["hamsters", 2]]
+console.log(petsArray)
+console.log(petsArray instanceof Array) // -> true
