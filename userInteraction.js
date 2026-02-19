@@ -2992,6 +2992,24 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // console.log(Math.log2(16)) // -> 4
 // console.log(Math.log10(1000)) // -> 3
 
-console.log(Math.cos(Math.PI/3))
-console.log(Math.tan(Math.PI/4))
-console.log(Math.asin(1))
+// console.log(Math.cos(Math.PI/3))
+// console.log(Math.tan(Math.PI/4))
+// console.log(Math.asin(1))
+
+let re1 = new RegExp('c.t')
+let re2 = /c.t/
+console.log("re1.test('cat'): ", re1.test("cat"))
+console.log("re1.test('c1t'): ", re1.test("c1t"))
+console.log("re1.test('c12t'): ", re1.test("c12t"))
+console.log("re2.test('cut'): ", re2.test("cut"))
+console.log("re2.test('cot'): ", re2.test("cot"))
+console.log("re2.test('ct'): ", re2.test("ct"))
+console.log("-----------")
+re1 = new RegExp('c..t')
+re2 = /c..t/
+console.log("re1.test('cat'): ", re1.test("cat"))
+console.log("re1.test('c1t'): ", re1.test("c1t"))
+console.log("re1.test('c12t'): ", re1.test("c12t"))
+console.log("re2.test('cut'): ", re2.test("cut"))
+console.log("re2.test('cot'): ", re2.test("cot"))
+console.log("re2.test('ct'): ", re2.test("ct"))
