@@ -3019,20 +3019,34 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // console.log(re.exec("I am planning to get my hair cut, so I am looking for a haircut")) 
 // console.log(re.exec("ct"))
 
-const personList = `First_Name: John, Last_Name: Doe`
-const regexpNames = /First_Name: (\w+), Last_Name: (\w+)/
+// const personList = `First_Name: John, Last_Name: Doe`
+// const regexpNames = /First_Name: (\w+), Last_Name: (\w+)/
+// const match = regexpNames.exec(personList);
+
+// if(match)
+// {
+//     console.log("Full match: ", match[0]);
+//     console.log("First name: ", match[1]);
+//     console.log("Last name: ", match[2]);
+//     console.log("Match index: ", match.index);
+//     console.log("Input string: ", match.input);
+//     console.log(match)
+// } 
+// else 
+// {
+//     console.log("No match found.");
+// }
+
+const personList = `First_Name: Jane, Last_Name: Smith`;
+// The syntax for a named group is (?<name>...)
+const regexpNames = /First_Name: (?<firstName>\w+), Last_Name: (?<lastName>\w+)/;
 const match = regexpNames.exec(personList);
 
-if(match)
+if (match) 
 {
-    console.log("Full match: ", match[0]);
-    console.log("First name: ", match[1]);
-    console.log("Last name: ", match[2]);
-    console.log("Match index: ", match.index);
-    console.log("Input string: ", match.input);
+    console.log("First name: ", match.groups.firstName); // "Jane"
+    console.log("Last name: ", match.groups.lastName); // "Smith"
+    // Named groups are still accessible by index as well
+    console.log("First name by index: ", match[1]); // "Jane"
     console.log(match)
-} 
-else 
-{
-    console.log("No match found.");
 }
