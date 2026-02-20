@@ -3037,16 +3037,41 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 //     console.log("No match found.");
 // }
 
-const personList = `First_Name: Jane, Last_Name: Smith`;
-// The syntax for a named group is (?<name>...)
-const regexpNames = /First_Name: (?<firstName>\w+), Last_Name: (?<lastName>\w+)/;
-const match = regexpNames.exec(personList);
+// const personList = `First_Name: Jane, Last_Name: Smith`;
+// // The syntax for a named group is (?<name>...)
+// const regexpNames = /First_Name: (?<firstName>\w+), Last_Name: (?<lastName>\w+)/;
+// const match = regexpNames.exec(personList);
 
-if (match) 
-{
-    console.log("First name: ", match.groups.firstName); // "Jane"
-    console.log("Last name: ", match.groups.lastName); // "Smith"
-    // Named groups are still accessible by index as well
-    console.log("First name by index: ", match[1]); // "Jane"
-    console.log(match)
-}
+// if (match) 
+// {
+//     console.log("First name: ", match.groups.firstName); // "Jane"
+//     console.log("Last name: ", match.groups.lastName); // "Smith"
+//     // Named groups are still accessible by index as well
+//     console.log("First name by index: ", match[1]); // "Jane"
+//     console.log(match)
+// }
+
+// let re = /c.t/
+// let str = "dog and cat"
+// console.log(str.match(re)) 
+// console.log(str.search(re)) 
+// let newStr = str.replace(re, 'unicorn')
+// console.log(newStr) 
+// console.log(str)
+
+let re = /c\.t/
+console.log(re.exec("cut")) 
+console.log(re.exec("c.t"))
+let re1 = /o*ps/
+console.log(re1.exec("wkevjbkjwbv ps"))
+console.log(re1.exec("ops")) 
+console.log(re1.exec("He said: ooops!")) 
+let re2 = /o+ps/
+console.log(re2.exec("ps")) // -> null
+console.log(re2.exec("ops"))
+console.log(re2.exec("He said: ooops!")) 
+let re3 = /o?ps/  /// strange, isnt it?
+console.log(re3.exec("ps")) 
+console.log(re3.exec("ops")) 
+console.log(re3.exec("He said: ooops!")) 
+
