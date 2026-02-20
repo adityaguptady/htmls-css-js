@@ -3059,19 +3059,30 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // console.log(newStr) 
 // console.log(str)
 
-let re = /c\.t/
-console.log(re.exec("cut")) 
-console.log(re.exec("c.t"))
-let re1 = /o*ps/
-console.log(re1.exec("wkevjbkjwbv ps"))
-console.log(re1.exec("ops")) 
-console.log(re1.exec("He said: ooops!")) 
-let re2 = /o+ps/
-console.log(re2.exec("ps")) // -> null
-console.log(re2.exec("ops"))
-console.log(re2.exec("He said: ooops!")) 
-let re3 = /o?ps/  /// strange, isnt it?
-console.log(re3.exec("ps")) 
-console.log(re3.exec("ops")) 
-console.log(re3.exec("He said: ooops!")) 
+// let re = /c\.t/
+// console.log(re.exec("cut")) 
+// console.log(re.exec("c.t"))
+// let re1 = /o*ps/
+// console.log(re1.exec("wkevjbkjwbv ps"))
+// console.log(re1.exec("ops")) 
+// console.log(re1.exec("He said: ooops!")) 
+// let re2 = /o+ps/
+// console.log(re2.exec("ps")) // -> null
+// console.log(re2.exec("ops"))
+// console.log(re2.exec("He said: ooops!")) 
+// let re3 = /o?ps/  /// strange, isnt it?
+// console.log(re3.exec("ps")) 
+// console.log(re3.exec("ops")) 
+// console.log(re3.exec("He said: ooops!")) 
+
+let re1 = /ca|ut/
+console.log(re1.exec("cattle")) 
+console.log(re1.exec("haircut")) 
+console.log(re1.exec("city")) 
+
+
+let re2 = /c(a|u)t/
+console.log(re2.exec("cattle"))
+console.log(re2.exec("haircut")) 
+console.log(re2.exec("city"))
 
