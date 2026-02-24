@@ -3103,11 +3103,40 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // console.log(re2.exec("city")) 	
 // console.log(re2.exec("coty")) 
 
-let re = /id\d+/
-console.log(re.exec("My ids.")) 
-console.log(re.exec("id60001"))
+// let re = /id\d+/
+// console.log(re.exec("My ids.")) 
+// console.log(re.exec("id60001"))
 
-let re1 = /^(abc\s){3}$/
-console.log(re1.exec("abc abc abc ")) 
-console.log(re1.exec("abc abc abc abc ")) 
-console.log(re1.exec("abc abcabc")) 
+// let re1 = /^(abc\s){3}$/
+// console.log(re1.exec("abc abc abc ")) 
+// console.log(re1.exec("abc abc abc abc ")) 
+// console.log(re1.exec("abc abcabc")) 
+
+// let getItem = function(array, index) 
+// {
+//    	let retVal = undefined
+//     if(index > 0 && index < array.length) 
+//     {
+//         retVal = array[index]
+//     }
+//     return retVal
+    //return array[index]
+// }
+// let array = [10, 20, 80, 100]
+// console.log(getItem(array, 5))
+
+let getRandomItem = function (array) 
+{
+    return array[Math.floor(Math.random() * array.length)]
+}
+
+let array = [10, 20, 80, 100]
+console.log(getRandomItem(array))
+console.log(getRandomItem(array))
+
+// Array.prototype.getRandomItem = function (array) 
+// {
+//     return this[Math.floor(Math.random() * this.length)]
+// }
+// console.log(array.getRandomItem())
+// console.log(array.getRandomItem())
