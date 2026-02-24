@@ -3075,14 +3075,39 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // console.log(re3.exec("ops")) 
 // console.log(re3.exec("He said: ooops!")) 
 
-let re1 = /ca|ut/
-console.log(re1.exec("cattle")) 
-console.log(re1.exec("haircut")) 
-console.log(re1.exec("city")) 
+// let re1 = /ca|ut/
+// console.log(re1.exec("cattle")) 
+// console.log(re1.exec("haircut")) 
+// console.log(re1.exec("city")) 
 
 
-let re2 = /c(a|u)t/
-console.log(re2.exec("cattle"))
-console.log(re2.exec("haircut")) 
-console.log(re2.exec("city"))
+// let re2 = /c(a|u)t/
+// console.log(re2.exec("cattle"))
+// console.log(re2.exec("haircut")) 
+// console.log(re2.exec("city"))
 
+//let re = /\so{2,3}ps/ // repeats 'o' two or three times 
+// console.log(re.exec("He said: ops!")) 
+// console.log(re.exec("He said: oops!")) 
+// console.log(re.exec("He said: ooops!")) 
+// console.log(re.exec("He said: oooops!")) 
+// console.log(re.exec("He said: ooooooooops!"))
+
+// let re1 = /c[aiu]t/
+// console.log(re1.exec("cattle")) 
+// console.log(re1.exec("haircut")) 
+// console.log(re1.exec("city")) 
+// let re2 = /c[^au]t/
+// console.log(re2.exec("cattle")) 
+// console.log(re2.exec("haircut")) 
+// console.log(re2.exec("city")) 	
+// console.log(re2.exec("coty")) 
+
+let re = /id\d+/
+console.log(re.exec("My ids.")) 
+console.log(re.exec("id60001"))
+
+let re1 = /^(abc\s){3}$/
+console.log(re1.exec("abc abc abc ")) 
+console.log(re1.exec("abc abc abc abc ")) 
+console.log(re1.exec("abc abcabc")) 
