@@ -3125,14 +3125,14 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // let array = [10, 20, 80, 100]
 // console.log(getItem(array, 5))
 
-let getRandomItem = function (array) 
-{
-    return array[Math.floor(Math.random() * array.length)]
-}
+// let getRandomItem = function (array) 
+// {
+//     return array[Math.floor(Math.random() * array.length)]
+// }
 
-let array = [10, 20, 80, 100]
-console.log(getRandomItem(array))
-console.log(getRandomItem(array))
+// let array = [10, 20, 80, 100]
+// console.log(getRandomItem(array))
+// console.log(getRandomItem(array))
 
 // Array.prototype.getRandomItem = function (array) 
 // {
@@ -3140,3 +3140,46 @@ console.log(getRandomItem(array))
 // }
 // console.log(array.getRandomItem())
 // console.log(array.getRandomItem())
+
+// function greet(name = 'Guest') 
+// {
+//  	console.log('Hello ' + name)
+// }
+
+// greet("Adtya")
+// greet()
+
+// function sum(...numbers) 
+// { 
+//     return numbers.reduce((a, b) => a + b) 
+// }
+
+// let result = sum(1, 2, 3, 4)
+// console.log(result)
+
+// setTimeout(() => console.log('Hi!'), 5000)
+
+// setTimeout(myCallBackFunction, 6000)
+
+// //callback function
+// function myCallBackFunction()
+// {
+//     console.log("This callback is now called!")
+// }
+
+function createCounter()
+{
+    let count = 0
+
+    return function innerFunction()
+    {
+        count++
+        console.log(count)
+    }
+}
+
+const counter = createCounter()
+//console.log(counter)
+counter()   //1
+counter()   //2
+counter()   //3
