@@ -3167,19 +3167,31 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 //     console.log("This callback is now called!")
 // }
 
-function createCounter()
-{
-    let count = 0
+// function createCounter()
+// {
+//     let count = 0
 
-    return function innerFunction()
-    {
-        count++
-        console.log(count)
-    }
+//     return function innerFunction()
+//     {
+//         count++
+//         console.log(count)
+//     }
+// }
+
+// const counter = createCounter()
+// //console.log(counter)
+// counter()   //1
+// counter()   //2
+// counter()   //3
+
+async function fetchData() 
+{
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+  const data = await response.json()
+  console.log("Response: ", data)
 }
 
-const counter = createCounter()
-//console.log(counter)
-counter()   //1
-counter()   //2
-counter()   //3
+console.log("Ok, starting with API call:")
+fetchData()
+console.log("Ok, We are done with API call")
+
