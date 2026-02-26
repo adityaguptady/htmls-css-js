@@ -3184,14 +3184,60 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // counter()   //2
 // counter()   //3
 
-async function fetchData() 
+// async function fetchData() 
+// {
+//   const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+//   const data = await response.json()
+//   console.log("Response: ", data)
+// }
+
+// console.log("Ok, starting with API call:")
+// fetchData()
+// console.log("Ok, We are done with API call")
+
+// function test(a, b = 1, c, d = 2) 
+// {
+//   console.log(`a: ${a}, b: ${b}, c: ${c}, d: ${d}`)
+// }
+// test() // -> a: undefined, b: 1, c: undefined, d: 2
+// test(100) // -> a: 100, b: 1, c: undefined, d: 2
+// test(100, 200) // -> a: 100, b: 200, c: undefined, d: 2
+// test(100, 200, 300) // -> a: 100, b: 200, c: 300, d: 2
+// test(100, 200, 300, 400)
+
+// function test(firstArg, ...anotherArgs) 
+// {
+//     let msg = `frist arg: ${firstArg}, length: ${anotherArgs.length}, args:`
+//     anotherArgs.forEach(arg => {msg += ` ${arg}`})
+//     console.log(msg)
+// }
+// test(100, 200, 300) // -> frist arg: 100, length: 2, args: 200 300
+// test(100) // -> frist arg: 100, length: 0, args:
+
+// function getFile(url, name, mime) 
+// {
+//   console.log(`url: ${url}, name: ${name}, mime: ${mime}`)
+//   // …
+//   // // some logic responsible for connecting and downloading the file
+// }
+
+// let parameters = ['https://localhost/files', 'test.json', 'application/json']
+// getFile(...parameters)
+
+function getFile({url, name, mime}) 
 {
-  const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-  const data = await response.json()
-  console.log("Response: ", data)
+  console.log(`url: ${url}, name: ${name}, mime: ${mime}`)
+// …
+// some logic responsible for connecting and downloading the file
 }
 
-console.log("Ok, starting with API call:")
-fetchData()
-console.log("Ok, We are done with API call")
+let parameters = {
+  name: 'test.json', 
+  url: 'https://localhost/files', 
+  mime: 'application/json'
+}
 
+getFile(parameters) // -> url: https://localhost/files, name: test.json, mime: application/json
+
+//getFile({mime: 'image/jpeg', url: 'http://test.com/rest', name: 'id.jpg'}) // -> url: http://test.com/rest, name: id.jpg, mime: image/jpeg
+		
