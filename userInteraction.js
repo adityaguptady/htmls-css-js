@@ -3224,20 +3224,37 @@ let numbers = [10, 20, 30, 50, 80, 90, 100]
 // let parameters = ['https://localhost/files', 'test.json', 'application/json']
 // getFile(...parameters)
 
-function getFile({url, name, mime}) 
-{
-  console.log(`url: ${url}, name: ${name}, mime: ${mime}`)
-// …
-// some logic responsible for connecting and downloading the file
-}
+// function getFile({url, name, mime}) 
+// {
+//   console.log(`url: ${url}, name: ${name}, mime: ${mime}`)
+// // …
+// // some logic responsible for connecting and downloading the file
+// }
 
-let parameters = {
-  name: 'test.json', 
-  url: 'https://localhost/files', 
-  mime: 'application/json'
-}
+// let parameters = {
+//   name: 'test.json', 
+//   url: 'https://localhost/files', 
+//   mime: 'application/json'
+// }
 
-getFile(parameters) // -> url: https://localhost/files, name: test.json, mime: application/json
+// getFile(parameters) // -> url: https://localhost/files, name: test.json, mime: application/json
 
 //getFile({mime: 'image/jpeg', url: 'http://test.com/rest', name: 'id.jpg'}) // -> url: http://test.com/rest, name: id.jpg, mime: image/jpeg
 		
+function print(n, max)
+{
+  if(n > max)
+    return;
+  console.log(n)
+  print(n+1, max)
+}
+
+print(0, 15)
+
+/* Dry Running
+n       0   1   2   3   4   5   6   7   8   9   10    11  12  13  14  15 
+max     15  15  15  15
+output  0   1   2   3   4   5   6   7   8   9   10    11  12  13  14
+
+
+*/
